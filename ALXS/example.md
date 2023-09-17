@@ -1,4 +1,22 @@
+<!-- example Markdown file -->
+
+<!-- css style -->
 <link rel="stylesheet" href="style.css">
+
+<!-- render math to pdf -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$']],
+    displayMath: [['$$', '$$']]
+  }
+};
+</script>
+<!--  -->
+
+<!-- Document start -->
 
 # This is a level 1 heading
 
@@ -33,6 +51,10 @@ Here's an ordered list:
 > This is a blockquote. It can span multiple lines.
 >
 > Here's a second paragraph in the blockquote.
+
+<v>
+This is a verse block.
+</v>
 
 <div class="definition">
     Here's a definition
@@ -116,6 +138,7 @@ $$
 \frac{1}{n^{2}}
 $$
 
+
 Here's a math inline: $\frac{1}{n^{2}}$
 
 Here's a superscript: 10<sup>2</sup>
@@ -124,8 +147,16 @@ Here's a subscript: H<sub>2</sub>O
 
 Here's a strikethrough: ~~strikethrough~~
 
-Here's a highlight: ==highlight==
-
 Here's a comment: <!-- This is a comment -->
 
 Here's some emoji: 🐻
+
+This is a mermaid diagram:
+
+```mermaid
+graph LR;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
