@@ -326,3 +326,16 @@ table th {
     padding: 5px;
 }
 
+/* & mermaid */
+
+.mermaid {
+    page-break-inside: avoid !important;
+}
+
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node polygon {
+    fill: #638dbc6e !important;
+    stroke: #638dbc !important;
+    stroke-width: 2px !important;
+}
