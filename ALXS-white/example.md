@@ -10,6 +10,7 @@
 window.MathJax = {
   tex: {
     inlineMath: [['$', '$']],
+    processEscapes: true,
     displayMath: [['$$', '$$']]
   }
 };
@@ -85,6 +86,80 @@ This is a verse block.
     Here's a success
 </div>
 
+<div class="remarque">
+    Here's a 'remarque'
+</div>
+
+<div class="exemple">
+    Here's an 'exemple'
+</div>
+
+Here are my custom color or highlight elements : 
+
+<red>
+This is a red text
+</red>
+
+<green>
+This is a green text
+</green>
+
+<blue>
+This is a blue text
+</blue>
+
+<yellow>
+This is a yellow text
+</yellow>
+
+<orange>
+This is an orange text
+</orange>
+
+<purple>
+This is a purple text
+</purple>
+
+<pink>
+This is a pink text
+</pink>
+
+<grey>
+This is a grey text
+</grey>
+
+<hred>
+This is a red highlight
+</hred>
+
+<hgreen>
+This is a green highlight
+</hgreen>
+
+<hblue>
+This is a blue highlight
+</hblue>
+
+<hyellow>
+This is a yellow highlight
+</hyellow>
+
+<horange>
+This is an orange highlight
+</horange>
+
+<hpurple>
+This is a purple highlight
+</hpurple>
+
+<hpink>
+This is a pink highlight
+</hpink>
+
+<hgrey>
+This is a grey highlight
+</hgrey>
+
 Here's some inline code: `console.log('Hello, world!');`
 
 Here's a code block:
@@ -158,6 +233,6 @@ This is a mermaid diagram:
 graph LR;
     A-->B;
     A-->C;
-    B-->D;
+    B-->D[here is a very long node, i want to break it into multiple lines];
     C-->D;
 ```

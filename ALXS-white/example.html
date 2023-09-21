@@ -375,6 +375,7 @@ code {
 window.MathJax = {
   tex: {
     inlineMath: [['$', '$']],
+    processEscapes: true,
     displayMath: [['$$', '$$']]
   }
 };
@@ -497,7 +498,7 @@ $$</p>
 <pre><code class="language-mermaid"><div class="mermaid">graph LR;
     A-->B;
     A-->C;
-    B-->D;
+    B-->D[here is a very long node, i want to break it into multiple lines];
     C-->D;
 </div></code></pre>
 
