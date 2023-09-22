@@ -195,6 +195,6 @@ This is a mermaid diagram:
 graph LR;
     A-->B;
     A-->C;
-    B-->D[here is a very long node, i want to break it into multiple lines];
+    B-->D[here is a very long node,<br> i want to break it into multiple lines];
     C-->D;
 ```
