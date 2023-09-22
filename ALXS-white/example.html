@@ -367,22 +367,12 @@ code {
   </script>
 <!-- example Markdown file -->
 <!-- css style -->
-<link rel="stylesheet" href="style.css">
-<!-- render math to pdf -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$']],
-    processEscapes: true,
-    displayMath: [['$$', '$$']]
-  }
-};
-</script>
-<!--  -->
+<script src="import.js" defer></script>
+<!--  --
+
 <!-- Document start -->
 <h1 id="this-is-a-level-1-heading">This is a level 1 heading</h1>
+<p><plan></plan></p>
 <h2 id="this-is-a-level-2-heading">This is a level 2 heading</h2>
 <h3 id="this-is-a-level-3-heading">This is a level 3 heading</h3>
 <h4 id="this-is-a-level-4-heading">This is a level 4 heading</h4>
@@ -439,6 +429,29 @@ This is a verse block.
 <div class="success">
     Here's a success
 </div>
+<div class="remarque">
+    Here's a 'remarque'
+</div>
+<div class="exemple">
+    Here's an 'exemple'
+</div>
+<p>Here are my custom color or highlight elements :</p>
+<p><red>This is a red text</red></p>
+<p><green>This is a green text</green></p>
+<p><blue>This is a blue text</blue></p>
+<p><yellow>This is a yellow text</yellow></p>
+<p><orange>This is an orange text</orange></p>
+<p><purple>This is a purple text</purple></p>
+<p><pink>This is a pink text</pink></p>
+<p><grey>This is a grey text</grey></p>
+<p><hred>This is a red highlight</hred></p>
+<p><hgreen>This is a green highlight</hgreen></p>
+<p><hblue>This is a blue highlight</hblue></p>
+<p><hyellow>This is a yellow highlight</hyellow></p>
+<p><horange>This is an orange highlight</horange></p>
+<p><hpurple>This is a purple highlight</hpurple></p>
+<p><hpink>This is a pink highlight</hpink></p>
+<p><hgrey>This is a grey highlight</hgrey></p>
 <p>Here's some inline code: <code>console.log('Hello, world!');</code></p>
 <p>Here's a code block:</p>
 <pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b</span>) </span>{
@@ -471,6 +484,8 @@ This is a verse block.
 <hr>
 <p>Here's a footnote[^1].</p>
 <p>[^1]: This is a footnote.</p>
+<p>This is my <fnote>custom footnote || And here is the explaination</fnote></p>
+<p>Here is a <fnote>second custom footnote || And here is the explaination of the second one</fnote></p>
 <p>Here's a definition list:</p>
 <p>Term 1
 : Definition 1</p>

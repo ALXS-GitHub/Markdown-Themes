@@ -1,23 +1,8 @@
 <!-- example Markdown file -->
 
 <!-- css style -->
-<link rel="stylesheet" href="style.css">
 
-<!-- render math to pdf -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$']],
-    processEscapes: true,
-    displayMath: [['$$', '$$']]
-  }
-};
-</script>
-
-<!-- toc script, add <plan></plan> in the document -->
-<script src="javascript/toc.js" defer></script>
+<script src="import.js" defer></script>
 
 <!--  --
 
@@ -101,69 +86,37 @@ This is a verse block.
 
 Here are my custom color or highlight elements : 
 
-<red>
-This is a red text
-</red>
+<red>This is a red text</red>
 
-<green>
-This is a green text
-</green>
+<green>This is a green text</green>
 
-<blue>
-This is a blue text
-</blue>
+<blue>This is a blue text</blue>
 
-<yellow>
-This is a yellow text
-</yellow>
+<yellow>This is a yellow text</yellow>
 
-<orange>
-This is an orange text
-</orange>
+<orange>This is an orange text</orange>
 
-<purple>
-This is a purple text
-</purple>
+<purple>This is a purple text</purple>
 
-<pink>
-This is a pink text
-</pink>
+<pink>This is a pink text</pink>
 
-<grey>
-This is a grey text
-</grey>
+<grey>This is a grey text</grey>
 
-<hred>
-This is a red highlight
-</hred>
+<hred>This is a red highlight</hred>
 
-<hgreen>
-This is a green highlight
-</hgreen>
+<hgreen>This is a green highlight</hgreen>
 
-<hblue>
-This is a blue highlight
-</hblue>
+<hblue>This is a blue highlight</hblue>
 
-<hyellow>
-This is a yellow highlight
-</hyellow>
+<hyellow>This is a yellow highlight</hyellow>
 
-<horange>
-This is an orange highlight
-</horange>
+<horange>This is an orange highlight</horange>
 
-<hpurple>
-This is a purple highlight
-</hpurple>
+<hpurple>This is a purple highlight</hpurple>
 
-<hpink>
-This is a pink highlight
-</hpink>
+<hpink>This is a pink highlight</hpink>
 
-<hgrey>
-This is a grey highlight
-</hgrey>
+<hgrey>This is a grey highlight</hgrey>
 
 Here's some inline code: `console.log('Hello, world!');`
 
@@ -195,6 +148,10 @@ Here's a horizontal rule:
 Here's a footnote[^1].
 
 [^1]: This is a footnote.
+
+This is my <fnote>custom footnote || And here is the explaination</fnote>
+
+Here is a <fnote>second custom footnote || And here is the explaination of the second one</fnote>
 
 Here's a definition list:
 

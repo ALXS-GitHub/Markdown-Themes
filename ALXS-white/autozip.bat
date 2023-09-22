@@ -1,1 +1,1 @@
-zip ALXS-white.zip context.md style.css -r javascript
+zip ALXS-white.zip context.md style.css import.js -r javascript
