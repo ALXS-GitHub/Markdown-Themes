@@ -5,6 +5,8 @@ body {
     color: black;
 }
 
+/* & p */
+
 p {
     text-align: justify;
 }
@@ -451,11 +453,10 @@ pre {
     color: black !important;
 }
 
-foreignObject div { 
+foreignObject div {
     overflow-wrap: wrap !important;
     padding-right: 0px !important;
 }
-
 
 /* @ mermaid arrows pattern (solid) */
 

@@ -16,11 +16,16 @@ window.MathJax = {
 };
 </script>
 
-<!--  -->
+<!-- toc script, add <plan></plan> in the document -->
+<script src="javascript/toc.js" defer></script>
+
+<!--  --
 
 <!-- Document start -->
 
 # This is a level 1 heading
+
+<plan></plan>
 
 ## This is a level 2 heading
 
