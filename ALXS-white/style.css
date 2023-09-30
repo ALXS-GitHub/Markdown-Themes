@@ -224,8 +224,8 @@ blockquote {
 }
 
 .warning .block-title::before {
-    mask-image: url("./icons/warning.svg");
-    -webkit-mask-image: url("./icons/warning.svg");
+    mask-image: var(--warning-url);
+    -webkit-mask-image: var(--warning-url);
     background-color: var(--warning-color);
 }
 
@@ -241,8 +241,8 @@ blockquote {
 }
 
 .info .block-title::before {
-    mask-image: url("./icons/info.svg");
-    -webkit-mask-image: url("./icons/info.svg");
+    mask-image: var(--info-url);
+    -webkit-mask-image: var(--info-url);
     background-color: var(--info-color);
 }
 
@@ -258,8 +258,8 @@ blockquote {
 }
 
 .success .block-title::before {
-    mask-image: url("./icons/success.svg");
-    -webkit-mask-image: url("./icons/success.svg");
+    mask-image: var(--success-url);
+    -webkit-mask-image: var(--success-url);
     background-color: var(--success-color);
 }
 
@@ -275,8 +275,8 @@ blockquote {
 }
 
 .error .block-title::before {
-    mask-image: url("./icons/error.svg");
-    -webkit-mask-image: url("./icons/error.svg");
+    mask-image: var(--error-url);
+    -webkit-mask-image: var(--error-url);
     background-color: var(--error-color);
 }
 
@@ -292,8 +292,8 @@ blockquote {
 }
 
 .definition .block-title::before {
-    mask-image: url("./icons/note.svg");
-    -webkit-mask-image: url("./icons/note.svg");
+    mask-image: var(--note-url);
+    -webkit-mask-image: var(--note-url);
     background-color: var(--note-color);
 }
 
@@ -309,8 +309,8 @@ blockquote {
 }
 
 .tip .block-title::before {
-    mask-image: url("./icons/tip.svg");
-    -webkit-mask-image: url("./icons/tip.svg");
+    mask-image: var(--tip-url);
+    -webkit-mask-image: var(--tip-url);
     background-color: var(--tip-color);
 }
 
@@ -326,8 +326,8 @@ blockquote {
 }
 
 .important .block-title::before {
-    mask-image: url("./icons/important.svg");
-    -webkit-mask-image: url("./icons/important.svg");
+    mask-image: var(--important-url);
+    -webkit-mask-image: var(--important-url);
     background-color: var(--important-color);
 }
 
@@ -343,8 +343,8 @@ blockquote {
 }
 
 .note .block-title::before {
-    mask-image: url("./icons/note.svg");
-    -webkit-mask-image: url("./icons/note.svg");
+    mask-image: var(--note-url);
+    -webkit-mask-image: var(--note-url);
     background-color: var(--note-color);
 }
 
@@ -360,8 +360,8 @@ blockquote {
 }
 
 .abstract .block-title::before {
-    mask-image: url("./icons/abstract.svg");
-    -webkit-mask-image: url("./icons/abstract.svg");
+    mask-image: var(--abstract-url);
+    -webkit-mask-image: var(--abstract-url);
     background-color: var(--abstract-color);
 }
 
@@ -377,8 +377,8 @@ blockquote {
 }
 
 .example .block-title::before {
-    mask-image: url("./icons/example.svg");
-    -webkit-mask-image: url("./icons/example.svg");
+    mask-image: var(--example-url);
+    -webkit-mask-image: var(--example-url);
     background-color: var(--example-color);
 }
 
@@ -394,8 +394,8 @@ blockquote {
 }
 
 .bug .block-title::before {
-    mask-image: url("./icons/bug.svg");
-    -webkit-mask-image: url("./icons/bug.svg");
+    mask-image: var(--bug-url);
+    -webkit-mask-image: var(--bug-url);
     background-color: var(--bug-color);
 }
 
@@ -411,8 +411,8 @@ blockquote {
 }
 
 .question .block-title::before {
-    mask-image: url("./icons/question.svg");
-    -webkit-mask-image: url("./icons/question.svg");
+    mask-image: var(--question-url);
+    -webkit-mask-image: var(--question-url);
     background-color: var(--question-color);
 }
 
@@ -428,8 +428,8 @@ blockquote {
 }
 
 .quote .block-title::before {
-    mask-image: url("./icons/quote.svg");
-    -webkit-mask-image: url("./icons/quote.svg");
+    mask-image: var(--quote-url);
+    -webkit-mask-image: var(--quote-url);
     background-color: var(--quote-color);
 }
 

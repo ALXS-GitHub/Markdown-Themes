@@ -6,6 +6,12 @@ cssLink.rel = "stylesheet";
 cssLink.href = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/style.min.css";
 document.head.appendChild(cssLink);
 
+// create link element for url CSS file
+var cssLink = document.createElement("link");
+cssLink.rel = "stylesheet";
+cssLink.href = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/cdnurl.min.css";
+document.head.appendChild(cssLink);
+
 // create script element for MathJax
 var mathJaxScript = document.createElement("script");
 mathJaxScript.src = "https://polyfill.io/v3/polyfill.min.js?features=es6";

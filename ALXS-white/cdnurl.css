@@ -1,0 +1,15 @@
+:root {
+    --note-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/note.svg");
+    --warning-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/warning.svg");
+    --info-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/info.svg");
+    --success-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/success.svg");
+    --error-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/error.svg");
+    --important-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/important.svg");
+    --tip-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/tip.svg");
+    --abstract-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/abstract.svg");
+    --definition-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/note.svg");
+    --example-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/example.svg");
+    --question-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/question.svg");
+    --bug-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/bug.svg");
+    --quote-url: url("https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/icons/quote.svg");
+}
