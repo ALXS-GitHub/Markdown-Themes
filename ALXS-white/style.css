@@ -1,3 +1,34 @@
+/* & root */
+
+:root {
+    --note-color: #448aff;
+    --warning-color: #ff9100;
+    --info-color: #00b8d4;
+    --success-color: #00c853;
+    --error-color: #ff5252;
+    --important-color: #ff1744;
+    --tip-color: #00bfa5;
+    --abstract-color: #00b0ff;
+    --definition-color: #448aff;
+    --example-color: #7c4dff;
+    --question-color: #64dd17;
+    --bug-color: #f50057;
+    --quote-color: #9e9e9e;
+    --note-bg-color: #448aff4f;
+    --warning-bg-color: #ff91004f;
+    --info-bg-color: #00b8d44f;
+    --success-bg-color: #00c8534f;
+    --error-bg-color: #ff52524f;
+    --important-bg-color: #ff17444f;
+    --tip-bg-color: #00bfa54f;
+    --abstract-bg-color: #00b0ff4f;
+    --definition-bg-color: #448aff4f;
+    --example-bg-color: #7c4dff4f;
+    --question-bg-color: #64dd174f;
+    --bug-bg-color: #f500574f;
+    --quote-bg-color: #9e9e9e4f;
+}
+
 /* & body */
 
 body {
@@ -133,255 +164,279 @@ blockquote {
     margin-bottom: 10px;
 }
 
+/* & custom blocks */
+
+.block-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.block-icon {
+    height: 16px;
+    width: 16px;
+}
+
+.block-title-text {
+    display: block;
+    height: 100%;
+    font-size: 16px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.warning, .info, .success, .error, .important, .tip, .abstract, .definition, .example, .question, .bug, .quote, .note {
+    display: block;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top : 10px;
+    border: 1px solid;
+    border-left: 5px solid;
+}
+
+.block-title::before {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+.block-title-text::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 95%;
+    height: 2px;
+}
+
 /* & warning */
 
 .warning {
-    display: block;
-    border-left: 5px solid #f98304;
-    padding-left: 20px;
-    background-color: #f983044f;
-    position: relative;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+    border-color: var(--warning-color);
+    background-color: var(--warning-bg-color);
 }
 
-.warning::before {
-    content: "⚠️ Warning:";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
-    padding-left: 10px;
-    border-bottom: 1px solid #f98304;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.warning .block-title::before {
+    mask-image: url("./icons/warning.svg");
+    -webkit-mask-image: url("./icons/warning.svg");
+    background-color: var(--warning-color);
+}
+
+.warning .block-title-text::after {
+    background-color: var(--warning-color);
 }
 
 /* & info */
 
 .info {
-    display: block;
-    border-left: 5px solid #2b8eff;
-    padding-left: 20px;
-    background-color: #2b8eff4f;
-    position: relative;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+    border-color: var(--info-color);
+    background-color: var(--info-bg-color);
 }
 
-.info::before {
-    content: "ℹ️ Info:";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
-    padding-left: 10px;
-    border-bottom: 1px solid #2b8eff;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.info .block-title::before {
+    mask-image: url("./icons/info.svg");
+    -webkit-mask-image: url("./icons/info.svg");
+    background-color: var(--info-color);
+}
+
+.info .block-title-text::after {
+    background-color: var(--info-color);
 }
 
 /* & success */
 
 .success {
-    display: block;
-    border-left: 5px solid #2bff04;
-    padding-left: 20px;
-    background-color: #2bff044f;
-    position: relative;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+    border-color: var(--success-color);
+    background-color: var(--success-bg-color);
 }
 
-.success::before {
-    content: "✅ Success:";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
-    padding-left: 10px;
-    border-bottom: 1px solid #2bff04;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.success .block-title::before {
+    mask-image: url("./icons/success.svg");
+    -webkit-mask-image: url("./icons/success.svg");
+    background-color: var(--success-color);
+}
+
+.success .block-title-text::after {
+    background-color: var(--success-color);
 }
 
 /* & error */
 
 .error {
-    display: block;
-    border-left: 5px solid #ff0404;
-    padding-left: 20px;
-    background-color: #ff04044f;
-    position: relative;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+    border-color: var(--error-color);
+    background-color: var(--error-bg-color);
 }
 
-.error::before {
-    content: "❌ Error:";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
-    padding-left: 10px;
-    border-bottom: 1px solid #ff0404;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.error .block-title::before {
+    mask-image: url("./icons/error.svg");
+    -webkit-mask-image: url("./icons/error.svg");
+    background-color: var(--error-color);
+}
+
+.error .block-title-text::after {
+    background-color: var(--error-color);
 }
 
 /* & definition */
 
 .definition {
-    display: block;
-    border-left: 5px solid #2495ff;
-    padding-left: 20px;
-    background-color: #2495ff4f;
-    position: relative;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+    border-color: var(--definition-color);
+    background-color: var(--definition-bg-color);
 }
 
-.definition::before {
-    content: "📖 Definition:";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
-    padding-left: 10px;
-    border-bottom: 1px solid #2495ff;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.definition .block-title::before {
+    mask-image: url("./icons/note.svg");
+    -webkit-mask-image: url("./icons/note.svg");
+    background-color: var(--note-color);
+}
+
+.definition .block-title-text::after {
+    background-color: var(--note-color);
 }
 
 /* & tip */
 
 .tip {
-    display: block;
-    border-left: 5px solid #f9b208;
-    padding-left: 20px;
-    background-color: #f9b2084f;
-    position: relative;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+    border-color: var(--tip-color);
+    background-color: var(--tip-bg-color);
 }
 
-.tip::before {
-    content: "💡 Tip:";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
-    padding-left: 10px;
-    border-bottom: 1px solid #f9b208;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.tip .block-title::before {
+    mask-image: url("./icons/tip.svg");
+    -webkit-mask-image: url("./icons/tip.svg");
+    background-color: var(--tip-color);
+}
+
+.tip .block-title-text::after {
+    background-color: var(--tip-color);
 }
 
 /* & important */
 
 .important {
-    display: block;
-    border-left: 5px solid #fb3e04;
-    padding-left: 20px;
-    background-color: #fb3e044f;
-    position: relative;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+    border-color: var(--important-color);
+    background-color: var(--important-bg-color);
 }
 
-.important::before {
-    content: "❗ Important:";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
-    padding-left: 10px;
-    border-bottom: 1px solid #fb3e04;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.important .block-title::before {
+    mask-image: url("./icons/important.svg");
+    -webkit-mask-image: url("./icons/important.svg");
+    background-color: var(--important-color);
+}
+
+.important .block-title-text::after {
+    background-color: var(--important-color);
 }
 
 /* & note */
 
 .note {
-    display: block;
-    border-left: 5px solid #10b9ed;
-    padding-left: 20px;
-    background-color: #10b9ed4f;
-    position: relative;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+    border-color: var(--note-color);
+    background-color: var(--note-bg-color);
 }
 
-.note::before {
-    content: "📝 Note:";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
-    padding-left: 10px;
-    border-bottom: 1px solid #10b9ed;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.note .block-title::before {
+    mask-image: url("./icons/note.svg");
+    -webkit-mask-image: url("./icons/note.svg");
+    background-color: var(--note-color);
 }
 
-/* & remarque */
-
-.remarque {
-    display: block;
-    border-left: 5px solid #f7c177;
-    padding-left: 20px;
-    background-color: #f7c1774f;
-    position: relative;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.note .block-title-text::after {
+    background-color: var(--note-color);
 }
 
-.remarque::before {
-    content: "📌 Remarque:";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
-    padding-left: 10px;
-    border-bottom: 1px solid #f7c177;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+/* & abstract */
+
+.abstract {
+    border-color: var(--abstract-color);
+    background-color: var(--abstract-bg-color);
 }
 
-/* & Exemple */
-
-.exemple {
-    display: block;
-    border-left: 5px solid #ccc;
-    padding-left: 20px;
-    background-color: #cccccc4f;
-    position: relative;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.abstract .block-title::before {
+    mask-image: url("./icons/abstract.svg");
+    -webkit-mask-image: url("./icons/abstract.svg");
+    background-color: var(--abstract-color);
 }
 
-.exemple::before {
-    content: "✏️ Exemple:";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
-    padding-left: 10px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
-    page-break-inside: avoid;
+.abstract .block-title-text::after {
+    background-color: var(--abstract-color);
 }
+
+/* & Example */
+
+.example {
+    border-color: var(--example-color);
+    background-color: var(--example-bg-color);
+}
+
+.example .block-title::before {
+    mask-image: url("./icons/example.svg");
+    -webkit-mask-image: url("./icons/example.svg");
+    background-color: var(--example-color);
+}
+
+.example .block-title-text::after {
+    background-color: var(--example-color);
+}
+
+/* & bug */
+
+.bug {
+    border-color: var(--bug-color);
+    background-color: var(--bug-bg-color);
+}
+
+.bug .block-title::before {
+    mask-image: url("./icons/bug.svg");
+    -webkit-mask-image: url("./icons/bug.svg");
+    background-color: var(--bug-color);
+}
+
+.bug .block-title-text::after {
+    background-color: var(--bug-color);
+}
+
+/* & question */
+
+.question {
+    border-color: var(--question-color);
+    background-color: var(--question-bg-color);
+}
+
+.question .block-title::before {
+    mask-image: url("./icons/question.svg");
+    -webkit-mask-image: url("./icons/question.svg");
+    background-color: var(--question-color);
+}
+
+.question .block-title-text::after {
+    background-color: var(--question-color);
+}
+
+/* & quote */
+
+.quote {
+    border-color: var(--quote-color);
+    background-color: var(--quote-bg-color);
+}
+
+.quote .block-title::before {
+    mask-image: url("./icons/quote.svg");
+    -webkit-mask-image: url("./icons/quote.svg");
+    background-color: var(--quote-color);
+}
+
+.quote .block-title-text::after {
+    background-color: var(--quote-color);
+}
+
 
 /* & tables */
 

@@ -34,3 +34,9 @@ var tocScript = document.createElement("script");
 tocScript.src = "javascript/footnotes.js";
 tocScript.defer = true;
 document.head.appendChild(tocScript);
+
+// create script element for custom blocks
+var tocScript = document.createElement("script");
+tocScript.src = "javascript/customblocks.js";
+tocScript.defer = true;
+document.head.appendChild(tocScript);

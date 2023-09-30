@@ -68,7 +68,7 @@ This is a verse block.
     Here's something important
 </div>
 
-<div class="error">
+<div class="error"> 
     Here's an error
 </div>
 
@@ -76,12 +76,24 @@ This is a verse block.
     Here's a success
 </div>
 
-<div class="remarque">
-    Here's a 'remarque'
+<div class="abstract">
+    Here's an abstract
 </div>
 
-<div class="exemple">
-    Here's an 'exemple'
+<div class="example">
+    Here's an example
+</div>
+
+<div class="question">
+    Here's a question
+</div>
+
+<div class="quote">
+    Here's a quote
+</div>
+
+<div class="bug">
+    Here's an bug
 </div>
 
 Here are my custom color or highlight elements : 
