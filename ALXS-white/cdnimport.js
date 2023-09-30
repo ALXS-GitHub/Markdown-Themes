@@ -9,7 +9,7 @@ document.head.appendChild(cssLink);
 // create link element for url CSS file
 var cssLink = document.createElement("link");
 cssLink.rel = "stylesheet";
-cssLink.href = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/cdnurl.min.css";
+cssLink.href = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/cdnurl.css";
 document.head.appendChild(cssLink);
 
 // create script element for MathJax
