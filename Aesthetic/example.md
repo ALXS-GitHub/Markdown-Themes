@@ -211,14 +211,6 @@ graph LR;
     C-->D;
 ```
 
-Here's a plantuml diagram:
-
-```plantuml
-@startuml
-Bob -> Alice : hello
-@enduml
-```
-
 Here's a sequence diagram:
 
 ```mermaid

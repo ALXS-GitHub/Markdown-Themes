@@ -1,0 +1,15 @@
+:root {
+    --note-url: url("./icons/note.svg");
+    --warning-url: url("./icons/warning.svg");
+    --info-url: url("./icons/info.svg");
+    --success-url: url("./icons/success.svg");
+    --error-url: url("./icons/error.svg");
+    --important-url: url("./icons/important.svg");
+    --tip-url: url("./icons/tip.svg");
+    --abstract-url: url("./icons/abstract.svg");
+    --definition-url: url("./icons/note.svg");
+    --example-url: url("./icons/example.svg");
+    --question-url: url("./icons/question.svg");
+    --bug-url: url("./icons/bug.svg");
+    --quote-url: url("./icons/quote.svg");
+}
