@@ -79,6 +79,7 @@ p {
 h1 {
     text-align: center;
     font-size: 50px;
+    font-weight: bold;
     text-decoration: none;
     border: none;
     text-transform: uppercase;
@@ -86,6 +87,7 @@ h1 {
     display: block;
     margin-bottom: 10px;
     padding-bottom: 0;
+    line-height: 60px;
 }
 
 h1::after {
@@ -106,6 +108,7 @@ h1::after {
 
 h2 {
     font-size: 30px;
+    font-weight: bold;
     text-decoration: none;
     text-align: center;
     border: none;
@@ -113,6 +116,7 @@ h2 {
     text-shadow: 2px 3px 0px var(--blue7bg);
     margin-bottom: 10px;
     padding-bottom: 0;
+    line-height: 38px;
 }
 
 h2::after {
@@ -133,12 +137,14 @@ h2::after {
 
 h3 {
     font-size: 25px;
+    font-weight: bold;
     text-decoration: none;
     border: none;
     display: block;
     text-shadow: 2px 3px 0px var(--blue5bg);
     margin-bottom: 10px;
     padding-bottom: 0;
+    line-height: 32px;
 }
 
 h3::after {
@@ -159,12 +165,15 @@ h3::after {
 
 h4 {
     font-size: 20px;
+    font-weight: bold;
     text-decoration: none;
     border: none;
     display: inline-block;
     text-shadow: 2px 3px 0px var(--blue3bg);
     margin-bottom: 10px;
     padding: 0;
+    margin-top: 0;
+    line-height: 26px;
 }
 
 h4::after {
@@ -760,6 +769,8 @@ plan {
     margin-bottom: 10px;
     margin-left: 10px;
     padding-bottom: 0;
+    margin-top : 10px;
+    line-height: 100%;
 }
 
 .plan-title::after {
@@ -767,13 +778,14 @@ plan {
     display: block;
     position: relative;
     z-index: -1;
-    top:-24px;
+    top: -16px;
     left: -10px;
     border-radius: 4px;
     width: 140%;
     height: 14px;
     background-color: var(--blue6bg);
-    margin: 0px auto;
+    margin: 0;
+    padding: 0;
 }
 
 .plan-item-2 {
