@@ -7,6 +7,7 @@ This repository contains a collection of themes for the Markdown editor and allo
 ## Available Themes
 
 - ALXS-white
+- Aesthetic
 
 (the other themes are just in development)
 
