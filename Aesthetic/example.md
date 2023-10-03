@@ -136,6 +136,8 @@ Here's a code block:
 
 ```javascript
 function add(a, b) {
+    a = a + 1;
+    b = 2 + 1 + 2;
   return a + b;
 }
 ```
