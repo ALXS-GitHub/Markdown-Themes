@@ -643,6 +643,10 @@ code {
     border-radius: 4px;
 }
 
+.language-mermaid * {
+    font-family: var(--font) !important;
+}
+
 pre code * {
     font-family: 'Courier New', Courier, monospace !important;
 }
@@ -873,4 +877,34 @@ footnote a {
     color: #333;
     text-decoration: none;
     vertical-align: baseline;
+}
+
+/* & mermaid sequence diagram */
+
+rect.actor {
+    fill: #ececff !important;
+    stroke: #dacef3 !important;
+    stroke-width: 2px !important;
+}
+
+rect.note {
+    fill: #fff5ad !important;
+    stroke: #f5e79e !important;
+    stroke-width: 2px !important;
+}
+
+text.actor tspan, text.noteText tspan {
+    fill: #333 !important;
+}
+
+g line {
+    stroke: #88b6dd !important;
+}
+
+text.messageText {
+    fill: #333 !important;
+}
+
+line[class^="messageLine"] {
+    stroke: #333 !important;
 }

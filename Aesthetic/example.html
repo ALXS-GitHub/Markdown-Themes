@@ -394,6 +394,31 @@ Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob-->Alice: I am good thanks!
 </div></code></pre>
+<p>Here’s a class diagram:</p>
+<pre><code class="language-mermaid"><div class="mermaid">classDiagram
+    class Animal {
+        -name: string
+        -age: int
+        +eat(): void
+        +sleep(): void
+    }
+    class Dog {
+        -breed: string
+        +bark(): void
+    }
+    class Cat {
+        -color: string
+        +meow(): void
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+</div></code></pre>
+<p>Here’s a plantuml diagram:</p>
+<pre class="hljs"><code><div>@startuml
+Alice -&gt; Bob: Authentication Request
+Bob --&gt; Alice: Authentication Response
+@enduml
+</div></code></pre>
 
     </body>
     </html>

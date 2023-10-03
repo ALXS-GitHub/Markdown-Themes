@@ -221,3 +221,25 @@ Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob-->Alice: I am good thanks!
 ```
+
+Here's a class diagram:
+
+```mermaid
+classDiagram
+    class Animal {
+        -name: string
+        -age: int
+        +eat(): void
+        +sleep(): void
+    }
+    class Dog {
+        -breed: string
+        +bark(): void
+    }
+    class Cat {
+        -color: string
+        +meow(): void
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
