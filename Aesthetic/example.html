@@ -228,7 +228,7 @@ pre code {
     <body>
         <!-- example Markdown file -->
 <!-- css style -->
-<script src="import.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/cdnimport.js" defer></script>
 <!--  --
 
 <!-- Document start -->
@@ -415,8 +415,22 @@ Bob-->Alice: I am good thanks!
 </div></code></pre>
 <p>Here’s a plantuml diagram:</p>
 <pre class="hljs"><code><div>@startuml
-Alice -&gt; Bob: Authentication Request
-Bob --&gt; Alice: Authentication Response
+class Animal {
+    -name: string
+    -age: int
+    +eat(): void
+    +sleep(): void
+}
+class Dog {
+    -breed: string
+    +bark(): void
+}
+class Cat {
+    -color: string
+    +meow(): void
+}
+Animal &lt;|-- Dog
+Animal &lt;|-- Cat
 @enduml
 </div></code></pre>
 

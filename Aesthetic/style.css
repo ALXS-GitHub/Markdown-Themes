@@ -908,3 +908,15 @@ text.messageText {
 line[class^="messageLine"] {
     stroke: #333 !important;
 }
+
+/* & bluebox */
+
+bluebox {
+    background-image: linear-gradient(to right, var(--blue3), var(--blue4), var(--blue5), var(--blue6), var(--blue7));
+    display: block;
+    color: white;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 4px 4px 8px 1px var(--blue9bg);
+    border-radius: 8px;
+  }

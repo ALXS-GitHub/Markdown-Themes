@@ -243,3 +243,30 @@ classDiagram
     Animal <|-- Dog
     Animal <|-- Cat
 ```
+
+Here's a plantuml diagram:
+
+```plantuml
+@startuml
+class Animal {
+    -name: string
+    -age: int
+    +eat(): void
+    +sleep(): void
+}
+class Dog {
+    -breed: string
+    +bark(): void
+}
+class Cat {
+    -color: string
+    +meow(): void
+}
+Animal <|-- Dog
+Animal <|-- Cat
+@enduml
+```
+
+<bluebox>
+    Phasellus egestas feugiat aliquet. Proin ut sollicitudin diam. Sed at commodo est. Fusce non volutpat orci. Cras semper auctor hendrerit. Integer molestie efficitur augue, ac tincidunt ante pulvinar id. Nunc urna velit, pharetra vitae tincidunt et, pulvinar ac quam. Vivamus ornare at sem nec iaculis. Integer nec tortor convallis, mattis ante sit amet, bibendum magna. Nunc suscipit tellus nec pretium placerat. Nullam maximus dictum gravida. Nullam euismod lobortis velit eget sodales.
+</bluebox>
