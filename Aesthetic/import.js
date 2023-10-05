@@ -51,4 +51,7 @@ document.head.appendChild(tocScript);
 var colorScript = document.createElement("script");
 colorScript.src = "javascript/color.js";
 colorScript.defer = true;
+colorScript.onload = function() {
+    document.color = new document.Color();
+};
 document.head.appendChild(colorScript);

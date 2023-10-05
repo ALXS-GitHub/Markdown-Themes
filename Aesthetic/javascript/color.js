@@ -81,26 +81,30 @@ const yellow = {
 
 document.Color = class {
     constructor() {
-        this.color = blue;
+        this.color = "blue";
+        this.numberOfColors = 12;
         this.applyTheme();
     }
     applyTheme() {
         const root = document.documentElement;
-        for (const [key, value] of Object.entries(this.color)) {
-            console.log(`${key}: ${value}`);
-            root.style.setProperty(`--${key}`, value);
+        const rootStyle = getComputedStyle(root);
+        for (let i = 0; i < this.numberOfColors; i++) {
+            var colorI = rootStyle.getPropertyValue(`--${this.color}${i}`);
+            var colorIBG = rootStyle.getPropertyValue(`--${this.color}${i}bg`);
+            if (colorI != null && colorI != undefined) {
+                root.style.setProperty(`--color${i}`, colorI);
+            }
+            if (colorIBG != null && colorIBG != undefined) {
+                root.style.setProperty(`--color${i}bg`, colorIBG);
+            }
         }
     }
     setColor(color) {
         if (color == undefined || color == null) {
-            color = blue;
+            color = "blue";
         }
 
         this.color = color;
         this.applyTheme();
     }
 };
-
-document.color = new document.Color();
-
-
