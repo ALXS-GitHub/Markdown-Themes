@@ -28,6 +28,54 @@
     --blue9bg: #0d47a1bb;
     --blue10bg: #002171bb;
     --blue11bg: #001064bb;
+    --pink0: #fce4ec;
+    --pink1: #f8bbd0;
+    --pink2: #f48fb1;
+    --pink3: #f06292;
+    --pink4: #ec407a;
+    --pink5: #e91e63;
+    --pink6: #d81b60;
+    --pink7: #c2185b;
+    --pink8: #ad1457;
+    --pink9: #880e4f;
+    --pink10: #560027;
+    --pink11: #3f003f;
+    --pink0bg: #fce4ecbb;
+    --pink1bg: #f8bbd0bb;
+    --pink2bg: #f48fb1bb;
+    --pink3bg: #f06292bb;
+    --pink4bg: #ec407abb;
+    --pink5bg: #e91e63bb;
+    --pink6bg: #d81b60bb;
+    --pink7bg: #c2185bbb;
+    --pink8bg: #ad1457bb;
+    --pink9bg: #880e4fbb;
+    --pink10bg: #560027bb;
+    --pink11bg: #3f003fbb;
+    --yellow0: #fff9c4;
+    --yellow1: #fff59d;
+    --yellow2: #fff176;
+    --yellow3: #ffee58;
+    --yellow4: #ffeb3b;
+    --yellow5: #fdd835;
+    --yellow6: #fbc02d;
+    --yellow7: #f9a825;
+    --yellow8: #f57f17;
+    --yellow9: #ff6f00;
+    --yellow10: #e65100;
+    --yellow11: #bf360c;
+    --yellow0bg: #fff9c4bb;
+    --yellow1bg: #fff59dbb;
+    --yellow2bg: #fff176bb;
+    --yellow3bg: #ffee58bb;
+    --yellow4bg: #ffeb3bbb;
+    --yellow5bg: #fdd835bb;
+    --yellow6bg: #fbc02dbb;
+    --yellow7bg: #f9a825bb;
+    --yellow8bg: #f57f17bb;
+    --yellow9bg: #ff6f00bb;
+    --yellow10bg: #e65100bb;
+    --yellow11bg: #bf360cbb;
     --note-color: #448aff;
     --warning-color: #ff9100;
     --info-color: #00b8d4;
@@ -83,7 +131,7 @@ h1 {
     text-decoration: none;
     border: none;
     text-transform: uppercase;
-    text-shadow: 2px 4px 0px var(--blue8bg);
+    text-shadow: 2px 4px 0px var(--color8bg);
     display: block;
     margin-bottom: 10px;
     padding-bottom: 0;
@@ -100,7 +148,7 @@ h1::after {
     width: 100%;
     border-radius: 5px;
     height: 34px;
-    background-color: var(--blue8bg);
+    background-color: var(--color8bg);
     margin: 0px auto;
 }
 
@@ -113,7 +161,7 @@ h2 {
     text-align: center;
     border: none;
     display: block;
-    text-shadow: 2px 3px 0px var(--blue7bg);
+    text-shadow: 2px 3px 0px var(--color7bg);
     margin-bottom: 10px;
     padding-bottom: 0;
     line-height: 38px;
@@ -129,7 +177,7 @@ h2::after {
     width: 100%;
     height: 20px;
     border-radius: 5px;
-    background-color: var(--blue7bg);
+    background-color: var(--color7bg);
     margin: 0px auto;
 }
 
@@ -141,7 +189,7 @@ h3 {
     text-decoration: none;
     border: none;
     display: block;
-    text-shadow: 2px 3px 0px var(--blue5bg);
+    text-shadow: 2px 3px 0px var(--color5bg);
     margin-bottom: 10px;
     padding-bottom: 0;
     line-height: 32px;
@@ -159,7 +207,7 @@ h3::after {
     padding-left: 10px;
     height: 18px;
     border-radius: 5px;
-    background-color: var(--blue5bg);
+    background-color: var(--color5bg);
     margin: 0px auto;
 }
 
@@ -171,7 +219,7 @@ h4 {
     text-decoration: none;
     border: none;
     display: inline-block;
-    text-shadow: 2px 3px 0px var(--blue3bg);
+    text-shadow: 2px 3px 0px var(--color3bg);
     margin-bottom: 10px;
     padding: 0 10px;
     margin-top: 0;
@@ -188,7 +236,7 @@ h4::after {
     width: 100%;
     height: 14px;
     border-radius: 5px;
-    background-color: var(--blue3bg);
+    background-color: var(--color3bg);
     margin: 0px auto;
     padding: 0 10px;
 }
@@ -199,7 +247,7 @@ h5 {
     font-size: 18px;
     text-decoration: none;
     border: none;
-    text-shadow: 2px 3px 0px var(--blue2);
+    text-shadow: 2px 3px 0px var(--color2);
 }
 
 /* & h6 */
@@ -208,18 +256,18 @@ h6 {
     font-size: 16px;
     text-decoration: none;
     border: none;
-    text-shadow: 2px 3px 0px var(--blue1);
+    text-shadow: 2px 3px 0px var(--color1);
 }
 
 /* & links */
 
 a {
-    color: var(--blue5);
+    color: var(--color5);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--blue8);
+    color: var(--color8);
     text-decoration: underline;
 }
 
@@ -636,7 +684,7 @@ pre {
 }
 
 code {
-    color: var(--blue5);
+    color: var(--color5);
     font-family: Courier, monospace;
     background-color: #f1f1f1;
     padding: 2px 4px;
@@ -779,7 +827,7 @@ plan {
 .plan-title {
     font-size: 30px;
     display: inline-block;
-    text-shadow: 2px 2px 0px var(--blue6bg);
+    text-shadow: 2px 2px 0px var(--color6bg);
     margin-bottom: 10px;
     margin-left: 10px;
     padding-bottom: 0;
@@ -797,7 +845,7 @@ plan {
     border-radius: 4px;
     width: 140%;
     height: 14px;
-    background-color: var(--blue6bg);
+    background-color: var(--color6bg);
     margin: 0;
     padding: 0;
 }

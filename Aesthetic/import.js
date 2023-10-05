@@ -46,3 +46,9 @@ var tocScript = document.createElement("script");
 tocScript.src = "javascript/customblocks.js";
 tocScript.defer = true;
 document.head.appendChild(tocScript);
+
+// create a script for the color theme
+var colorScript = document.createElement("script");
+colorScript.src = "javascript/color.js";
+colorScript.defer = true;
+document.head.appendChild(colorScript);

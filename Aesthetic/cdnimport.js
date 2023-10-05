@@ -46,3 +46,9 @@ var tocScript = document.createElement("script");
 tocScript.src = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/javascript/customblocks.min.js";
 tocScript.defer = true;
 document.head.appendChild(tocScript);
+
+// create a script for the color theme
+var colorScript = document.createElement("script");
+colorScript.src = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/javascript/color.min.js";
+colorScript.defer = true;
+document.head.appendChild(colorScript);

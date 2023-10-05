@@ -3,6 +3,11 @@
 <!-- css style -->
 
 <script src="import.js" defer></script>
+<script defer>
+	window.addEventListener("load", function() {
+        document.color.setColor(yellow);
+      });
+</script>
 
 <!--  --
 
