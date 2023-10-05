@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
 
 /* & root */
 
 :root {
-    --font: 'Kalam', cursive;
+    --font: "Kalam", cursive;
     --blue0: #e3f2fd;
     --blue1: #bbdefb;
     --blue2: #90caf9;
@@ -76,6 +76,126 @@
     --yellow9bg: #ff6f00bb;
     --yellow10bg: #e65100bb;
     --yellow11bg: #bf360cbb;
+    --red0: #ffebee;
+    --red1: #ffcdd2;
+    --red2: #ef9a9a;
+    --red3: #e57373;
+    --red4: #ef5350;
+    --red5: #f44336;
+    --red6: #e53935;
+    --red7: #d32f2f;
+    --red8: #c62828;
+    --red9: #b71c1c;
+    --red10: #7f0000;
+    --red11: #4a0000;
+    --red0bg: #ffebeebb;
+    --red1bg: #ffcdd2bb;
+    --red2bg: #ef9a9abb;
+    --red3bg: #e57373bb;
+    --red4bg: #ef5350bb;
+    --red5bg: #f44336bb;
+    --red6bg: #e53935bb;
+    --red7bg: #d32f2fbb;
+    --red8bg: #c62828bb;
+    --red9bg: #b71c1cbb;
+    --red10bg: #7f0000bb;
+    --red11bg: #4a0000bb;
+    --green0: #e8f5e9;
+    --green1: #c8e6c9;
+    --green2: #a5d6a7;
+    --green3: #81c784;
+    --green4: #66bb6a;
+    --green5: #4caf50;
+    --green6: #43a047;
+    --green7: #388e3c;
+    --green8: #2e7d32;
+    --green9: #1b5e20;
+    --green10: #003300;
+    --green11: #002200;
+    --green0bg: #e8f5e9bb;
+    --green1bg: #c8e6c9bb;
+    --green2bg: #a5d6a7bb;
+    --green3bg: #81c784bb;
+    --green4bg: #66bb6abb;
+    --green5bg: #4caf50bb;
+    --green6bg: #43a047bb;
+    --green7bg: #388e3cbb;
+    --green8bg: #2e7d32bb;
+    --green9bg: #1b5e20bb;
+    --green10bg: #003300bb;
+    --green11bg: #002200bb;
+    --white0: #ffffff;
+    --white1: #f5f5f5;
+    --white2: #eeeeee;
+    --white3: #e0e0e0;
+    --white4: #bdbdbd;
+    --white5: #9e9e9e;
+    --white6: #757575;
+    --white7: #616161;
+    --white8: #424242;
+    --white9: #212121;
+    --white10: #000000;
+    --white11: #000000;
+    --white0bg: #ffffffbb;
+    --white1bg: #f5f5f5bb;
+    --white2bg: #eeeeeebb;
+    --white3bg: #e0e0e0bb;
+    --white4bg: #bdbdbdbb;
+    --white5bg: #9e9e9ebb;
+    --white6bg: #757575bb;
+    --white7bg: #616161bb;
+    --white8bg: #424242bb;
+    --white9bg: #212121bb;
+    --white10bg: #000000bb;
+    --white11bg: #000000bb;
+    --purple0: #f3e5f5;
+    --purple1: #e1bee7;
+    --purple2: #ce93d8;
+    --purple3: #ba68c8;
+    --purple4: #ab47bc;
+    --purple5: #9c27b0;
+    --purple6: #8e24aa;
+    --purple7: #7b1fa2;
+    --purple8: #6a1b9a;
+    --purple9: #4a148c;
+    --purple10: #12005e;
+    --purple11: #0d0039;
+    --purple0bg: #f3e5f5bb;
+    --purple1bg: #e1bee7bb;
+    --purple2bg: #ce93d8bb;
+    --purple3bg: #ba68c8bb;
+    --purple4bg: #ab47bcbb;
+    --purple5bg: #9c27b0bb;
+    --purple6bg: #8e24aabb;
+    --purple7bg: #7b1fa2bb;
+    --purple8bg: #6a1b9abb;
+    --purple9bg: #4a148cbb;
+    --purple10bg: #12005ebb;
+    --purple11bg: #0d0039bb;
+    --orange0: #fff3e0;
+    --orange1: #ffe0b2;
+    --orange2: #ffcc80;
+    --orange3: #ffb74d;
+    --orange4: #ffa726;
+    --orange5: #ff9800;
+    --orange6: #fb8c00;
+    --orange7: #f57c00;
+    --orange8: #ef6c00;
+    --orange9: #e65100;
+    --orange10: #bf360c;
+    --orange11: #870000;
+    --orange0bg: #fff3e0bb;
+    --orange1bg: #ffe0b2bb;
+    --orange2bg: #ffcc80bb;
+    --orange3bg: #ffb74dbb;
+    --orange4bg: #ffa726bb;
+    --orange5bg: #ff9800bb;
+    --orange6bg: #fb8c00bb;
+    --orange7bg: #f57c00bb;
+    --orange8bg: #ef6c00bb;
+    --orange9bg: #e65100bb;
+    --orange10bg: #bf360cbb;
+    --orange11bg: #870000bb;
     --note-color: #448aff;
     --warning-color: #ff9100;
     --info-color: #00b8d4;
@@ -143,7 +263,7 @@ h1::after {
     display: block;
     position: relative;
     z-index: -1;
-    top:-40px;
+    top: -40px;
     left: 0;
     width: 100%;
     border-radius: 5px;
@@ -172,7 +292,7 @@ h2::after {
     display: block;
     position: relative;
     z-index: -1;
-    top:-20px;
+    top: -20px;
     left: 0;
     width: 100%;
     height: 20px;
@@ -201,7 +321,7 @@ h3::after {
     display: block;
     position: relative;
     z-index: -1;
-    top:-18px;
+    top: -18px;
     left: -10px;
     width: 100%;
     padding-left: 10px;
@@ -231,7 +351,7 @@ h4::after {
     display: block;
     position: relative;
     z-index: -1;
-    top:-14px;
+    top: -14px;
     left: -10px;
     width: 100%;
     height: 14px;
@@ -317,7 +437,19 @@ blockquote {
     text-align: center;
 }
 
-.warning, .info, .success, .error, .important, .tip, .abstract, .definition, .example, .question, .bug, .quote, .note {
+.warning,
+.info,
+.success,
+.error,
+.important,
+.tip,
+.abstract,
+.definition,
+.example,
+.question,
+.bug,
+.quote,
+.note {
     display: block;
     padding-left: 20px;
     position: relative;
@@ -325,7 +457,7 @@ blockquote {
     page-break-inside: avoid;
     border-radius: 5px;
     padding-bottom: 10px;
-    padding-top : 10px;
+    padding-top: 10px;
     border: 1px solid;
     border-left: 5px solid;
 }
@@ -572,7 +704,6 @@ blockquote {
     background-color: var(--quote-color);
 }
 
-
 /* & tables */
 
 table {
@@ -642,11 +773,10 @@ pre {
     color: black !important;
 }
 
-foreignObject div { 
+foreignObject div {
     overflow-wrap: wrap !important;
     padding-right: 0px !important;
 }
-
 
 /* @ mermaid arrows pattern (solid) */
 
@@ -696,7 +826,7 @@ code {
 }
 
 pre code * {
-    font-family: 'Courier New', Courier, monospace !important;
+    font-family: "Courier New", Courier, monospace !important;
 }
 
 pre code {
@@ -813,7 +943,22 @@ hgrey {
     border-radius: 5px;
 }
 
-red, green, blue, yellow, orange, purple, pink, grey, hred, hgreen, hblue, hyellow, horange, hpurple, hpink, hgrey {
+red,
+green,
+blue,
+yellow,
+orange,
+purple,
+pink,
+grey,
+hred,
+hgreen,
+hblue,
+hyellow,
+horange,
+hpurple,
+hpink,
+hgrey {
     display: inline-block;
 }
 
@@ -831,7 +976,7 @@ plan {
     margin-bottom: 10px;
     margin-left: 10px;
     padding-bottom: 0;
-    margin-top : 10px;
+    margin-top: 10px;
     line-height: 100%;
 }
 
@@ -865,11 +1010,15 @@ plan {
     padding-left: 120px;
 }
 
-.plan-item-2 span, .plan-item-3 span, .plan-item-4 span {
+.plan-item-2 span,
+.plan-item-3 span,
+.plan-item-4 span {
     margin-right: 14px;
 }
 
-.plan-item-2 a, .plan-item-3 a, .plan-item-4 a {
+.plan-item-2 a,
+.plan-item-3 a,
+.plan-item-4 a {
     color: black;
     transition: color 0.2s ease-in-out;
 }
@@ -941,7 +1090,8 @@ rect.note {
     stroke-width: 2px !important;
 }
 
-text.actor tspan, text.noteText tspan {
+text.actor tspan,
+text.noteText tspan {
     fill: #333 !important;
 }
 
@@ -960,11 +1110,18 @@ line[class^="messageLine"] {
 /* & bluebox */
 
 bluebox {
-    background-image: linear-gradient(to right, var(--blue3), var(--blue4), var(--blue5), var(--blue6), var(--blue7));
+    background-image: linear-gradient(
+        to right,
+        var(--blue3),
+        var(--blue4),
+        var(--blue5),
+        var(--blue6),
+        var(--blue7)
+    );
     display: block;
     color: white;
     padding: 16px;
     margin: 16px 0;
     box-shadow: 4px 4px 8px 1px var(--blue9bg);
     border-radius: 8px;
-  }
+}

@@ -39,8 +39,6 @@ for example with the ALXS-white theme:
 
 ## Usage
 
-(Based on the ALXS-white theme)
-
 The themes provide a set of custom elements that you can use in your markdown file.
 
 ### Colors
@@ -52,17 +50,22 @@ You can use the following script to change the main color of the theme:
 ```html
 <script defer>
 	window.addEventListener("load", function() {
-        document.color.setColor(yellow);
+        document.color.setColor("<color>");
       });
 </script>
 ```
 
-where `color` is a variable that contains the color you want to use.
+where `color` is a string representing the color you want to use.
 
 For the moment, the available colors are:
 - `blue` (default)
 - `yellow`
 - `pink`
+- `green`
+- `red`
+- `purple`
+- `orange`
+- `white`
 
 ### Titles
 
