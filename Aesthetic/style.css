@@ -1131,6 +1131,7 @@ bluebox {
     margin: 16px 0;
     box-shadow: 4px 4px 8px 1px var(--blue9bg);
     border-radius: 8px;
+    page-break-inside: avoid;
 }
 
 greenbox {
@@ -1148,6 +1149,7 @@ greenbox {
     margin: 16px 0;
     box-shadow: 4px 4px 8px 1px var(--green9bg);
     border-radius: 8px;
+    page-break-inside: avoid;
 }
 
 yellowbox {
@@ -1165,6 +1167,7 @@ yellowbox {
     margin: 16px 0;
     box-shadow: 4px 4px 8px 1px var(--yellow9bg);
     border-radius: 8px;
+    page-break-inside: avoid;
 }
 
 redbox {
@@ -1182,6 +1185,7 @@ redbox {
     margin: 16px 0;
     box-shadow: 4px 4px 8px 1px var(--red9bg);
     border-radius: 8px;
+    page-break-inside: avoid;
 }
 
 pinkbox {
@@ -1199,6 +1203,7 @@ pinkbox {
     margin: 16px 0;
     box-shadow: 4px 4px 8px 1px var(--pink9bg);
     border-radius: 8px;
+    page-break-inside: avoid;
 }
 
 purplebox {
@@ -1216,6 +1221,7 @@ purplebox {
     margin: 16px 0;
     box-shadow: 4px 4px 8px 1px var(--purple9bg);
     border-radius: 8px;
+    page-break-inside: avoid;
 }
 
 whitebox {
@@ -1233,6 +1239,7 @@ whitebox {
     margin: 16px 0;
     box-shadow: 4px 4px 8px 1px var(--white9bg);
     border-radius: 8px;
+    page-break-inside: avoid;
 }
 
 orangebox {
@@ -1250,4 +1257,5 @@ orangebox {
     margin: 16px 0;
     box-shadow: 4px 4px 8px 1px var(--orange9bg);
     border-radius: 8px;
+    page-break-inside: avoid;
 }

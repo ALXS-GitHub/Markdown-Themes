@@ -37,6 +37,12 @@ for example with the ALXS-white theme:
 <script src="https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/ALXS-white/cdnimport.js"></script>
 ```
 
+for example with the Aesthetic theme:
+
+```md
+<script src="https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/cdnimport.js"></script>
+```
+
 ## Usage
 
 The themes provide a set of custom elements that you can use in your markdown file.
@@ -45,7 +51,7 @@ The themes provide a set of custom elements that you can use in your markdown fi
 
 #### Aesthetic
 
-You can use the following script to change the main color of the theme:
+You have to use the following script to set the main color of the theme:
 
 ```html
 <script defer>

@@ -2,10 +2,10 @@
 
 <!-- css style -->
 
-<script src="import.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/cdnimport.js" defer></script>
 <script defer>
 	window.addEventListener("load", function() {
-        document.color.setColor("yellow");
+        document.color.setColor("blue");
       });
 </script>
 
