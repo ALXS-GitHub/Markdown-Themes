@@ -228,7 +228,7 @@ pre code {
     <body>
         <!-- example Markdown file -->
 <!-- css style -->
-<script src="import.js"></script>
+<script src="import.js" defer></script>
 <script defer>
 	window.addEventListener("load", function() {
         document.color.setColor("yellow");
@@ -388,8 +388,8 @@ $$</p>
 <p>Here’s some emoji: 🐻</p>
 <p>This is a mermaid diagram:</p>
 <pre><code class="language-mermaid"><div class="mermaid">graph LR;
-    A-->B;
-    A-->C;
+    A-->|text goes here|B;
+    A-->|text goes here|C;
     B-->D[here is a very long node,<br> i want to break it into multiple lines];
     C-->D;
 </div></code></pre>
@@ -438,6 +438,9 @@ Animal &lt;|-- Dog
 Animal &lt;|-- Cat
 @enduml
 </div></code></pre>
+<bluebox>
+    Phasellus egestas feugiat aliquet. Proin ut sollicitudin diam. Sed at commodo est. Fusce non volutpat orci. Cras semper auctor hendrerit. Integer molestie efficitur augue, ac tincidunt ante pulvinar id. Nunc urna velit, pharetra vitae tincidunt et, pulvinar ac quam. Vivamus ornare at sem nec iaculis. Integer nec tortor convallis, mattis ante sit amet, bibendum magna. Nunc suscipit tellus nec pretium placerat. Nullam maximus dictum gravida. Nullam euismod lobortis velit eget sodales.
+</bluebox>
 
     </body>
     </html>

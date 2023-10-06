@@ -212,8 +212,8 @@ This is a mermaid diagram:
 
 ```mermaid
 graph LR;
-    A-->B;
-    A-->C;
+    A-->|text goes here|B;
+    A-->|text goes here|C;
     B-->D[here is a very long node,<br> i want to break it into multiple lines];
     C-->D;
 ```

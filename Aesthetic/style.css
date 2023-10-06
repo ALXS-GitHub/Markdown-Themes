@@ -766,6 +766,13 @@ pre {
     stroke-width: 2px !important;
 }
 
+/* @ mermaid edgeLabel */
+
+.edgeLabel {
+    background-color: #f5f5f5 !important;
+    color: black !important;
+}
+
 /* @ mermaid text color / node width */
 
 .nodeLabel {
