@@ -228,7 +228,7 @@ pre code {
     <body>
         <!-- example Markdown file -->
 <!-- css style -->
-<script src="https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/cdnimport.js" defer></script>
+<script src="import.js" defer></script>
 <!-- <script defer>
 	window.addEventListener("load", function() {
         document.color.setColor("blue");
@@ -392,6 +392,10 @@ $$</p>
     A-->|text goes here|C;
     B-->D[here is a very long node,<br> i want to break it into multiple lines];
     C-->D;
+
+    subgraph S[Group Name]
+        D-->|text|E;
+    end
 </div></code></pre>
 <p>Here’s a sequence diagram:</p>
 <pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram

@@ -740,7 +740,12 @@ table th:hover {
 
 pre {
     page-break-inside: avoid !important;
-    color: white !important;
+    color: #333 !important;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
 }
 
 /* @ mermaid component */
@@ -769,7 +774,7 @@ pre {
 /* @ mermaid edgeLabel */
 
 .edgeLabel {
-    background-color: #f5f5f5 !important;
+    background-color: white !important;
     color: black !important;
 }
 
@@ -799,6 +804,14 @@ foreignObject div {
     stroke: #333 !important;
 }
 
+/* @ cluster */
+
+.cluster rect {
+    fill: var(--color5bg) !important;
+    stroke: var(--color5) !important;
+    stroke-width: 2px !important;
+}
+
 /* & horizontal line */
 
 hr {
@@ -810,7 +823,7 @@ hr {
 
 /* & code */
 
-pre {
+pre:not(:has(code.language-mermaid)) {
     background-color: #f5f5f5;
     color: #333 !important;
     padding: 10px;
