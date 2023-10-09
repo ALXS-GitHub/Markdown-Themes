@@ -3,7 +3,7 @@
 // create link element for CSS file
 var cssLink = document.createElement("link");
 cssLink.rel = "stylesheet";
-cssLink.href = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@1.1.4/Aesthetic/style.min.css";
+cssLink.href = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/style.min.css";
 document.head.appendChild(cssLink);
 
 // create link element for url CSS file
