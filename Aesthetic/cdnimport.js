@@ -3,13 +3,13 @@
 // create link element for CSS file
 var cssLink = document.createElement("link");
 cssLink.rel = "stylesheet";
-cssLink.href = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/style.css";
+cssLink.href = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/style.min.css";
 document.head.appendChild(cssLink);
 
 // create link element for url CSS file
 var cssLink = document.createElement("link");
 cssLink.rel = "stylesheet";
-cssLink.href = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/cdnurl.css";
+cssLink.href = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/cdnurl.min.css";
 document.head.appendChild(cssLink);
 
 // create script element for MathJax
