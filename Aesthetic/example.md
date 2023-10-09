@@ -3,11 +3,11 @@
 <!-- css style -->
 
 <script src="https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/cdnimport.js" defer></script>
-<script defer>
+<!-- <script defer>
 	window.addEventListener("load", function() {
         document.color.setColor("blue");
       });
-</script>
+</script> -->
 
 <!--  --
 
