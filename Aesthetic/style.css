@@ -1272,3 +1272,156 @@ orangebox {
     border-radius: 8px;
     page-break-inside: avoid;
 }
+
+blueformula {
+    background-image: linear-gradient(
+        to right,
+        var(--blue3),
+        var(--blue4),
+        var(--blue5),
+        var(--blue6),
+        var(--blue7)
+    );
+    display: inline-block;
+    white-space:nowrap;
+    color: white;
+    padding: 4px;
+    margin: 4px 0;
+    box-shadow: 2px 2px 4px 1px var(--blue9bg);
+    border-radius: 4px;
+    page-break-inside: avoid;
+}
+
+greenformula {
+    background-image: linear-gradient(
+        to right,
+        var(--green3),
+        var(--green4),
+        var(--green5),
+        var(--green6),
+        var(--green7)
+    );
+    display: inline-block;
+    white-space:nowrap;
+    color: white;
+    padding: 4px;
+    margin: 4px 0;
+    box-shadow: 2px 2px 4px 1px var(--green9bg);
+    border-radius: 4px;
+    page-break-inside: avoid;
+}
+
+yellowformula {
+    background-image: linear-gradient(
+        to right,
+        var(--yellow3),
+        var(--yellow4),
+        var(--yellow5),
+        var(--yellow6),
+        var(--yellow7)
+    );
+    display: inline-block;
+    white-space:nowrap;
+    color: white;
+    padding: 4px;
+    margin: 4px 0;
+    box-shadow: 2px 2px 4px 1px var(--yellow9bg);
+    border-radius: 4px;
+    page-break-inside: avoid;
+}
+
+redformula {
+    background-image: linear-gradient(
+        to right,
+        var(--red3),
+        var(--red4),
+        var(--red5),
+        var(--red6),
+        var(--red7)
+    );
+    display: inline-block;
+    white-space:nowrap;
+    color: white;
+    padding: 4px;
+    margin: 4px 0;
+    box-shadow: 2px 2px 4px 1px var(--red9bg);
+    border-radius: 4px;
+    page-break-inside: avoid;
+}
+
+pinkformula {
+    background-image: linear-gradient(
+        to right,
+        var(--pink3),
+        var(--pink4),
+        var(--pink5),
+        var(--pink6),
+        var(--pink7)
+    );
+    display: inline-block;
+    white-space:nowrap;
+    color: white;
+    padding: 4px;
+    margin: 4px 0;
+    box-shadow: 2px 2px 4px 1px var(--pink9bg);
+    border-radius: 4px;
+    page-break-inside: avoid;
+}
+
+purpleformula {
+    background-image: linear-gradient(
+        to right,
+        var(--purple3),
+        var(--purple4),
+        var(--purple5),
+        var(--purple6),
+        var(--purple7)
+    );
+    display: inline-block;
+    white-space:nowrap;
+    color: white;
+    padding: 4px;
+    margin: 4px 0;
+    box-shadow: 2px 2px 4px 1px var(--purple9bg);
+    border-radius: 4px;
+    page-break-inside: avoid;
+}
+
+whiteformula {
+    background-image: linear-gradient(
+        to right,
+        var(--white3),
+        var(--white4),
+        var(--white5),
+        var(--white6),
+        var(--white7)
+    );
+    display: inline-block;
+    white-space:nowrap;
+    color: black;
+    padding: 4px;
+    margin: 4px 0;
+    box-shadow: 2px 2px 4px 1px var(--white9bg);
+    border-radius: 4px;
+    page-break-inside: avoid;
+}
+
+orangeformula {
+    background-image: linear-gradient(
+        to right,
+        var(--orange3),
+        var(--orange4),
+        var(--orange5),
+        var(--orange6),
+        var(--orange7)
+    );
+    display: inline-block;
+    white-space:nowrap;
+    color: white;
+    padding: 4px;
+    margin: 4px 0;
+    box-shadow: 2px 2px 4px 1px var(--orange9bg);
+    border-radius: 4px;
+    page-break-inside: avoid;
+}
+
