@@ -55,3 +55,12 @@ colorScript.onload = function() {
     document.color = new document.Color();
 };
 document.head.appendChild(colorScript);
+
+// create a script for the font theme
+var fontScript = document.createElement("script");
+fontScript.src = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/javascript/font.min.js";
+fontScript.defer = true;
+fontScript.onload = function() {
+    document.font = new document.Font();
+};
+document.head.appendChild(fontScript);

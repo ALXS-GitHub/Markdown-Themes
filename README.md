@@ -73,6 +73,30 @@ For the moment, the available colors are:
 - `orange`
 - `white`
 
+You can also use the following script to change the font of different elements:
+
+```html
+<script defer>
+  window.addEventListener("load", function() {
+        document.font.<Method>("<font>");
+      });
+</script>
+```
+
+where `Method` is representing the element you want to change and `font` is a string representing the font you want to use.
+
+The available methods are:
+- `setBodyFont`
+- `setTitleFont`
+- `setMermaidFont`
+- `setFormulaFont`
+- `setFont` (for all the elements)
+
+the available fonts are:
+- `helvetica`
+- `arial`
+- `kalam`
+
 ### Titles
 
 You can use title with the usual markdown syntax:

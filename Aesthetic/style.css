@@ -3,7 +3,14 @@
 /* & root */
 
 :root {
-    --font: "Kalam", cursive;
+    --font: "Arial", cursive;
+    --font-title: "Kalam", cursive;
+    --font-body: "Kalam", cursive;
+    --font-formula: "Arial", sans-serif;
+    --font-mermaid: "Kalam", sans-serif;
+    --font-kalam: "Kalam", cursive;
+    --font-helevetica: "Helvetica", sans-serif;
+    --font-arial: "Arial", sans-serif;
     --blue0: #e3f2fd;
     --blue1: #bbdefb;
     --blue2: #90caf9;
@@ -228,6 +235,20 @@
 
 * {
     font-family: var(--font);
+}
+
+/* & fonts */
+
+body * {
+    font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6, plan * {
+    font-family: var(--font-title);
+}
+
+blueformula, redformula, greenformula, yellowformula, purpleformula, pinkformula, orangeformula, whiteformula {
+    font-family: var(--font-formula);
 }
 
 /* & body */
@@ -842,7 +863,7 @@ code {
 }
 
 .language-mermaid * {
-    font-family: var(--font) !important;
+    font-family: var(--font-mermaid) !important;
 }
 
 pre code * {
