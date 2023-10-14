@@ -107,6 +107,8 @@ This is a verse block.
     Here's an bug
 </div>
 
+<pagebreak></pagebreak>
+
 Here are my custom color or highlight elements : 
 
 <red>This is a red text</red>
