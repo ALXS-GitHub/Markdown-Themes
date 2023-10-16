@@ -776,6 +776,10 @@ pre {
     color: white !important;
 }
 
+.mermaid * {
+    font-family: var(--font-mermaid) !important;
+}
+
 /* @ mermaid svg */
 
 .mermaid svg {

@@ -8,11 +8,11 @@
         document.color.setColor("blue");
       });
 </script> -->
-<!-- <script defer>
+<script defer>
   window.addEventListener("load", function() {
-        document.font.setTitleFont("arial");
+        document.font.setMermaidFont("arial");
       });
-</script> -->
+</script>
 
 
 <!--  --
