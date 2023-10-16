@@ -5,7 +5,7 @@ document.Font = class {
         this.title = "kalam";
         this.body = "kalam";
         this.formula = "arial";
-        this.mermaid = "kalam";
+        this.mermaid = "arial";
         this.applyTheme();
     }
 
@@ -78,13 +78,13 @@ document.Font = class {
 
     setMermaidFont(font) {
         if (font == null || font == undefined) {
-            font = "kalam";
+            font = "arial";
         }
 
         font = font.toLowerCase();
 
         if (!availableFonts.includes(font)) {
-            font = "kalam";
+            font = "arial";
         }
 
         this.mermaid = font;

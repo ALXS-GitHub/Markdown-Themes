@@ -8,11 +8,11 @@
         document.color.setColor("blue");
       });
 </script> -->
-<script defer>
+<!-- <script defer>
   window.addEventListener("load", function() {
-        document.font.setMermaidFont("arial");
+        document.font.setMermaidFont("helvetica");
       });
-</script>
+</script> -->
 
 
 <!--  --
@@ -228,6 +228,34 @@ graph LR;
     subgraph S[Group Name]
         D-->|text|E;
     end
+```
+
+```mermaid
+graph LR
+
+0((q0)) -->|"[0-9]"| 1(((q1)))
+1 -->|"[0-9]"| 1
+1 --> N[number]
+0 -->|"[a-zA-Z]"| 2(((q2)))
+2 -->|"[a-zA-Z0-9_]"| 2
+2 --> I[identifier]
+2 -->|if matches a keyword| K["keyword (specific token)"]
+0 -->|"[\ s \ n]"| 0
+3 -->|"-"| 5((q5))
+5 -->|"\w"| 5
+5 -->|"\ n"| 6(((q6)))
+6 --> C[/comment/]
+0 -->|"[+, -, *, /, <, >, =, .]"| 3(((q3)))
+3 -->|"-"| 4b(((q4b)))
+3 -->|"[+, *, /, <, >, =, .]"| 4(((q4)))
+4b -->|"-"| 5
+4 --> O[operator]
+4b --> O[operator]
+0 -->|"'"| 7((q7))
+7 -->|"\w"| 8((q8))
+8 -->|"'"| 9(((q9)))
+8 -->|"\w"| e1{{error}}
+9 --> Ca[character]
 ```
 
 Here's a sequence diagram:
