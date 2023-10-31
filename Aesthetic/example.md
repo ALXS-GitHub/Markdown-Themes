@@ -5,7 +5,7 @@
 <script src="import.js" defer></script>
 <!-- <script defer>
 	window.addEventListener("load", function() {
-        document.color.setColor("blue");
+        document.color.setColor("red");
       });
 </script> -->
 <!-- <script defer>
