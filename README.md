@@ -203,6 +203,12 @@ This will automatically generate a table of footnotes at the end of the document
 
 All the other markdown syntax and elements are supported.
 
+## Extension
+
+### Snippets
+
+Use `Ctrl + Space` to open the snippets menu and select the snippet you want to use.
+
 ## Author
 
 - [ALXS-GitHub](https://github.com/ALXS-GitHub)

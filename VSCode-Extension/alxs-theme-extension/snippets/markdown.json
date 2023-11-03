@@ -1,0 +1,15 @@
+{
+    "Theme Content": {
+        "prefix": "!aesthetic",
+        "body": [
+            "<script src=\"https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/cdnimport.js\"></script>",
+            "<script defer>",
+            "\twindow.addEventListener(\"load\", function() {",
+            "\tdocument.color.setColor(\"blue\");",
+            "\tdocument.font.setFont(\"arial\");",
+            "});",
+            "</script>"
+        ],
+        "description": "Inserts the Aesthetic theme into your markdown file."
+    }
+}

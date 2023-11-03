@@ -4,3 +4,5 @@
 /ideas
 /.vscode
 /AestheticFormulas
+**/node_modules
+**.vsix

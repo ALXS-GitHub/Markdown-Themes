@@ -1,0 +1,214 @@
+{
+    "name": "alxs-theme-extension",
+    "displayName": "ALXS-Theme-Extension",
+    "description": "This extension is made to use the ALXS Markdown Themes more easly",
+    "icon": "icon.jpg",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.84.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "alxs-theme-extension.helloWorld",
+                "title": "Hello World"
+            },
+            {
+                "command": "alxs-theme-extension.colorblue",
+                "title": "Color Blue"
+            },
+            {
+                "command": "alxs-theme-extension.colorred",
+                "title": "Color Red"
+            },
+            {
+                "command": "alxs-theme-extension.colorgreen",
+                "title": "Color Green"
+            },
+            {
+                "command": "alxs-theme-extension.colororange",
+                "title": "Color Orange"
+            },
+            {
+                "command": "alxs-theme-extension.colorpurple",
+                "title": "Color Purple"
+            },
+            {
+                "command": "alxs-theme-extension.colorpink",
+                "title": "Color Pink"
+            },
+            {
+                "command": "alxs-theme-extension.coloryellow",
+                "title": "Color Yellow"
+            },
+            {
+                "command": "alxs-theme-extension.colorwhite",
+                "title": "Color White"
+            },
+            {
+                "command": "alxs-theme-extension.highlightblue",
+                "title": "Highlight Blue"
+            },
+            {
+                "command": "alxs-theme-extension.highlightred",
+                "title": "Highlight Red"
+            },
+            {
+                "command": "alxs-theme-extension.highlightgreen",
+                "title": "Highlight Green"
+            },
+            {
+                "command": "alxs-theme-extension.highlightorange",
+                "title": "Highlight Orange"
+            },
+            {
+                "command": "alxs-theme-extension.highlightpurple",
+                "title": "Highlight Purple"
+            },
+            {
+                "command": "alxs-theme-extension.highlightpink",
+                "title": "Highlight Pink"
+            },
+            {
+                "command": "alxs-theme-extension.highlightyellow",
+                "title": "Highlight Yellow"
+            },
+            {
+                "command": "alxs-theme-extension.highlightwhite",
+                "title": "Highlight White"
+            },
+            {
+                "command": "alxs-theme-extension.highlightwhite",
+                "title": "Highlight White"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "markdown",
+                "path": "./snippets/markdown.json"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "submenu": "changeColor",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "navigation@first"
+                }
+            ],
+            "changeColor": [
+                {
+                    "submenu": "Color",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "submenu": "Highlight",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }
+            ],
+            "Color": [
+                {
+                    "command": "alxs-theme-extension.colorblue",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.colorred",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.colorgreen",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.colororange",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.colorpurple",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.colorpink",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.coloryellow",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.colorwhite",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }
+            ],
+            "Highlight": [
+                {
+                    "command": "alxs-theme-extension.highlightblue",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.highlightred",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.highlightgreen",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.highlightorange",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.highlightpurple",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.highlightpink",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.highlightyellow",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.highlightwhite",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }
+            ]
+        },
+        "submenus": [
+            {
+                "id": "changeColor",
+                "label": "Change Color"
+            },
+            {
+                "id": "Color",
+                "label": "Color"
+            },
+            {
+                "id": "Highlight",
+                "label": "Highlight"
+            }
+        ]
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.3",
+        "@types/node": "18.x",
+        "@types/vscode": "^1.84.0",
+        "@vscode/test-electron": "^2.3.6",
+        "eslint": "^8.52.0",
+        "glob": "^10.3.10",
+        "mocha": "^10.2.0",
+        "typescript": "^5.2.2",
+        "vscode": "^1.1.37"
+    }
+}
