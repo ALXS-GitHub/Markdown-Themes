@@ -3,7 +3,7 @@
     "displayName": "ALXS-Theme-Extension",
     "description": "This extension is made to use the ALXS Markdown Themes more easly",
     "icon": "icon.jpg",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.84.0"
     },
@@ -85,6 +85,74 @@
             {
                 "command": "alxs-theme-extension.highlightwhite",
                 "title": "Highlight White"
+            },
+            {
+                "command": "alxs-theme-extension.addThemeaesthetic",
+                "title": "Add Theme Aesthetic"
+            },
+            {
+                "command": "alxs-theme-extension.addThemealxs-white",
+                "title": "Add Theme ALXS-white"
+            },
+            {
+                "command": "alxs-theme-extension.componentsfnote",
+                "title": "Add footnote"
+            },
+            {
+                "command": "alxs-theme-extension.componentsplan",
+                "title": "Add plan"
+            },
+            {
+                "command": "alxs-theme-extension.componentspagebreak",
+                "title": "Add page break"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblockdefinition",
+                "title": "Definition Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblocknote",
+                "title": "Note Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblockwarning",
+                "title": "Warning Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblocktip",
+                "title": "Tip Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblockimportant",
+                "title": "Important Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblockerror",
+                "title": "Error Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblocksucess",
+                "title": "Sucess Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblockabstract",
+                "title": "Abstract Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblockexample",
+                "title": "Example Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblockquestion",
+                "title": "Question Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblockquote",
+                "title": "Quote Block"
+            },
+            {
+                "command": "alxs-theme-extension.componentscustomblockbug",
+                "title": "Bug Block"
             }
         ],
         "snippets": [
@@ -98,7 +166,17 @@
                 {
                     "submenu": "changeColor",
                     "when": "editorTextFocus && resourceLangId == markdown",
-                    "group": "navigation@first"
+                    "group": "0_AlxsThemeExtension"
+                },
+                {
+                    "submenu": "AddTheme",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "0_AlxsThemeExtension"
+                },
+                {
+                    "submenu": "Components",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "0_AlxsThemeExtension"
                 }
             ],
             "changeColor": [
@@ -178,6 +256,84 @@
                     "command": "alxs-theme-extension.highlightwhite",
                     "when": "editorTextFocus && resourceLangId == markdown"
                 }
+            ],
+            "AddTheme": [
+                {
+                    "command": "alxs-theme-extension.addThemeaesthetic",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.addThemealxs-white",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }
+            ],
+            "Components": [
+                {
+                    "submenu": "CustomBlocks",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentsfnote",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentsplan",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentspagebreak",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }
+            ],
+            "CustomBlocks": [
+                {
+                    "command": "alxs-theme-extension.componentscustomblockdefinition",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblocknote",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblockwarning",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblocktip",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblockimportant",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblockerror",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblocksucess",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblockabstract",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblockexample",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblockquestion",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblockquote",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.componentscustomblockbug",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }
             ]
         },
         "submenus": [
@@ -192,6 +348,18 @@
             {
                 "id": "Highlight",
                 "label": "Highlight"
+            },
+            {
+                "id": "AddTheme",
+                "label": "Add Theme"
+            },
+            {
+                "id": "Components",
+                "label": "Components"
+            },
+            {
+                "id": "CustomBlocks",
+                "label": "Custom Blocks"
             }
         ]
     },
