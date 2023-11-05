@@ -20,3 +20,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 -   Added new menu commands to add the selected theme to the current file
 -   Added other components like plan, footnotes, custom blocks, etc.
+
+## [0.0.3] - 05-11-2023
+
+### Added
+
+-   Added the possiblility to add boxes and formulas to the current file
