@@ -3,7 +3,7 @@
     "displayName": "ALXS-Theme-Extension",
     "description": "This extension is made to use the ALXS Markdown Themes more easly",
     "icon": "icon.jpg",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "engines": {
         "vscode": "^1.84.0"
     },
@@ -217,6 +217,46 @@
             {
                 "command": "alxs-theme-extension.boxesformulawhite",
                 "title": "White Formula"
+            },
+            {
+                "command": "alxs-theme-extension.blank",
+                "title": "Blank"
+            },
+            {
+                "command": "alxs-theme-extension.grids2",
+                "title": "2 Column Grid"
+            },
+            {
+                "command": "alxs-theme-extension.grids3",
+                "title": "3 Column Grid"
+            },
+            {
+                "command": "alxs-theme-extension.alignementsleft",
+                "title": "Align Left"
+            },
+            {
+                "command": "alxs-theme-extension.alignementscenter",
+                "title": "Align Center"
+            },
+            {
+                "command": "alxs-theme-extension.alignementsright",
+                "title": "Align Right"
+            },
+            {
+                "command": "alxs-theme-extension.effectsb",
+                "title": "Bold"
+            },
+            {
+                "command": "alxs-theme-extension.effectsi",
+                "title": "Italic"
+            },
+            {
+                "command": "alxs-theme-extension.effectsu",
+                "title": "Underline"
+            },
+            {
+                "command": "alxs-theme-extension.effectss",
+                "title": "Strikethrough"
             }
         ],
         "snippets": [
@@ -244,6 +284,16 @@
                 },
                 {
                     "submenu": "CustomBoxes",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "0_AlxsThemeExtension"
+                },
+                {
+                    "submenu": "Alignement",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "0_AlxsThemeExtension"
+                },
+                {
+                    "submenu": "Effects",
                     "when": "editorTextFocus && resourceLangId == markdown",
                     "group": "0_AlxsThemeExtension"
                 }
@@ -342,6 +392,10 @@
                     "when": "editorTextFocus && resourceLangId == markdown"
                 },
                 {
+                    "submenu": "Grids",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
                     "command": "alxs-theme-extension.componentsfnote",
                     "when": "editorTextFocus && resourceLangId == markdown"
                 },
@@ -351,6 +405,10 @@
                 },
                 {
                     "command": "alxs-theme-extension.componentspagebreak",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.blank",
                     "when": "editorTextFocus && resourceLangId == markdown"
                 }
             ],
@@ -481,6 +539,48 @@
                     "command": "alxs-theme-extension.boxesformulawhite",
                     "when": "editorTextFocus && resourceLangId == markdown"
                 }
+            ],
+            "Grids": [
+                {
+                    "command": "alxs-theme-extension.grids2",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.grids3",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }
+            ],
+            "Alignement": [
+                {
+                    "command": "alxs-theme-extension.alignementsleft",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.alignementscenter",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.alignementsright",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }
+            ],
+            "Effects": [
+                {
+                    "command": "alxs-theme-extension.effectsb",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.effectsi",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.effectsu",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.effectss",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }
             ]
         },
         "submenus": [
@@ -519,7 +619,20 @@
             {
                 "id": "Formulas",
                 "label": "Formulas"
+            },
+            {
+                "id": "Grids",
+                "label": "Grids"
+            },
+            {
+                "id": "Alignement",
+                "label": "Alignement"
+            },
+            {
+                "id": "Effects",
+                "label": "Text effects"
             }
+
         ]
     },
     "scripts": {

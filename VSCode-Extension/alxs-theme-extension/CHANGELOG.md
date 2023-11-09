@@ -26,3 +26,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Added
 
 -   Added the possiblility to add boxes and formulas to the current file
+
+## [0.0.4] - 09-11-2023
+
+### Added
+
+-   Added new components like text alignment, grids blank lines, bold italic underline and strikethrough

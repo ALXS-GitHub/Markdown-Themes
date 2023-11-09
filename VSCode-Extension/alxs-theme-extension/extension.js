@@ -57,27 +57,28 @@ function activate(context) {
                 let selection = editor.selection;
                 let text = editor.document.getText(selection);
 
-                editor.edit((editBuilder) => {
-                    editBuilder.replace(
-                        selection,
-                        `<${color}>${text}</${color}>`
-                    );
-                })
-				.then((success) => {
-					// Move cursor to the end of the text
-					if (success) {
-						let position = editor.selection.start;
-						let newPosition = position.translate(
-							0,
-							2 + color.length + text.length
-						); // 3 is the length of "<h>"
-						let newSelection = new vscode.Selection(
-							newPosition,
-							newPosition
-						);
-						editor.selection = newSelection;
-					}
-				});
+                editor
+                    .edit((editBuilder) => {
+                        editBuilder.replace(
+                            selection,
+                            `<${color}>${text}</${color}>`
+                        );
+                    })
+                    .then((success) => {
+                        // Move cursor to the end of the text
+                        if (success) {
+                            let position = editor.selection.start;
+                            let newPosition = position.translate(
+                                0,
+                                2 + color.length + text.length
+                            ); // 3 is the length of "<h>"
+                            let newSelection = new vscode.Selection(
+                                newPosition,
+                                newPosition
+                            );
+                            editor.selection = newSelection;
+                        }
+                    });
             }
         );
 
@@ -249,7 +250,7 @@ function activate(context) {
 
                 let selection = editor.selection;
                 let text = editor.document.getText(selection);
-				text = text.replace(/\n/g, '\n\t');
+                text = text.replace(/\n/g, "\n\t");
 
                 editor
                     .edit((editBuilder) => {
@@ -261,8 +262,8 @@ function activate(context) {
                     .then((success) => {
                         // Move cursor to the end of the text
                         if (success) {
-							let lines = text.split('\n');
-        					let lastLine = lines[lines.length - 1];
+                            let lines = text.split("\n");
+                            let lastLine = lines[lines.length - 1];
                             let position = editor.selection.start;
                             let newPosition = position.translate(
                                 lines.length,
@@ -292,7 +293,7 @@ function activate(context) {
         "pink",
         "white",
     ];
-    
+
     // @ usual boxes
     for (let color in boxesColor) {
         let disposableBox = vscode.commands.registerCommand(
@@ -305,7 +306,7 @@ function activate(context) {
 
                 let selection = editor.selection;
                 let text = editor.document.getText(selection);
-                text = text.replace(/\n/g, '\n\t');
+                text = text.replace(/\n/g, "\n\t");
 
                 editor
                     .edit((editBuilder) => {
@@ -317,8 +318,8 @@ function activate(context) {
                     .then((success) => {
                         // Move cursor to the end of the text
                         if (success) {
-                            let lines = text.split('\n');
-        					let lastLine = lines[lines.length - 1];
+                            let lines = text.split("\n");
+                            let lastLine = lines[lines.length - 1];
                             let position = editor.selection.start;
                             let newPosition = position.translate(
                                 lines.length,
@@ -349,7 +350,7 @@ function activate(context) {
 
                 let selection = editor.selection;
                 let text = editor.document.getText(selection);
-                text = text.replace(/\n/g, '\n\t');
+                text = text.replace(/\n/g, "\n\t");
 
                 editor
                     .edit((editBuilder) => {
@@ -361,8 +362,8 @@ function activate(context) {
                     .then((success) => {
                         // Move cursor to the end of the text
                         if (success) {
-                            let lines = text.split('\n');
-        					let lastLine = lines[lines.length - 1];
+                            let lines = text.split("\n");
+                            let lastLine = lines[lines.length - 1];
                             let position = editor.selection.start;
                             let newPosition = position.translate(
                                 lines.length,
@@ -380,6 +381,146 @@ function activate(context) {
 
         context.subscriptions.push(disposableBox);
     }
+
+    // & grids
+
+    let sizes = ["2", "3"];
+    for (let size of sizes) {
+        let disposableGrid = vscode.commands.registerCommand(
+            `alxs-theme-extension.grids${size}`,
+            function () {
+                let editor = vscode.window.activeTextEditor;
+                if (!editor) {
+                    return; // No open text editor
+                }
+
+                let selection = editor.selection;
+                let text = editor.document.getText(selection);
+                text = text.replace(/\n/g, "\n\t");
+
+                let content = `<div class="grid-container c${size}">\n`;
+                content += `\t<div class="grid-item">\n\t\t${text}\n\t</div>\n`;
+                let intSize = parseInt(size);
+                console.log(size + intSize + '\n');
+                for (let i = 1; i < intSize; i++) {
+                    content += `\t<div class="grid-item">\n\t</div>\n`;
+                }
+
+                content += `</div>`;
+
+                editor.edit((editBuilder) => {
+                    editBuilder.replace(selection, content);
+                });
+            }
+        );
+
+        context.subscriptions.push(disposableGrid);
+    }
+
+    // & blank line
+
+    let disposableBlank = vscode.commands.registerCommand(
+        `alxs-theme-extension.blank`,
+        function () {
+            let editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                return; // No open text editor
+            }
+
+            let position = editor.selection.active;
+            editor.edit((editBuilder) => {
+                editBuilder.insert(position, `<blank></blank>`);
+            });
+        }
+    );
+
+    context.subscriptions.push(disposableBlank);
+
+    // & Alignements
+
+    let alignements = ["left", "center", "right"];
+
+    for (let alignement of alignements) {
+        let disposableAlignement = vscode.commands.registerCommand(
+            `alxs-theme-extension.alignements${alignement}`,
+            function () {
+                let editor = vscode.window.activeTextEditor;
+                if (!editor) {
+                    return; // No open text editor
+                }
+
+                let selection = editor.selection;
+                let text = editor.document.getText(selection);
+
+                editor
+                    .edit((editBuilder) => {
+                        editBuilder.replace(
+                            selection,
+                            `<p class="${alignement}">${text}</p>`
+                        );
+                    })
+                    .then((success) => {
+                        // Move cursor to the end of the text
+                        if (success) {
+                            let position = editor.selection.start;
+                            let newPosition = position.translate(
+                                0,
+                                12 + alignement.length + text.length
+                            ); // 3 is the length of "<h>"
+                            let newSelection = new vscode.Selection(
+                                newPosition,
+                                newPosition
+                            );
+                            editor.selection = newSelection;
+                        }
+                    });
+            }
+        );
+
+        context.subscriptions.push(disposableAlignement);
+    }
+
+    // & Text effects
+
+    let effects = ["b", "i", "u", "s"];
+
+    for (let effect of effects) {
+        let disposableEffect = vscode.commands.registerCommand(
+            `alxs-theme-extension.effects${effect}`,
+            function () {
+                let editor = vscode.window.activeTextEditor;
+                if (!editor) {
+                    return; // No open text editor
+                }
+
+                let selection = editor.selection;
+                let text = editor.document.getText(selection);
+
+                editor
+                    .edit((editBuilder) => {
+                        editBuilder.replace(selection, `<${effect}>${text}</${effect}>`);
+                    })
+                    .then((success) => {
+                        // Move cursor to the end of the text
+                        if (success) {
+                            let position = editor.selection.start;
+                            let newPosition = position.translate(
+                                0,
+                                2 + effect.length + text.length
+                            ); // 3 is the length of "<h>"
+                            let newSelection = new vscode.Selection(
+                                newPosition,
+                                newPosition
+                            );
+                            editor.selection = newSelection;
+                        }
+                    });
+            }
+        );
+
+        context.subscriptions.push(disposableEffect);
+    }
+
 }
 
 // This method is called when your extension is deactivated
