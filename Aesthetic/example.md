@@ -299,6 +299,59 @@ Animal <|-- Cat
     Phasellus egestas feugiat aliquet. Proin ut sollicitudin diam. Sed at commodo est. Fusce non volutpat orci. Cras semper auctor hendrerit. Integer molestie efficitur augue, ac tincidunt ante pulvinar id. Nunc urna velit, pharetra vitae tincidunt et, pulvinar ac quam. Vivamus ornare at sem nec iaculis. Integer nec tortor convallis, mattis ante sit amet, bibendum magna. Nunc suscipit tellus nec pretium placerat. Nullam maximus dictum gravida. Nullam euismod lobortis velit eget sodales.
 </bluebox>
 
+
 <blueformula>
 This is a formula : <br> $f(n) = \frac{1}{n^{2}}$
 </blueformula>
+
+
+<blank></blank>
+
+
+**2 columns grid (default) :**
+
+<div class="grid-container c2">
+  <div class="grid-item">
+    <b>Column 1 text...</b><br>
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+  </div>
+  <div class="grid-item">
+    <b>Column 2 text...</b><br>
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+  </div>
+  <div class="grid-item">
+    </div>
+    <div class="grid-item"><b>Column 3 text...</b><br>
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+    </div>
+</div>
+
+**3 columns grid :**
+
+<div class="grid-container c3">
+  <div class="grid-item">
+    <b>Column 1 text...</b><br>
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+  </div>
+  <div class="grid-item">
+    <b>Column 2 text...</b><br>
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+  </div>
+  <div class="grid-item">
+    </div>
+    <div class="grid-item"><b>Column 3 text...</b><br>
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+    </div>
+    <div class="grid-item">
+    </div>
+    <div class="grid-item"><b>Column 4 text...</b><br>
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+    </div>
+</div>
+
+
+<p class="center">This is a centered paragraph<br>second line here</p>
+
+<p class="right">This is a right-aligned paragraph<br>second line here</p>
+
+<p class="left">This is a left-aligned paragraph<br>second line here</p>

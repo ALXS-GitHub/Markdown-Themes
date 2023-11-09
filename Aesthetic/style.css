@@ -260,6 +260,7 @@
 
 * {
     font-family: var(--font);
+    text-align: justify;
 }
 
 /* & fonts */
@@ -268,11 +269,24 @@ body * {
     font-family: var(--font-body);
 }
 
-h1, h2, h3, h4, h5, h6, plan * {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+plan * {
     font-family: var(--font-title);
 }
 
-blueformula, redformula, greenformula, yellowformula, purpleformula, pinkformula, orangeformula, whiteformula {
+blueformula,
+redformula,
+greenformula,
+yellowformula,
+purpleformula,
+pinkformula,
+orangeformula,
+whiteformula {
     font-family: var(--font-formula);
 }
 
@@ -753,6 +767,7 @@ blockquote {
 /* & tables */
 
 table {
+    margin: 16px auto;
     border-collapse: collapse;
     border-spacing: 0;
     margin-bottom: 10px;
@@ -1094,15 +1109,15 @@ plan {
 }
 
 .plan-item-2 a:hover {
-    color: #f9b208;
+    color: var(--color7);
 }
 
 .plan-item-3 a:hover {
-    color: #f98404;
+    color: var(--color5);
 }
 
 .plan-item-4 a:hover {
-    color: #fc5404;
+    color: var(--color3);
 }
 
 /* & footer */
@@ -1178,6 +1193,10 @@ line[class^="messageLine"] {
 }
 
 /* & bluebox */
+
+bluebox, greenbox, yellowbox, redbox, pinkbox, purplebox, whitebox, orangebox {
+    text-align: justify;
+}
 
 bluebox {
     background-image: linear-gradient(
@@ -1333,7 +1352,7 @@ blueformula {
         var(--blue7)
     );
     display: inline-block;
-    white-space:nowrap;
+    white-space: nowrap;
     color: white;
     padding: 4px;
     margin: 4px 0;
@@ -1352,7 +1371,7 @@ greenformula {
         var(--green7)
     );
     display: inline-block;
-    white-space:nowrap;
+    white-space: nowrap;
     color: white;
     padding: 4px;
     margin: 4px 0;
@@ -1371,7 +1390,7 @@ yellowformula {
         var(--yellow7)
     );
     display: inline-block;
-    white-space:nowrap;
+    white-space: nowrap;
     color: white;
     padding: 4px;
     margin: 4px 0;
@@ -1390,7 +1409,7 @@ redformula {
         var(--red7)
     );
     display: inline-block;
-    white-space:nowrap;
+    white-space: nowrap;
     color: white;
     padding: 4px;
     margin: 4px 0;
@@ -1409,7 +1428,7 @@ pinkformula {
         var(--pink7)
     );
     display: inline-block;
-    white-space:nowrap;
+    white-space: nowrap;
     color: white;
     padding: 4px;
     margin: 4px 0;
@@ -1428,7 +1447,7 @@ purpleformula {
         var(--purple7)
     );
     display: inline-block;
-    white-space:nowrap;
+    white-space: nowrap;
     color: white;
     padding: 4px;
     margin: 4px 0;
@@ -1447,7 +1466,7 @@ whiteformula {
         var(--white7)
     );
     display: inline-block;
-    white-space:nowrap;
+    white-space: nowrap;
     color: black;
     padding: 4px;
     margin: 4px 0;
@@ -1466,7 +1485,7 @@ orangeformula {
         var(--orange7)
     );
     display: inline-block;
-    white-space:nowrap;
+    white-space: nowrap;
     color: white;
     padding: 4px;
     margin: 4px 0;
@@ -1480,4 +1499,58 @@ orangeformula {
 pagebreak {
     display: block;
     page-break-before: always;
+}
+
+/* & grid */
+
+/* @ default grid (2 columns) */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 46% 46%;
+    grid-gap: 0 8%;
+    margin: 16px 0;
+}
+
+.grid-item {
+    display: inline-block;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    margin-top: 16px;
+}
+
+/* @ grid with 2 columns */
+
+.grid-container.c2 {
+    grid-template-columns: 46% 46%;
+    grid-gap: 0 8%;
+}
+
+/* @ grid with 3 columns */
+
+.grid-container.c3 {
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 0 5%;
+}
+
+/* & alignements */
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+/* & blank line */
+
+blank {
+    display: block;
+    height: 20px;
 }
