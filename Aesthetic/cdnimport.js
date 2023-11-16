@@ -35,6 +35,12 @@ tocScript.src = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/
 tocScript.defer = true;
 document.head.appendChild(tocScript);
 
+// create script element for the date
+var tocScript = document.createElement("script");
+tocScript.src = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/javascript/date.min.js";
+tocScript.defer = true;
+document.head.appendChild(tocScript);
+
 // create script element for footnotes
 var tocScript = document.createElement("script");
 tocScript.src = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/Aesthetic/javascript/footnotes.min.js";

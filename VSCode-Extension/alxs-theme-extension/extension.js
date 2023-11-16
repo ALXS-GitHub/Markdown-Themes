@@ -1,6 +1,9 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require("vscode");
+const fs = require("fs");
+const { mdToHtml } = require("./mdtohtml.js");
+const { htmlToPdf } = require("./htmltopdf.js");
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -33,6 +36,7 @@ function activate(context) {
 
     context.subscriptions.push(disposable);
 
+    // µ Main theme commands
     // & md text color menu
     let colors = [
         "red",
@@ -521,6 +525,147 @@ function activate(context) {
         context.subscriptions.push(disposableEffect);
     }
 
+    // & Author component
+
+    let disposableAuthor = vscode.commands.registerCommand(
+        `alxs-theme-extension.author`,
+        function () {
+            let editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                return; // No open text editor
+            }
+
+            let selection = editor.selection;
+            let text = editor.document.getText(selection);
+
+            editor
+                .edit((editBuilder) => {
+                    editBuilder.replace(selection, `<author>${text}</author>`);
+                })
+                .then((success) => {
+                    // Move cursor to the end of the text
+                    if (success) {
+                        let position = editor.selection.start;
+                        let newPosition = position.translate(
+                            0,
+                            8 + text.length
+                        ); // 3 is the length of "<h>"
+                        let newSelection = new vscode.Selection(
+                            newPosition,
+                            newPosition
+                        );
+                        editor.selection = newSelection;
+                    }
+                });
+        }
+    );
+
+    context.subscriptions.push(disposableAuthor);
+
+    // & Date component
+
+    let disposableDate = vscode.commands.registerCommand(
+        `alxs-theme-extension.date`,
+        function () {
+            let editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                return; // No open text editor
+            }
+
+            let selection = editor.selection;
+            let text = editor.document.getText(selection);
+
+            editor
+                .edit((editBuilder) => {
+                    editBuilder.replace(selection, `<date>${text}</date>`);
+                })
+                .then((success) => {
+                    // Move cursor to the end of the text
+                    if (success) {
+                        let position = editor.selection.start;
+                        let newPosition = position.translate(
+                            0,
+                            6 + text.length
+                        ); // 3 is the length of "<h>"
+                        let newSelection = new vscode.Selection(
+                            newPosition,
+                            newPosition
+                        );
+                        editor.selection = newSelection;
+                    }
+                });
+        }
+    );
+
+    context.subscriptions.push(disposableDate);
+
+    // & Font size
+
+    let sizesFont = ["6", "8", "10", "12", "14", "16", "18", "20", "24", "28", "32", "36", "40", "44", "48", "52"];
+
+    for (let size of sizesFont) {
+        let disposableSize = vscode.commands.registerCommand(
+            `alxs-theme-extension.fontsize${size}`,
+            function () {
+                let editor = vscode.window.activeTextEditor;
+                if (!editor) {
+                    return; // No open text editor
+                }
+
+                let selection = editor.selection;
+                let text = editor.document.getText(selection);
+
+                editor
+                    .edit((editBuilder) => {
+                        editBuilder.replace(selection, `<span class="f${size}">${text}</span>`);
+                    })
+                    .then((success) => {
+                        // Move cursor to the end of the text
+                        if (success) {
+                            let position = editor.selection.start;
+                            let newPosition = position.translate(
+                                0,
+                                16 + size.length + text.length
+                            ); // 3 is the length of "<h>"
+                            let newSelection = new vscode.Selection(
+                                newPosition,
+                                newPosition
+                            );
+                            editor.selection = newSelection;
+                        }
+                    });
+            }
+        );
+
+        context.subscriptions.push(disposableSize);
+    }
+
+
+    // µ Md to pdf commands
+
+    let disposableMdToPdf = vscode.commands.registerCommand(
+        "alxs-theme-extension.mdToPdf",
+        function () {
+            let editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                return; // No open text editor
+            }
+
+            let filePath = editor.document.uri.fsPath;
+
+            const outputHtml = mdToHtml(filePath);
+            console.log(outputHtml);
+            htmlToPdf(outputHtml).then(() => {
+                try {
+                    fs.unlinkSync(outputHtml);
+                } catch (error) {
+                    console.log(error);
+                }
+            });
+        }
+    );
+
+    context.subscriptions.push(disposableMdToPdf);
 }
 
 // This method is called when your extension is deactivated

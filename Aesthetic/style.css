@@ -300,6 +300,7 @@ body {
 
 p {
     text-align: justify;
+    position: relative;
 }
 
 /* & h1 */
@@ -1544,6 +1545,11 @@ pagebreak {
     text-align: right;
 }
 
+span.right {
+    position: absolute;
+    right: 0;
+}
+
 .left {
     text-align: left;
 }
@@ -1553,4 +1559,92 @@ pagebreak {
 blank {
     display: block;
     height: 20px;
+}
+
+/* & author */
+
+author {
+    display: block;
+    font-family: var(--font-title);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+date {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* & font size */
+
+/* available font sizes: 8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 44, 48, 52 px */
+
+.f6 {
+    font-size: 6px;
+}
+
+.f8 {
+    font-size: 8px;
+}
+
+.f10 {
+    font-size: 10px;
+}
+
+.f12 {
+    font-size: 12px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.f20 {
+    font-size: 20px;
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.f28 {
+    font-size: 28px;
+}
+
+.f32 {
+    font-size: 32px;
+}
+
+.f36 {
+    font-size: 36px;
+}
+
+.f40 {
+    font-size: 40px;
+}
+
+.f44 {
+    font-size: 44px;
+}
+
+.f48 {
+    font-size: 48px;
+}
+
+.f52 {
+    font-size: 52px;
 }

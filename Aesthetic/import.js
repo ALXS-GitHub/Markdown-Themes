@@ -35,6 +35,12 @@ tocScript.src = "javascript/toc.js";
 tocScript.defer = true;
 document.head.appendChild(tocScript);
 
+// create script element for the date
+var tocScript = document.createElement("script");
+tocScript.src = "javascript/date.js";
+tocScript.defer = true;
+document.head.appendChild(tocScript);
+
 // create script element for footnotes
 var tocScript = document.createElement("script");
 tocScript.src = "javascript/footnotes.js";

@@ -3,7 +3,7 @@
     "displayName": "ALXS-Theme-Extension",
     "description": "This extension is made to use the ALXS Markdown Themes more easly",
     "icon": "icon.jpg",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "engines": {
         "vscode": "^1.84.0"
     },
@@ -257,6 +257,82 @@
             {
                 "command": "alxs-theme-extension.effectss",
                 "title": "Strikethrough"
+            },
+            {
+                "command": "alxs-theme-extension.author",
+                "title": "Author"
+            },
+            {
+                "command": "alxs-theme-extension.date",
+                "title": "Date"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize6",
+                "title": "Font Size 6"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize8",
+                "title": "Font Size 8"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize10",
+                "title": "Font Size 10"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize12",
+                "title": "Font Size 12"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize14",
+                "title": "Font Size 14"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize16",
+                "title": "Font Size 16"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize18",
+                "title": "Font Size 18"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize20",
+                "title": "Font Size 20"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize24",
+                "title": "Font Size 24"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize28",
+                "title": "Font Size 28"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize32",
+                "title": "Font Size 32"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize36",
+                "title": "Font Size 36"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize40",
+                "title": "Font Size 40"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize44",
+                "title": "Font Size 44"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize48",
+                "title": "Font Size 48"
+            },
+            {
+                "command": "alxs-theme-extension.fontsize52",
+                "title": "Font Size 52"
+            },
+            {
+                "command": "alxs-theme-extension.mdToPdf",
+                "title": "Convert to PDF"
             }
         ],
         "snippets": [
@@ -294,6 +370,16 @@
                 },
                 {
                     "submenu": "Effects",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "0_AlxsThemeExtension"
+                },
+                {
+                    "command": "alxs-theme-extension.mdToPdf",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "0_AlxsThemeExtension@10"
+                },
+                {
+                    "submenu": "FontSizes",
                     "when": "editorTextFocus && resourceLangId == markdown",
                     "group": "0_AlxsThemeExtension"
                 }
@@ -409,6 +495,14 @@
                 },
                 {
                     "command": "alxs-theme-extension.blank",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }, 
+                {
+                    "command": "alxs-theme-extension.author",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
+                    "command": "alxs-theme-extension.date",
                     "when": "editorTextFocus && resourceLangId == markdown"
                 }
             ],
@@ -581,6 +675,88 @@
                     "command": "alxs-theme-extension.effectss",
                     "when": "editorTextFocus && resourceLangId == markdown"
                 }
+            ],
+            "FontSizes": [
+                {
+                    "command": "alxs-theme-extension.fontsize6",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@1"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize8",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@1"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize10",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize12",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize14",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize16",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize18",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize20",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize24",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize28",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize32",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize36",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize40",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize44",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize48",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                },
+                {
+                    "command": "alxs-theme-extension.fontsize52",
+                    "when": "editorTextFocus && resourceLangId == markdown",
+                    "group": "FontSizes@2"
+                }
             ]
         },
         "submenus": [
@@ -631,8 +807,11 @@
             {
                 "id": "Effects",
                 "label": "Text effects"
+            },
+            {
+                "id": "FontSizes",
+                "label": "Font Sizes"
             }
-
         ]
     },
     "scripts": {
@@ -650,5 +829,16 @@
         "mocha": "^10.2.0",
         "typescript": "^5.2.2",
         "vscode": "^1.1.37"
+    },
+    "dependencies": {
+        "gray-matter": "^4.0.3",
+        "highlight.js": "^9.18.1",
+        "markdown-it": "^13.0.2",
+        "markdown-it-checkbox": "^1.1.0",
+        "markdown-it-container": "^3.0.0",
+        "markdown-it-emoji": "^2.0.2",
+        "markdown-it-include": "^2.0.0",
+        "markdown-it-named-headers": "^0.0.4",
+        "puppeteer": "^21.5.2"
     }
 }

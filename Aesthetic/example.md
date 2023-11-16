@@ -8,18 +8,19 @@
         document.color.setColor("red");
       });
 </script> -->
-<!-- <script defer>
+<script defer>
   window.addEventListener("load", function() {
-        document.font.setMermaidFont("helvetica");
+        document.font.setBodyFont("arial");
       });
-</script> -->
-
-
-<!--  --
+</script>
 
 <!-- Document start -->
 
 # This is a level 1 heading
+
+<author>ALXS</author>
+
+<date></date>
 
 <plan></plan>
 
@@ -355,3 +356,39 @@ This is a formula : <br> $f(n) = \frac{1}{n^{2}}$
 <p class="right">This is a right-aligned paragraph<br>second line here</p>
 
 <p class="left">This is a left-aligned paragraph<br>second line here</p>
+
+This is now a span to the right: <span class="right">This is a right-aligned span</span>
+
+Here are the different font-sizes available :
+
+<span class="f6">This is a f6 paragraph</span>
+
+<span class="f8">This is a f8 paragraph</span>
+
+<span class="f10">This is a f10 paragraph</span>
+
+<span class="f12">This is a f12 paragraph</span>
+
+<span class="f14">This is a f14 paragraph</span>
+
+<span class="f16">This is a f16 paragraph</span>
+
+<span class="f18">This is a f18 paragraph</span>
+
+<span class="f20">This is a f20 paragraph</span>
+
+<span class="f24">This is a f24 paragraph</span>
+
+<span class="f28">This is a f28 paragraph</span>
+
+<span class="f32">This is a f32 paragraph</span>
+
+<span class="f36">This is a f36 paragraph</span>
+
+<span class="f40">This is a f40 paragraph</span>
+
+<span class="f44">This is a f44 paragraph</span>
+
+<span class="f48">This is a f48 paragraph</span>
+
+<span class="f52">This is a f52 paragraph</span>
