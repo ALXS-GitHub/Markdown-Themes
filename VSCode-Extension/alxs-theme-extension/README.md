@@ -14,11 +14,7 @@ This is a theme extension for the [alxs](https://github.com/ALXS-GitHub) Theme i
 
 By right clicking in a markdown file, the menu will appear. Here you can chose any of the options to customize your markdown file.
 
-![](images/2023-11-24-20-34-33.png)
-
 You can also use all the available commands in the left sidebar.
-
-![](images/2023-11-24-20-39-59.png)
 
 ## Features
 
