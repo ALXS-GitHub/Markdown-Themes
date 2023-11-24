@@ -229,14 +229,14 @@ function mdToHtml(mdPath) {
     
     if (!fs.existsSync(mdPath)) {
         console.log(`File ${mdPath} does not exist in the current directory`);
-        process.exit(1);
+        throw new Error(`File ${mdPath} does not exist in the current directory`);
     }
     if (path.extname(mdPath) !== ".md") {
         console.log("File is not markdown");
-        process.exit(1);
+        throw new Error("File is not markdown");
     }
     const html = makeHtml(mdPath);
-    const outputFilename = mdPath.replace(/\.md$/, ".html");
+    const outputFilename = mdPath.replace(/\.md$/, "_tmp.html");
     fs.writeFileSync(outputFilename, html);
     return outputFilename;
 }

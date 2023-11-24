@@ -8,15 +8,22 @@ async function htmlToPdf(htmlPath) {
 
     if (!fs.existsSync(htmlPath)) {
         console.log(`File ${htmlPath} does not exist`);
-        process.exit(1);
+        throw new Error(`File ${htmlPath} does not exist`);
     }
 
     if (path.extname(htmlPath) !== ".html") {
         console.log("File is not html");
-        process.exit(1);
+        throw new Error("File is not html");
     }
 
-    const outputFilename = htmlPath.replace(/\.html$/, ".pdf");
+    let outputFilename;
+
+    if (path.basename(htmlPath).endsWith("_tmp.html")) {
+        console.log("File is already a temporary file")
+        outputFilename = htmlPath.replace(/_tmp\.html$/, ".pdf");
+    } else {
+        outputFilename = htmlPath.replace(/\.html$/, ".pdf");
+    }
 
     const browser = await puppeteer.launch({ headless: 'new' });
     const page = await browser.newPage();

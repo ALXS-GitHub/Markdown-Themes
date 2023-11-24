@@ -513,6 +513,7 @@ blockquote {
 .note {
     display: block;
     padding-left: 20px;
+    padding-right: 20px;
     position: relative;
     margin-bottom: 10px;
     page-break-inside: avoid;
@@ -540,7 +541,7 @@ blockquote {
     position: absolute;
     left: 0;
     bottom: -3px;
-    width: 95%;
+    width: 100%;
     height: 2px;
 }
 
@@ -941,6 +942,11 @@ pre code {
 
 /* & colors */
 
+/* Color text */
+color {
+    color: var(--color6)
+}
+
 /* Red text */
 red {
     color: red;
@@ -979,6 +985,12 @@ pink {
 /* Grey text */
 grey {
     color: grey;
+}
+
+/* Color highlight */
+hcolor {
+    background-color: var(--color6bg);
+    border-radius: 5px;
 }
 
 /* Red highlight */
@@ -1195,8 +1207,26 @@ line[class^="messageLine"] {
 
 /* & bluebox */
 
-bluebox, greenbox, yellowbox, redbox, pinkbox, purplebox, whitebox, orangebox {
+colorbox, bluebox, greenbox, yellowbox, redbox, pinkbox, purplebox, whitebox, orangebox {
     text-align: justify;
+}
+
+colorbox {
+    background-image: linear-gradient(
+        to right,
+        var(--color3),
+        var(--color4),
+        var(--color5),
+        var(--color6),
+        var(--color7)
+    );
+    display: block;
+    color: white;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 4px 4px 8px 1px var(--color9bg);
+    border-radius: 8px;
+    page-break-inside: avoid;
 }
 
 bluebox {
@@ -1341,6 +1371,26 @@ orangebox {
     box-shadow: 4px 4px 8px 1px var(--orange9bg);
     border-radius: 8px;
     page-break-inside: avoid;
+}
+
+colorformula {
+    background-image: linear-gradient(
+        to right,
+        var(--color3),
+        var(--color4),
+        var(--color5),
+        var(--color6),
+        var(--color7)
+    );
+    display: inline-block;
+    white-space: nowrap;
+    color: white;
+    padding: 4px;
+    margin: 4px 0;
+    box-shadow: 2px 2px 4px 1px var(--color9bg);
+    border-radius: 4px;
+    page-break-inside: avoid;
+
 }
 
 blueformula {

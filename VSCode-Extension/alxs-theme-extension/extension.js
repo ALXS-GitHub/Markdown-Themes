@@ -47,6 +47,7 @@ function activate(context) {
         "purple",
         "pink",
         "white",
+        "color",
     ];
     for (let color of colors) {
         // @ text color
@@ -296,6 +297,7 @@ function activate(context) {
         "purple",
         "pink",
         "white",
+        "color",
     ];
 
     // @ usual boxes
@@ -405,7 +407,7 @@ function activate(context) {
                 let content = `<div class="grid-container c${size}">\n`;
                 content += `\t<div class="grid-item">\n\t\t${text}\n\t</div>\n`;
                 let intSize = parseInt(size);
-                console.log(size + intSize + '\n');
+                console.log(size + intSize + "\n");
                 for (let i = 1; i < intSize; i++) {
                     content += `\t<div class="grid-item">\n\t</div>\n`;
                 }
@@ -502,7 +504,10 @@ function activate(context) {
 
                 editor
                     .edit((editBuilder) => {
-                        editBuilder.replace(selection, `<${effect}>${text}</${effect}>`);
+                        editBuilder.replace(
+                            selection,
+                            `<${effect}>${text}</${effect}>`
+                        );
                     })
                     .then((success) => {
                         // Move cursor to the end of the text
@@ -601,7 +606,24 @@ function activate(context) {
 
     // & Font size
 
-    let sizesFont = ["6", "8", "10", "12", "14", "16", "18", "20", "24", "28", "32", "36", "40", "44", "48", "52"];
+    let sizesFont = [
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "24",
+        "28",
+        "32",
+        "36",
+        "40",
+        "44",
+        "48",
+        "52",
+    ];
 
     for (let size of sizesFont) {
         let disposableSize = vscode.commands.registerCommand(
@@ -617,7 +639,10 @@ function activate(context) {
 
                 editor
                     .edit((editBuilder) => {
-                        editBuilder.replace(selection, `<span class="f${size}">${text}</span>`);
+                        editBuilder.replace(
+                            selection,
+                            `<span class="f${size}">${text}</span>`
+                        );
                     })
                     .then((success) => {
                         // Move cursor to the end of the text
@@ -640,6 +665,45 @@ function activate(context) {
         context.subscriptions.push(disposableSize);
     }
 
+    // & image component
+
+    let disposableImage = vscode.commands.registerCommand(
+        `alxs-theme-extension.image`,
+        function () {
+            let editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                return; // No open text editor
+            }
+
+            let selection = editor.selection;
+            let text = editor.document.getText(selection);
+
+            editor
+                .edit((editBuilder) => {
+                    editBuilder.replace(
+                        selection,
+                        `<img src="${text}" style="width: auto; height: auto" class="" alt=""/>`
+                    );
+                })
+                .then((success) => {
+                    // Move cursor to the end of the text
+                    if (success) {
+                        let position = editor.selection.start;
+                        let newPosition = position.translate(
+                            0,
+                            10 + text.length
+                        ); // 3 is the length of "<h>"
+                        let newSelection = new vscode.Selection(
+                            newPosition,
+                            newPosition
+                        );
+                        editor.selection = newSelection;
+                    }
+                });
+        }
+    );
+
+    context.subscriptions.push(disposableImage);
 
     // µ Md to pdf commands
 
@@ -653,7 +717,14 @@ function activate(context) {
 
             let filePath = editor.document.uri.fsPath;
 
-            const outputHtml = mdToHtml(filePath);
+            let outputHtml;
+            try {
+                outputHtml = mdToHtml(filePath);
+            } catch (error) {
+                console.log(error);
+                return;
+            }
+            
             console.log(outputHtml);
             htmlToPdf(outputHtml).then(() => {
                 try {
@@ -666,6 +737,496 @@ function activate(context) {
     );
 
     context.subscriptions.push(disposableMdToPdf);
+
+    // µ TreeView
+
+    // & Theme Provider
+
+    const themeDataProvider = {
+        getChildren: (element) => {
+            if (!element) {
+                return [
+                    { label: "Theme", id: "theme", iconPath: vscode.Uri.file(context.asAbsolutePath("media/theme.png")) },
+                    {
+                        label: "Color",
+                        id: "color",
+                        iconPath: vscode.Uri.file(
+                            context.asAbsolutePath("media/colors.png")
+                        ),
+                    },
+                    { label: "Alignement", id: "alignement", iconPath: vscode.Uri.file(context.asAbsolutePath("media/alignement.png")) },
+                    { label: "Components", id: "components", iconPath: vscode.Uri.file(context.asAbsolutePath("media/component.png")) },
+                    { label: "Custom Boxes", id: "custom-boxes", iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes.png")) },
+                    { label: "Font Size", id: "font-size", iconPath: vscode.Uri.file(context.asAbsolutePath("media/font-size.png")) },
+                    { label: "Text Effects", id: "text-effects", iconPath: vscode.Uri.file(context.asAbsolutePath("media/text-effect.png")) },
+                    { label: "Convert to PDF", command: "alxs-theme-extension.mdToPdf", iconPath: vscode.Uri.file(context.asAbsolutePath("media/convert-pdf.png"))}
+                ];
+            } else
+                switch (element.id) {
+                    case "theme":
+                        return [
+                            {
+                                label: "Aesthetic",
+                                command:
+                                    "alxs-theme-extension.addThemeaesthetic",
+                            },
+                            {
+                                label: "ALXS-white",
+                                command:
+                                    "alxs-theme-extension.addThemealxs-white",
+                            },
+                        ];
+                    case "color":
+                        return [
+                            {
+                                label: "Highlight Color",
+                                id: "highlight-color",
+                                iconPath: vscode.Uri.file(
+                                    context.asAbsolutePath(
+                                        "media/highlighter/highlightersection.png"
+                                    )
+                                ),
+                            },
+                            {
+                                label: "Text Color",
+                                id: "text-color",
+                                iconPath: vscode.Uri.file(
+                                    context.asAbsolutePath("media/T/Tsection.png")
+                                ),
+                            },
+                        ];
+
+                    case "text-color":
+                        return [
+                            {
+                                label: "Color Blue",
+                                command: "alxs-theme-extension.colorblue",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/T/Tblue.png")),
+                            },
+                            {
+                                label: "Color Red",
+                                command: "alxs-theme-extension.colorred",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/T/Tred.png")),
+                            },
+                            {
+                                label: "Color Green",
+                                command: "alxs-theme-extension.colorgreen",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/T/Tgreen.png")),
+                            },
+                            {
+                                label: "Color Orange",
+                                command: "alxs-theme-extension.colororange",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/T/Torange.png")),
+                            },
+                            {
+                                label: "Color Yellow",
+                                command: "alxs-theme-extension.coloryellow",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/T/Tyellow.png")),
+                            },
+                            {
+                                label: "Color Purple",
+                                command: "alxs-theme-extension.colorpurple",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/T/Tpurple.png")),
+                            },
+                            {
+                                label: "Color Pink",
+                                command: "alxs-theme-extension.colorpink",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/T/Tpink.png")),
+                            },
+                            {
+                                label: "Color White",
+                                command: "alxs-theme-extension.colorwhite",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/T/Twhite.png")),
+                            },
+                            {
+                                label: "Color Theme Color",
+                                command: "alxs-theme-extension.colorcolor",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/T/Tcolor.png")),
+                            },
+                        ];
+                    case "highlight-color":
+                        return [
+                            {
+                                label: "Highlight Blue",
+                                command: "alxs-theme-extension.highlightblue",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/highlighter/highlighterblue.png")),
+                            },
+                            {
+                                label: "Highlight Red",
+                                command: "alxs-theme-extension.highlightred",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/highlighter/highlighterred.png")),
+                            },
+                            {
+                                label: "Highlight Green",
+                                command: "alxs-theme-extension.highlightgreen",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/highlighter/highlightergreen.png")),
+                            },
+                            {
+                                label: "Highlight Orange",
+                                command: "alxs-theme-extension.highlightorange",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/highlighter/highlighterorange.png")),
+                            },
+                            {
+                                label: "Highlight Yellow",
+                                command: "alxs-theme-extension.highlightyellow",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/highlighter/highlighteryellow.png")),
+                            },
+                            {
+                                label: "Highlight Purple",
+                                command: "alxs-theme-extension.highlightpurple",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/highlighter/highlighterpurple.png")),
+                            },
+                            {
+                                label: "Highlight Pink",
+                                command: "alxs-theme-extension.highlightpink",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/highlighter/highlighterpink.png")),
+                            },
+                            {
+                                label: "Highlight White",
+                                command: "alxs-theme-extension.highlightwhite",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/highlighter/highlighterwhite.png")),
+                            },
+                            {
+                                label: "Highlight Theme Color",
+                                command: "alxs-theme-extension.highlightcolor",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/highlighter/highlightercolor.png")),
+                            },
+                        ];
+                    case "alignement":
+                        return [
+                            {
+                                label: "Align Left",
+                                command: "alxs-theme-extension.alignementsleft",
+                            },
+                            {
+                                label: "Align Center",
+                                command:
+                                    "alxs-theme-extension.alignementscenter",
+                            },
+                            {
+                                label: "Align Right",
+                                command:
+                                    "alxs-theme-extension.alignementsright",
+                            },
+                        ];
+
+                    case "components":
+                        return [
+                            {
+                                label: "Blank Line",
+                                command: "alxs-theme-extension.blank",
+                            },
+                            {
+                                label: "Plan",
+                                command: "alxs-theme-extension.componentsplan",
+                            },
+                            {
+                                label: "Page Break",
+                                command:
+                                    "alxs-theme-extension.componentspagebreak",
+                            },
+                            {
+                                label: "Footnote",
+                                command: "alxs-theme-extension.componentsfnote",
+                            },
+                            {
+                                label: "Author",
+                                command: "alxs-theme-extension.author",
+                            },
+                            {
+                                label: "Date",
+                                command: "alxs-theme-extension.date",
+                            },
+                            {
+                                label: "Image",
+                                command: "alxs-theme-extension.image",
+                            },
+                            {
+                                label: "Custom Blocks",
+                                id: "custom-blocks",
+                            },
+                            {
+                                label: "Grids",
+                                id: "grids",
+                            },
+                        ];
+                    case "custom-blocks":
+                        return [
+                            {
+                                label: "Definition",
+                                command:
+                                    "alxs-theme-extension.componentscustomblockdefinition",
+                            },
+                            {
+                                label: "Note",
+                                command:
+                                    "alxs-theme-extension.componentscustomblocknote",
+                            },
+                            {
+                                label: "Warning",
+                                command:
+                                    "alxs-theme-extension.componentscustomblockwarning",
+                            },
+                            {
+                                label: "Tip",
+                                command:
+                                    "alxs-theme-extension.componentscustomblocktip",
+                            },
+                            {
+                                label: "Important",
+                                command:
+                                    "alxs-theme-extension.componentscustomblockimportant",
+                            },
+                            {
+                                label: "Error",
+                                command:
+                                    "alxs-theme-extension.componentscustomblockerror",
+                            },
+                            {
+                                label: "Sucess",
+                                command:
+                                    "alxs-theme-extension.componentscustomblocksucess",
+                            },
+                            {
+                                label: "Abstract",
+                                command:
+                                    "alxs-theme-extension.componentscustomblockabstract",
+                            },
+                            {
+                                label: "Example",
+                                command:
+                                    "alxs-theme-extension.componentscustomblockexample",
+                            },
+                            {
+                                label: "Question",
+                                command:
+                                    "alxs-theme-extension.componentscustomblockquestion",
+                            },
+                            {
+                                label: "Quote",
+                                command:
+                                    "alxs-theme-extension.componentscustomblockquote",
+                            },
+                            {
+                                label: "Bug",
+                                command:
+                                    "alxs-theme-extension.componentscustomblockbug",
+                            },
+                        ];
+                    case "grids":
+                        return [
+                            {
+                                label: "Grid 2",
+                                command: "alxs-theme-extension.grids2",
+                            },
+                            {
+                                label: "Grid 3",
+                                command: "alxs-theme-extension.grids3",
+                            },
+                        ];
+                    case "custom-boxes":
+                        return [
+                            {
+                                label: "Boxes",
+                                id: "boxes",
+                            },
+                            {
+                                label: "Formulas",
+                                id: "formulas",
+                            },
+                        ];
+                    case "boxes":
+                        return [
+                            {
+                                label: "Red Box",
+                                command: "alxs-theme-extension.boxesred",
+                            },
+                            {
+                                label: "Blue Box",
+                                command: "alxs-theme-extension.boxesblue",
+                            },
+                            {
+                                label: "Green Box",
+                                command: "alxs-theme-extension.boxesgreen",
+                            },
+                            {
+                                label: "Orange Box",
+                                command: "alxs-theme-extension.boxesorange",
+                            },
+                            {
+                                label: "Yellow Box",
+                                command: "alxs-theme-extension.boxesyellow",
+                            },
+                            {
+                                label: "Purple Box",
+                                command: "alxs-theme-extension.boxespurple",
+                            },
+                            {
+                                label: "Pink Box",
+                                command: "alxs-theme-extension.boxespink",
+                            },
+                            {
+                                label: "White Box",
+                                command: "alxs-theme-extension.boxeswhite",
+                            },
+                            {
+                                label: "Custom Box",
+                                command: "alxs-theme-extension.boxescolor",
+                            },
+                        ];
+                    case "formulas":
+                        return [
+                            {
+                                label: "Red Formula",
+                                command: "alxs-theme-extension.boxesformulared",
+                            },
+                            {
+                                label: "Blue Formula",
+                                command: "alxs-theme-extension.boxesformulablue",
+                            },
+                            {
+                                label: "Green Formula",
+                                command:
+                                    "alxs-theme-extension.boxesformulagreen",
+                            },
+                            {
+                                label: "Orange Formula",
+                                command:
+                                    "alxs-theme-extension.boxesformulaorange",
+                            },
+                            {
+                                label: "Yellow Formula",
+                                command:
+                                    "alxs-theme-extension.boxesformulayellow",
+                            },
+                            {
+                                label: "Purple Formula",
+                                command:
+                                    "alxs-theme-extension.boxesformulapurple",
+                            },
+                            {
+                                label: "Pink Formula",
+                                command: "alxs-theme-extension.boxesformulapink",
+                            },
+                            {
+                                label: "White Formula",
+                                command:
+                                    "alxs-theme-extension.boxesformulawhite",
+                            },
+                            {
+                                label: "Custom Formula",
+                                command:
+                                    "alxs-theme-extension.boxesformulacolor",
+                            },
+                        ];
+                    case "font-size":
+                        return [
+                            {
+                                label: "Size 6",
+                                command: "alxs-theme-extension.fontsize6",
+                            },
+                            {
+                                label: "Size 8",
+                                command: "alxs-theme-extension.fontsize8",
+                            },
+                            {
+                                label: "Size 10",
+                                command: "alxs-theme-extension.fontsize10",
+                            },
+                            {
+                                label: "Size 12",
+                                command: "alxs-theme-extension.fontsize12",
+                            },
+                            {
+                                label: "Size 14",
+                                command: "alxs-theme-extension.fontsize14",
+                            },
+                            {
+                                label: "Size 16",
+                                command: "alxs-theme-extension.fontsize16",
+                            },
+                            {
+                                label: "Size 18",
+                                command: "alxs-theme-extension.fontsize18",
+                            },
+                            {
+                                label: "Size 20",
+                                command: "alxs-theme-extension.fontsize20",
+                            },
+                            {
+                                label: "Size 24",
+                                command: "alxs-theme-extension.fontsize24",
+                            },
+                            {
+                                label: "Size 28",
+                                command: "alxs-theme-extension.fontsize28",
+                            },
+                            {
+                                label: "Size 32",
+                                command: "alxs-theme-extension.fontsize32",
+                            },
+                            {
+                                label: "Size 36",
+                                command: "alxs-theme-extension.fontsize36",
+                            },
+                            {
+                                label: "Size 40",
+                                command: "alxs-theme-extension.fontsize40",
+                            },
+                            {
+                                label: "Size 44",
+                                command: "alxs-theme-extension.fontsize44",
+                            },
+                            {
+                                label: "Size 48",
+                                command: "alxs-theme-extension.fontsize48",
+                            },
+                            {
+                                label: "Size 52",
+                                command: "alxs-theme-extension.fontsize52",
+                            },
+                        ];
+                    case "text-effects":
+                        return [
+                            {
+                                label: "Bold",
+                                command: "alxs-theme-extension.effectsb",
+                            },
+                            {
+                                label: "Italic",
+                                command: "alxs-theme-extension.effectsi",
+                            },
+                            {
+                                label: "Underline",
+                                command: "alxs-theme-extension.effectsu",
+                            },
+                            {
+                                label: "Strike",
+                                command: "alxs-theme-extension.effectss",
+                            },
+                        ];
+                }
+        },
+        getTreeItem: (item) => {
+            return {
+                label: item.label,
+                command: item.command
+                    ? {
+                          command: item.command,
+                          title: item.label,
+                      }
+                    : undefined,
+                collapsibleState: item.command
+                    ? vscode.TreeItemCollapsibleState.None
+                    : vscode.TreeItemCollapsibleState.Collapsed,
+                iconPath: item.iconPath,
+            };
+        },
+    };
+
+    vscode.window.createTreeView("alxs-theme-extension.themeView", {
+        treeDataProvider: themeDataProvider,
+    });
 }
 
 // This method is called when your extension is deactivated

@@ -13,10 +13,77 @@
     "activationEvents": [],
     "main": "./extension.js",
     "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "alxs-theme",
+                    "title": "ALXS Theme Extension",
+                    "icon": "media/logo_paint.png"
+                }
+            ]
+        },
+        "views": {
+            "alxs-theme": [
+                {
+                    "id": "alxs-theme-extension.themeView",
+                    "name": "Theme Selection"
+                }
+            ]
+        },
+        "keybindings": [
+            {
+                "command": "alxs-theme-extension.colorblue",
+                "key":"ctrl+shift+alt+b",
+                "when": "editorTextFocus && resourceLangId == markdown"
+            },
+            {
+                "command": "alxs-theme-extension.colorred",
+                "key":"ctrl+shift+alt+r",
+                "when": "editorTextFocus && resourceLangId == markdown"
+            },
+            {
+                "command": "alxs-theme-extension.colorgreen",
+                "key":"ctrl+shift+alt+g",
+                "when": "editorTextFocus && resourceLangId == markdown"
+            },
+            {
+                "command": "alxs-theme-extension.colororange",
+                "key":"ctrl+shift+alt+o",
+                "when": "editorTextFocus && resourceLangId == markdown"
+            },
+            {
+                "command": "alxs-theme-extension.colorpurple",
+                "key":"ctrl+shift+alt+v",
+                "when": "editorTextFocus && resourceLangId == markdown"
+            },
+            {
+                "command": "alxs-theme-extension.colorpink",
+                "key":"ctrl+shift+alt+p",
+                "when": "editorTextFocus && resourceLangId == markdown"
+            },
+            {
+                "command": "alxs-theme-extension.coloryellow",
+                "key":"ctrl+shift+alt+y",
+                "when": "editorTextFocus && resourceLangId == markdown"
+            },
+            {
+                "command": "alxs-theme-extension.colorwhite",
+                "key":"ctrl+shift+alt+w",
+                "when": "editorTextFocus && resourceLangId == markdown"
+            }
+        ],
         "commands": [
+            {
+                "command": "alxs-theme-extension.colorPicker",
+                "title": "Color Picker"
+            },
             {
                 "command": "alxs-theme-extension.helloWorld",
                 "title": "Hello World"
+            },
+            {
+                "command": "alxs-theme-extension.colorcolor",
+                "title": "Color Theme Color"
             },
             {
                 "command": "alxs-theme-extension.colorblue",
@@ -49,6 +116,10 @@
             {
                 "command": "alxs-theme-extension.colorwhite",
                 "title": "Color White"
+            },
+            {
+                "command": "alxs-theme-extension.highlightcolor",
+                "title": "Highlight Theme Color"
             },
             {
                 "command": "alxs-theme-extension.highlightblue",
@@ -155,6 +226,10 @@
                 "title": "Bug Block"
             },
             {
+                "command": "alxs-theme-extension.boxescolor",
+                "title": "Box Theme Color"
+            },
+            {
                 "command": "alxs-theme-extension.boxesblue",
                 "title": "Blue Box"
             },
@@ -185,6 +260,10 @@
             {
                 "command": "alxs-theme-extension.boxeswhite",
                 "title": "White Box"
+            },
+            {
+                "command": "alxs-theme-extension.boxesformulacolor",
+                "title": "Formula Theme Color"
             },
             {
                 "command": "alxs-theme-extension.boxesformulablue",
@@ -333,6 +412,10 @@
             {
                 "command": "alxs-theme-extension.mdToPdf",
                 "title": "Convert to PDF"
+            },
+            {
+                "command": "alxs-theme-extension.image",
+                "title": "Add Image"
             }
         ],
         "snippets": [
@@ -396,6 +479,10 @@
             ],
             "Color": [
                 {
+                    "command": "alxs-theme-extension.colorcolor",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
                     "command": "alxs-theme-extension.colorblue",
                     "when": "editorTextFocus && resourceLangId == markdown"
                 },
@@ -429,6 +516,10 @@
                 }
             ],
             "Highlight": [
+                {
+                    "command": "alxs-theme-extension.highlightcolor",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
                 {
                     "command": "alxs-theme-extension.highlightblue",
                     "when": "editorTextFocus && resourceLangId == markdown"
@@ -496,13 +587,17 @@
                 {
                     "command": "alxs-theme-extension.blank",
                     "when": "editorTextFocus && resourceLangId == markdown"
-                }, 
+                },
                 {
                     "command": "alxs-theme-extension.author",
                     "when": "editorTextFocus && resourceLangId == markdown"
                 },
                 {
                     "command": "alxs-theme-extension.date",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                }, 
+                {
+                    "command": "alxs-theme-extension.image",
                     "when": "editorTextFocus && resourceLangId == markdown"
                 }
             ],
@@ -568,6 +663,10 @@
             ],
             "Boxes": [
                 {
+                    "command": "alxs-theme-extension.boxescolor",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
+                {
                     "command": "alxs-theme-extension.boxesblue",
                     "when": "editorTextFocus && resourceLangId == markdown"
                 },
@@ -601,6 +700,10 @@
                 }
             ],
             "Formulas": [
+                {
+                    "command": "alxs-theme-extension.boxesformulacolor",
+                    "when": "editorTextFocus && resourceLangId == markdown"
+                },
                 {
                     "command": "alxs-theme-extension.boxesformulablue",
                     "when": "editorTextFocus && resourceLangId == markdown"
@@ -832,7 +935,7 @@
     },
     "dependencies": {
         "gray-matter": "^4.0.3",
-        "highlight.js": "^9.18.1",
+        "highlight.js": "^11.9.0",
         "markdown-it": "^13.0.2",
         "markdown-it-checkbox": "^1.1.0",
         "markdown-it-container": "^3.0.0",
