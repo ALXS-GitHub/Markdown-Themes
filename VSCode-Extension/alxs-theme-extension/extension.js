@@ -1037,6 +1037,7 @@ function activate(context) {
                             {
                                 label: "Formulas",
                                 id: "formulas",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/formula/formulasection.png")),
                             },
                         ];
                     case "boxes":
@@ -1044,38 +1045,47 @@ function activate(context) {
                             {
                                 label: "Red Box",
                                 command: "alxs-theme-extension.boxesred",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxred.png")),
                             },
                             {
                                 label: "Blue Box",
                                 command: "alxs-theme-extension.boxesblue",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxblue.png")),
                             },
                             {
                                 label: "Green Box",
                                 command: "alxs-theme-extension.boxesgreen",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxgreen.png")),
                             },
                             {
                                 label: "Orange Box",
                                 command: "alxs-theme-extension.boxesorange",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxorange.png")),
                             },
                             {
                                 label: "Yellow Box",
                                 command: "alxs-theme-extension.boxesyellow",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxyellow.png")),
                             },
                             {
                                 label: "Purple Box",
                                 command: "alxs-theme-extension.boxespurple",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxpurple.png")),
                             },
                             {
                                 label: "Pink Box",
                                 command: "alxs-theme-extension.boxespink",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxpink.png")),
                             },
                             {
                                 label: "White Box",
                                 command: "alxs-theme-extension.boxeswhite",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxwhite.png")),
                             },
                             {
-                                label: "Custom Box",
+                                label: "Theme Color Box",
                                 command: "alxs-theme-extension.boxescolor",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxcolor.png")),
                             },
                         ];
                     case "formulas":
@@ -1083,44 +1093,53 @@ function activate(context) {
                             {
                                 label: "Red Formula",
                                 command: "alxs-theme-extension.boxesformulared",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/formula/formulared.png")),
                             },
                             {
                                 label: "Blue Formula",
                                 command: "alxs-theme-extension.boxesformulablue",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/formula/formulablue.png")),
                             },
                             {
                                 label: "Green Formula",
                                 command:
                                     "alxs-theme-extension.boxesformulagreen",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/formula/formulagreen.png")),
                             },
                             {
                                 label: "Orange Formula",
                                 command:
                                     "alxs-theme-extension.boxesformulaorange",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/formula/formulaorange.png")),
                             },
                             {
                                 label: "Yellow Formula",
                                 command:
                                     "alxs-theme-extension.boxesformulayellow",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/formula/formulayellow.png")),
                             },
                             {
                                 label: "Purple Formula",
                                 command:
                                     "alxs-theme-extension.boxesformulapurple",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/formula/formulapurple.png")),
                             },
                             {
                                 label: "Pink Formula",
                                 command: "alxs-theme-extension.boxesformulapink",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/formula/formulapink.png")),
                             },
                             {
                                 label: "White Formula",
                                 command:
                                     "alxs-theme-extension.boxesformulawhite",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/formula/formulawhite.png")),
                             },
                             {
-                                label: "Custom Formula",
+                                label: "Theme Color Formula",
                                 command:
                                     "alxs-theme-extension.boxesformulacolor",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/formula/formulacolor.png")),
                             },
                         ];
                     case "font-size":
