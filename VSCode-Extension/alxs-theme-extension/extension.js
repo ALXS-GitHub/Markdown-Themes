@@ -754,11 +754,11 @@ function activate(context) {
                             context.asAbsolutePath("media/colors.png")
                         ),
                     },
-                    { label: "Alignement", id: "alignement", iconPath: vscode.Uri.file(context.asAbsolutePath("media/alignement.png")) },
+                    { label: "Alignement", id: "alignement", iconPath: vscode.Uri.file(context.asAbsolutePath("media/alignement/alignement.png")) },
                     { label: "Components", id: "components", iconPath: vscode.Uri.file(context.asAbsolutePath("media/component.png")) },
-                    { label: "Custom Boxes", id: "custom-boxes", iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes.png")) },
+                    { label: "Custom Boxes", id: "custom-boxes", iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxsection.png")) },
                     { label: "Font Size", id: "font-size", iconPath: vscode.Uri.file(context.asAbsolutePath("media/font-size.png")) },
-                    { label: "Text Effects", id: "text-effects", iconPath: vscode.Uri.file(context.asAbsolutePath("media/text-effect.png")) },
+                    { label: "Text Effects", id: "text-effects", iconPath: vscode.Uri.file(context.asAbsolutePath("media/text-effect/text-effect.png")) },
                     { label: "Convert to PDF", command: "alxs-theme-extension.mdToPdf", iconPath: vscode.Uri.file(context.asAbsolutePath("media/convert-pdf.png"))}
                 ];
             } else
@@ -897,16 +897,19 @@ function activate(context) {
                             {
                                 label: "Align Left",
                                 command: "alxs-theme-extension.alignementsleft",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/alignement/left.png")),
                             },
                             {
                                 label: "Align Center",
                                 command:
                                     "alxs-theme-extension.alignementscenter",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/alignement/center.png")),
                             },
                             {
                                 label: "Align Right",
                                 command:
                                     "alxs-theme-extension.alignementsright",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/alignement/right.png")),
                             },
                         ];
 
@@ -1029,6 +1032,7 @@ function activate(context) {
                             {
                                 label: "Boxes",
                                 id: "boxes",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxsection.png")),
                             },
                             {
                                 label: "Formulas",
@@ -1191,18 +1195,22 @@ function activate(context) {
                             {
                                 label: "Bold",
                                 command: "alxs-theme-extension.effectsb",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/text-effect/bold.png")),
                             },
                             {
                                 label: "Italic",
                                 command: "alxs-theme-extension.effectsi",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/text-effect/italic.png")),
                             },
                             {
                                 label: "Underline",
                                 command: "alxs-theme-extension.effectsu",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/text-effect/underline.png")),
                             },
                             {
                                 label: "Strike",
                                 command: "alxs-theme-extension.effectss",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/text-effect/strikethrough.png")),
                             },
                         ];
                 }
