@@ -19,7 +19,6 @@ async function htmlToPdf(htmlPath) {
     let outputFilename;
 
     if (path.basename(htmlPath).endsWith("_tmp.html")) {
-        console.log("File is already a temporary file")
         outputFilename = htmlPath.replace(/_tmp\.html$/, ".pdf");
     } else {
         outputFilename = htmlPath.replace(/\.html$/, ".pdf");

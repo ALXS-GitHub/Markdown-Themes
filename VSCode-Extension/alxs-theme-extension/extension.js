@@ -5,6 +5,8 @@ const fs = require("fs");
 const { mdToHtml } = require("./mdtohtml.js");
 const { htmlToPdf } = require("./htmltopdf.js");
 
+const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
+
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 
@@ -710,8 +712,13 @@ function activate(context) {
     let disposableMdToPdf = vscode.commands.registerCommand(
         "alxs-theme-extension.mdToPdf",
         function () {
+
+            statusBarItem.text = "$(sync~spin) Converting to PDF...";
+            statusBarItem.show();
+
             let editor = vscode.window.activeTextEditor;
             if (!editor) {
+                statusBarItem.hide();
                 return; // No open text editor
             }
 
@@ -722,6 +729,7 @@ function activate(context) {
                 outputHtml = mdToHtml(filePath);
             } catch (error) {
                 console.log(error);
+                statusBarItem.hide();
                 return;
             }
             
@@ -732,7 +740,9 @@ function activate(context) {
                 } catch (error) {
                     console.log(error);
                 }
+                statusBarItem.hide();
             });
+
         }
     );
 

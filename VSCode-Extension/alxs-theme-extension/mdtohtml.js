@@ -3,8 +3,6 @@ const path = require("path");
 var grayMatter = require("gray-matter");
 var hljs = require("highlight.js");
 const vscode = require('vscode');
-var statusbarmessage = vscode.window.setStatusBarMessage('$(markdown) Converting (convertMarkdownToHtml) ...');
-
 
 const md = require("markdown-it")({
     html: true,
@@ -191,7 +189,7 @@ function requirements(mdPath) {
             },
         });
     } catch (error) {
-        statusbarmessage.dispose();
+        vscode.window.showErrorMessage(error.message);
         console.log(error.message);
     }
 }
@@ -229,10 +227,12 @@ function mdToHtml(mdPath) {
     
     if (!fs.existsSync(mdPath)) {
         console.log(`File ${mdPath} does not exist in the current directory`);
+        vscode.window.showErrorMessage(`File ${mdPath} does not exist in the current directory`);
         throw new Error(`File ${mdPath} does not exist in the current directory`);
     }
     if (path.extname(mdPath) !== ".md") {
         console.log("File is not markdown");
+        vscode.window.showErrorMessage("File is not markdown");
         throw new Error("File is not markdown");
     }
     const html = makeHtml(mdPath);
