@@ -799,6 +799,347 @@ table th:hover {
     background-color: #aaaaaa;
 }
 
+/* µ table alignements */
+
+table.left * {
+    text-align: left;
+}
+
+table.center * {
+    text-align: center;
+}
+
+table.right * {
+    text-align: right;
+}
+
+/* µ blue table */
+
+table.bluetable {
+    margin: 16px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px; 
+    page-break-inside: avoid;
+    border-radius: 10px; 
+    overflow: hidden;    
+    box-shadow: 0px 0px 0px 2px var(--blue5bg);
+}
+
+table.bluetable td,
+table.bluetable th {
+    border: 1px solid var(--blue5) !important;
+    padding: 5px;
+}
+
+table.bluetable th {
+    border-bottom: 3px solid var(--blue5) !important;
+}
+
+table.bluetable td:hover {
+    background-color: var(--blue5bg);
+}
+
+table.bluetable thead {
+    background-color: var(--blue5bg);
+    padding: 0;
+}
+
+table.bluetable th:hover {
+    background-color: var(--blue5);
+}
+
+/* µ red table */
+
+table.redtable {
+    margin: 16px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px; 
+    page-break-inside: avoid;
+    border-radius: 10px; 
+    overflow: hidden;    
+    box-shadow: 0px 0px 0px 2px var(--red5bg);
+}
+
+table.redtable td,
+table.redtable th {
+    border: 1px solid var(--red5) !important;
+    padding: 5px;
+}
+
+table.redtable th {
+    border-bottom: 3px solid var(--red5) !important;
+}
+
+table.redtable td:hover {
+    background-color: var(--red5bg);
+}
+
+table.redtable thead {
+    background-color: var(--red5bg);
+    padding: 0;
+}
+
+table.redtable th:hover {
+    background-color: var(--red5);
+}
+
+/* µ green table */
+
+table.greentable {
+    margin: 16px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px; 
+    page-break-inside: avoid;
+    border-radius: 10px; 
+    overflow: hidden;    
+    box-shadow: 0px 0px 0px 2px var(--green5bg);
+}
+
+table.greentable td,
+table.greentable th {
+    border: 1px solid var(--green5) !important;
+    padding: 5px;
+}
+
+table.greentable th {
+    border-bottom: 3px solid var(--green5) !important;
+}
+
+table.greentable td:hover {
+    background-color: var(--green5bg);
+}
+
+table.greentable thead {
+    background-color: var(--green5bg);
+    padding: 0;
+}
+
+table.greentable th:hover {
+    background-color: var(--green5);
+}
+
+/* µ yellow table */
+
+table.yellowtable {
+    margin: 16px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px; 
+    page-break-inside: avoid;
+    border-radius: 10px; 
+    overflow: hidden;    
+    box-shadow: 0px 0px 0px 2px var(--yellow5bg);
+}
+
+table.yellowtable td,
+table.yellowtable th {
+    border: 1px solid var(--yellow5) !important;
+    padding: 5px;
+}
+
+table.yellowtable th {
+    border-bottom: 3px solid var(--yellow5) !important;
+}
+
+table.yellowtable td:hover {
+    background-color: var(--yellow5bg);
+}
+
+table.yellowtable thead {
+    background-color: var(--yellow5bg);
+    padding: 0;
+}
+
+table.yellowtable th:hover {
+    background-color: var(--yellow5);
+}
+
+/* µ purple table */
+
+table.purpletable {
+    margin: 16px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px; 
+    page-break-inside: avoid;
+    border-radius: 10px; 
+    overflow: hidden;    
+    box-shadow: 0px 0px 0px 2px var(--purple5bg);
+}
+
+table.purpletable td,
+table.purpletable th {
+    border: 1px solid var(--purple5) !important;
+    padding: 5px;
+}
+
+table.purpletable th {
+    border-bottom: 3px solid var(--purple5) !important;
+}
+
+table.purpletable td:hover {
+    background-color: var(--purple5bg);
+}
+
+table.purpletable thead {
+    background-color: var(--purple5bg);
+    padding: 0;
+}
+
+table.purpletable th:hover {
+    background-color: var(--purple5);
+}
+
+/* µ pink table */
+
+table.pinktable {
+    margin: 16px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px; 
+    page-break-inside: avoid;
+    border-radius: 10px; 
+    overflow: hidden;    
+    box-shadow: 0px 0px 0px 2px var(--pink5bg);
+}
+
+table.pinktable td,
+table.pinktable th {
+    border: 1px solid var(--pink5) !important;
+    padding: 5px;
+}
+
+table.pinktable th {
+    border-bottom: 3px solid var(--pink5) !important;
+}
+
+table.pinktable td:hover {
+    background-color: var(--pink5bg);
+}
+
+table.pinktable thead {
+    background-color: var(--pink5bg);
+    padding: 0;
+}
+
+table.pinktable th:hover {
+    background-color: var(--pink5);
+}
+
+/* µ orange table */
+
+table.orangetable {
+    margin: 16px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px; 
+    page-break-inside: avoid;
+    border-radius: 10px; 
+    overflow: hidden;    
+    box-shadow: 0px 0px 0px 2px var(--orange5bg);
+}
+
+table.orangetable td,
+table.orangetable th {
+    border: 1px solid var(--orange5) !important;
+    padding: 5px;
+}
+
+table.orangetable th {
+    border-bottom: 3px solid var(--orange5) !important;
+}
+
+table.orangetable td:hover {
+    background-color: var(--orange5bg);
+}
+
+table.orangetable thead {
+    background-color: var(--orange5bg);
+    padding: 0;
+}
+
+table.orangetable th:hover {
+    background-color: var(--orange5);
+}
+
+/* µ white table */
+
+table.whitetable {
+    margin: 16px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px; 
+    page-break-inside: avoid;
+    border-radius: 10px; 
+    overflow: hidden;    
+    box-shadow: 0px 0px 0px 2px var(--white5bg);
+}
+
+table.whitetable td,
+table.whitetable th {
+    border: 1px solid var(--white5) !important;
+    padding: 5px;
+}
+
+table.whitetable th {
+    border-bottom: 3px solid var(--white5) !important;
+}
+
+table.whitetable td:hover {
+    background-color: var(--white5bg);
+}
+
+table.whitetable thead {
+    background-color: var(--white5bg);
+    padding: 0;
+}
+
+table.whitetable th:hover {
+    background-color: var(--white5);
+}
+
+/* µ color table */
+
+table.colortable {
+    margin: 16px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 2px var(--color5bg);
+}
+
+table.colortable td,
+table.colortable th {
+    border: 1px solid var(--color5) !important;
+    padding: 5px;
+}
+
+table.colortable th {
+    border-bottom: 3px solid var(--color5) !important;
+}
+
+table.colortable td:hover {
+    background-color: var(--color5bg);
+}
+
+table.colortable thead {
+    background-color: var(--color5bg);
+    padding: 0;
+}
+
+table.colortable th:hover {
+    background-color: var(--color5);
+}
+
+
+
+
 /* & mermaid */
 
 pre {
@@ -1604,6 +1945,13 @@ span.right {
     text-align: left;
 }
 
+/* & tabulation */
+
+tab {
+    display: inline-block;
+    margin-left: 20px;
+}
+
 /* & blank line */
 
 blank {
@@ -1698,3 +2046,4 @@ date {
 .f52 {
     font-size: 52px;
 }
+

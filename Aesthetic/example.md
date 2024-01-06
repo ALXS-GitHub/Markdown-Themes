@@ -37,15 +37,15 @@
 This is a paragraph of text. Here's a [link](https://www.youtube.com/) to an external website.
 
 Here's an unordered list:
-- Item 1
-- Item 2
-- Item 3
-  - Subitem 1
-  - Subitem 2
 
-
+-   Item 1
+-   Item 2
+-   Item 3
+    -   Subitem 1
+    -   Subitem 2
 
 Here's an ordered list:
+
 1. First item
 2. Second item
 3. Third item
@@ -110,7 +110,7 @@ This is a verse block.
 
 <pagebreak></pagebreak>
 
-Here are my custom color or highlight elements : 
+Here are my custom color or highlight elements :
 
 <red>This is a red text</red>
 
@@ -152,7 +152,7 @@ Here's a code block:
 function add(a, b) {
     a = a + 1;
     b = 2 + 1 + 2;
-  return a + b;
+    return a + b;
 }
 ```
 
@@ -160,7 +160,7 @@ Here's an image:
 
 ![Image alt text](image.png)
 
-Here's some **bold** text and some *italic* text.
+Here's some **bold** text and some _italic_ text.
 
 Here's a table:
 
@@ -183,7 +183,7 @@ Here is a <fnote>second custom footnote || And here is the explaination of the s
 
 Here's a definition list:
 
-Term 1 
+Term 1
 : Definition 1
 
 Term 2
@@ -191,10 +191,10 @@ Term 2
 
 Here's a task list:
 
-- [x] Task 1
-- [ ] Task 2
-- [ ] Task 3
-- [X] Task 4
+-   [x] Task 1
+-   [ ] Task 2
+-   [ ] Task 3
+-   [x] Task 4
 
 Here's an abbreviation: HTML
 
@@ -203,7 +203,6 @@ Here's a math block:
 $$
 \frac{1}{n^{2}}
 $$
-
 
 Here's a math inline: $\frac{1}{n^{2}}$
 
@@ -300,14 +299,11 @@ Animal <|-- Cat
     Phasellus egestas feugiat aliquet. Proin ut sollicitudin diam. Sed at commodo est. Fusce non volutpat orci. Cras semper auctor hendrerit. Integer molestie efficitur augue, ac tincidunt ante pulvinar id. Nunc urna velit, pharetra vitae tincidunt et, pulvinar ac quam. Vivamus ornare at sem nec iaculis. Integer nec tortor convallis, mattis ante sit amet, bibendum magna. Nunc suscipit tellus nec pretium placerat. Nullam maximus dictum gravida. Nullam euismod lobortis velit eget sodales.
 </bluebox>
 
-
 <blueformula>
 This is a formula : <br> $f(n) = \frac{1}{n^{2}}$
 </blueformula>
 
-
 <blank></blank>
-
 
 **2 columns grid (default) :**
 
@@ -350,7 +346,6 @@ This is a formula : <br> $f(n) = \frac{1}{n^{2}}$
     </div>
 </div>
 
-
 <p class="center">This is a centered paragraph<br>second line here</p>
 
 <p class="right">This is a right-aligned paragraph<br>second line here</p>
@@ -392,3 +387,209 @@ Here are the different font-sizes available :
 <span class="f48">This is a f48 paragraph</span>
 
 <span class="f52">This is a f52 paragraph</span>
+
+<tab></tab>Tabluation. This text has a tabulation at the beginning of the line. And this is a second line right there.
+
+table :
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+
+Custom colored table : 
+
+<table class="bluetable left">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="redtable center">
+    <thead>
+        <tr>
+            <th colspan="2">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+            <td rowspan="1">Item 5</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+            <td rowspan="1">Item 6</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="greentable right">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="yellowtable left">
+    <thead>
+        <tr>
+            <th colspan="3">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="2">Item 2</td>
+            <td rowspan="1">Item 5</td>
+            <td rowspan="1">Item 8</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+            <td rowspan="1">Item 7</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 6</td>
+            <td rowspan="1">Item 9</td>
+            <td rowspan="1">Item 10</td>
+            <td rowspan="1">Item 11</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="orangetable">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="purpletable">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="pinktable">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="whitetable">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="colortable">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
