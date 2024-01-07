@@ -33,7 +33,15 @@ function convertToTable(text) {
             continue;
         }
 
-        const line = lines[i];
+        let line = lines[i].trim();
+
+        if (line[0] !== "|" && line[line.length - 1] !== "|") {
+            // TODO : add a warning message on vscode
+            return text;
+        }
+
+        line = line.slice(1, line.length - 1);
+
         const cells = line.split("|");
         const row = [];
 
@@ -44,6 +52,8 @@ function convertToTable(text) {
 
         table.push(row);
     }
+
+    console.log(table);
 
     let tableHtml = `<table class="${alignement}">\n`
     let bodySet = false;
@@ -66,12 +76,14 @@ function convertToTable(text) {
         for (let j = 0; j < row.length; j++) {
             const cell = row[j];
             let tag = 'td rowspan="1"';
+            let tagOut = 'td';
 
             if (i === 0) {
                 tag = 'th colspan="1"';
+                tagOut = 'th';
             }
 
-            tableHtml += `\t\t\t<${tag}>${cell}</${tag}>\n`;
+            tableHtml += `\t\t\t<${tag}>${cell}</${tagOut}>\n`;
         }
 
         tableHtml += '\t\t</tr>\n';
