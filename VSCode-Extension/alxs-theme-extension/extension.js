@@ -4,6 +4,7 @@ const vscode = require("vscode");
 const fs = require("fs");
 const { mdToHtml } = require("./mdtohtml.js");
 const { htmlToPdf } = require("./htmltopdf.js");
+const { convertToTable } = require("./convertToTable.js");
 
 const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
 
@@ -707,6 +708,88 @@ function activate(context) {
 
     context.subscriptions.push(disposableImage);
 
+    // & tab component
+
+    let disposableTab = vscode.commands.registerCommand(
+        `alxs-theme-extension.tab`,
+        function () {
+            let editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                return; // No open text editor
+            }
+
+            let position = editor.selection.active;
+            editor.edit((editBuilder) => {
+                editBuilder.insert(position, `<tab></tab>`);
+            });
+        }
+    );
+
+    // & table component
+
+    let tableColors = [
+        "red",
+        "blue",
+        "green",
+        "orange",
+        "yellow",
+        "purple",
+        "pink",
+        "white",
+        "color",
+    ];
+    
+    for (let color of tableColors) {
+        let disposableTable = vscode.commands.registerCommand(
+            `alxs-theme-extension.table${color}`,
+            function () {
+                let editor = vscode.window.activeTextEditor;
+                if (!editor) {
+                    return; // No open text editor
+                }
+
+                let content = `<table class="${color}table left">\n`;
+                content += `\t<thead>\n\t\t<tr>\n\t\t\t<th colspan="1"></th>\n\t\t\t<th colspan="1"></th>\n\t\t</tr>\n\t</thead>\n`;
+                content += `\t<tbody>\n\t\t<tr>\n\t\t\t<td rowspan="1"></td>\n\t\t\t<td rowspan="1"></td>\n\t\t</tr>\n`;
+                content += `\t\t<tr>\n\t\t\t<td rowspan="1"></td>\n\t\t\t<td rowspan="1"></td>\n\t\t</tr>\n\t</tbody>\n`;
+                content += `</table>`;
+    
+                let position = editor.selection.active;
+                editor.edit((editBuilder) => {
+                    editBuilder.insert(position, content);
+                });
+
+            }
+        );
+
+        context.subscriptions.push(disposableTable);
+    }
+        
+    
+    // & convert to table
+        
+    let disposableConvertToTable = vscode.commands.registerCommand(
+        `alxs-theme-extension.convertToTable`,
+        function () {
+            let editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                return; // No open text editor
+            }
+    
+            let selection = editor.selection;
+            let text = editor.document.getText(selection);
+    
+            let table = convertToTable(text);
+    
+            editor.edit((editBuilder) => {
+                editBuilder.replace(selection, table);
+            });
+        }
+    );
+
+    context.subscriptions.push(disposableConvertToTable);
+
+
     // µ Md to pdf commands
 
     let disposableMdToPdf = vscode.commands.registerCommand(
@@ -955,6 +1038,10 @@ function activate(context) {
                                 command: "alxs-theme-extension.image",
                             },
                             {
+                                label: "Tab",
+                                command: "alxs-theme-extension.tab",
+                            },
+                            {
                                 label: "Custom Blocks",
                                 id: "custom-blocks",
                             },
@@ -962,6 +1049,10 @@ function activate(context) {
                                 label: "Grids",
                                 id: "grids",
                             },
+                            {
+                                label: "Tables",
+                                id: "tables",
+                            }
                         ];
                     case "custom-blocks":
                         return [
@@ -1036,6 +1127,59 @@ function activate(context) {
                                 label: "Grid 3",
                                 command: "alxs-theme-extension.grids3",
                             },
+                        ];
+                    case "tables":
+                        return [
+                            {
+                                label: "Table Red",
+                                command: "alxs-theme-extension.tablered",
+                                // iconPath: vscode.Uri.file(context.asAbsolutePath("media/table/table-red.png")),
+                            },
+                            {
+                                label: "Table Blue",
+                                command: "alxs-theme-extension.tableblue",
+                                // iconPath: vscode.Uri.file(context.asAbsolutePath("media/table/table-blue.png")),
+                            },
+                            {
+                                label: "Table Green",
+                                command: "alxs-theme-extension.tablegreen",
+                                // iconPath: vscode.Uri.file(context.asAbsolutePath("media/table/table-green.png")),
+                            },
+                            {
+                                label: "Table Orange",
+                                command: "alxs-theme-extension.tableorange",
+                                // iconPath: vscode.Uri.file(context.asAbsolutePath("media/table/table-orange.png")),
+                            },
+                            {
+                                label: "Table Yellow",
+                                command: "alxs-theme-extension.tableyellow",
+                                // iconPath: vscode.Uri.file(context.asAbsolutePath("media/table/table-yellow.png")),
+                            },
+                            {
+                                label: "Table Purple",
+                                command: "alxs-theme-extension.tablepurple",
+                                // iconPath: vscode.Uri.file(context.asAbsolutePath("media/table/table-purple.png")),
+                            },
+                            {
+                                label: "Table Pink",
+                                command: "alxs-theme-extension.tablepink",
+                                // iconPath: vscode.Uri.file(context.asAbsolutePath("media/table/table-pink.png")),
+                            },
+                            {
+                                label: "Table White",
+                                command: "alxs-theme-extension.tablewhite",
+                                // iconPath: vscode.Uri.file(context.asAbsolutePath("media/table/table-white.png")),
+                            },
+                            {
+                                label: "Table Theme Color",
+                                command: "alxs-theme-extension.tablecolor",
+                                // iconPath: vscode.Uri.file(context.asAbsolutePath("media/table/table-color.png")),
+                            },
+                            {
+                                label: "Convert to Table",
+                                command: "alxs-theme-extension.convertToTable",
+                                // iconPath: vscode.Uri.file(context.asAbsolutePath("media/table/convert.png")),
+                            }
                         ];
                     case "custom-boxes":
                         return [

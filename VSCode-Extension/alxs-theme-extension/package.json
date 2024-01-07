@@ -416,6 +416,46 @@
             {
                 "command": "alxs-theme-extension.image",
                 "title": "Add Image"
+            },
+            {
+                "command": "alxs-theme-extension.tab",
+                "title": "Tabulation"
+            },
+            {
+                "command": "alxs-theme-extension.tableblue",
+                "title": "Blue Table"
+            },
+            {
+                "command": "alxs-theme-extension.tablered",
+                "title": "Red Table"
+            },
+            {
+                "command": "alxs-theme-extension.tablegreen",
+                "title": "Green Table"
+            },
+            {
+                "command": "alxs-theme-extension.tableorange",
+                "title": "Orange Table"
+            },
+            {
+                "command": "alxs-theme-extension.tablepurple",
+                "title": "Purple Table"
+            },
+            {
+                "command": "alxs-theme-extension.tablepink",
+                "title": "Pink Table"
+            },
+            {
+                "command": "alxs-theme-extension.tableyellow",
+                "title": "Yellow Table"
+            },
+            {
+                "command": "alxs-theme-extension.tablewhite",
+                "title": "White Table"
+            },
+            {
+                "command": "alxs-theme-extension.tablecolor",
+                "title": "Table Theme Color"
             }
         ],
         "snippets": [
