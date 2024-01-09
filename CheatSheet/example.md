@@ -13,10 +13,19 @@
 
 # CheatSheet
 
-<bluebox>
+## Boxes Section
+
+### Subsection 1
+
+#### Subsubsection 1
+
+##### Subsubsubsection 1
+
+
+<whitebox>
     <h6 class="yellowtitle">this it the title of the box</h6>
     there is a bit of content for this box
-</bluebox>
+</whitebox>
 
 <div class="grid-container c2">
 	<div class="grid-item">
@@ -42,3 +51,133 @@
     <h6 class="greenftitle">this it the title of the box</h6>
     <p>there is a bit of content for this box</p>
 </redformula>
+
+<whitebox>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</whitebox>
+
+<bluebox>
+    <h6>this it the title of the box</h6>
+    there is a bit of content or this box
+</bluebox>
+
+<redbox>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</redbox>
+
+<greenbox>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</greenbox>
+
+<yellowbox>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</yellowbox>
+
+<pinkbox>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</pinkbox>
+
+<orangebox>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</orangebox>
+
+<purplebox>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</purplebox>
+
+<whiteformula>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</whiteformula>
+<blueformula>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</blueformula>
+<redformula>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</redformula>
+<orangeformula>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</orangeformula>
+<greenformula>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</greenformula>
+<yellowformula>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</yellowformula>
+<purpleformula>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</purpleformula>
+<pinkformula>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</pinkformula>
+
+
+
+## Code Section
+
+### Direct code
+
+```python	
+def function():
+    print("Hello World")
+```
+
+```javascript
+function function() {
+    console.log("Hello World");
+}
+```
+
+### Code in a box
+
+<bluebox>
+    <pre class="hljs">
+        <code>
+            <div>
+                def function():
+                print("Hello World")
+            </div>
+        </code>
+    </pre>
+</bluebox>
+
+<bluebox>
+    <pre>
+        <code class="language-javascript">
+            function function() {
+                console.log("Hello World");
+            }
+        </code>
+    </pre>
+</bluebox>
+
+### Code in a box with no pre
+
+<bluebox>
+    <code class="language-python">
+        def function():
+            print("Hello World")
+    </code>
+</bluebox>
+
+<bluebox>
+    <code class="language-javascript">
+        function function() {
+            console.log("Hello World");
+        }
+    </code>
+</bluebox>
