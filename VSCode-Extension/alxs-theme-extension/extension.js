@@ -4,6 +4,7 @@ const vscode = require("vscode");
 const fs = require("fs");
 const { mdToHtml } = require("./mdtohtml.js");
 const { htmlToPdf } = require("./htmltopdf.js");
+const { onePageHtmlToPdf } = require("./onepagehtmltopdf.js");
 const { convertToTable } = require("./convertToTable.js");
 
 const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left);
@@ -829,6 +830,43 @@ function activate(context) {
         }
     );
 
+    let disposableOnePageMdToPdf = vscode.commands.registerCommand(
+        "alxs-theme-extension.onePageMdToPdf",
+        function () {
+
+            statusBarItem.text = "$(sync~spin) Converting to PDF...";
+            statusBarItem.show();
+
+            let editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                statusBarItem.hide();
+                return; // No open text editor
+            }
+
+            let filePath = editor.document.uri.fsPath;
+
+            let outputHtml;
+            try {
+                outputHtml = mdToHtml(filePath);
+            } catch (error) {
+                console.log(error);
+                statusBarItem.hide();
+                return;
+            }
+            
+            console.log(outputHtml);
+            onePageHtmlToPdf(outputHtml).then(() => {
+                try {
+                    fs.unlinkSync(outputHtml);
+                } catch (error) {
+                    console.log(error);
+                }
+                statusBarItem.hide();
+            });
+
+        }
+    );
+
     context.subscriptions.push(disposableMdToPdf);
 
     // µ TreeView
@@ -852,7 +890,8 @@ function activate(context) {
                     { label: "Custom Boxes", id: "custom-boxes", iconPath: vscode.Uri.file(context.asAbsolutePath("media/boxes/boxsection.png")) },
                     { label: "Font Size", id: "font-size", iconPath: vscode.Uri.file(context.asAbsolutePath("media/font-size.png")) },
                     { label: "Text Effects", id: "text-effects", iconPath: vscode.Uri.file(context.asAbsolutePath("media/text-effect/text-effect.png")) },
-                    { label: "Convert to PDF", command: "alxs-theme-extension.mdToPdf", iconPath: vscode.Uri.file(context.asAbsolutePath("media/convert-pdf.png"))}
+                    { label: "Convert to PDF", command: "alxs-theme-extension.mdToPdf", iconPath: vscode.Uri.file(context.asAbsolutePath("media/convert-pdf.png"))},
+                    { label: "Conversion Options", id: "conversion-options", iconPath: vscode.Uri.file(context.asAbsolutePath("media/convert-pdf.png"))},
                 ];
             } else
                 switch (element.id) {
@@ -1384,6 +1423,19 @@ function activate(context) {
                                 label: "Strike",
                                 command: "alxs-theme-extension.effectss",
                                 iconPath: vscode.Uri.file(context.asAbsolutePath("media/text-effect/strikethrough.png")),
+                            },
+                        ];
+                    case "conversion-options":
+                        return [
+                            {
+                                label: "Convert to PDF",
+                                command: "alxs-theme-extension.mdToPdf",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/convert-pdf.png")),
+                            },
+                            {
+                                label: "Convert to One Page PDF",
+                                command: "alxs-theme-extension.onePageMdToPdf",
+                                iconPath: vscode.Uri.file(context.asAbsolutePath("media/convert-pdf.png")),
                             },
                         ];
                 }

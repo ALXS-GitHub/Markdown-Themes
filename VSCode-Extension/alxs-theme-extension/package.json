@@ -3,7 +3,7 @@
     "displayName": "ALXS-Theme-Extension",
     "description": "This extension is made to use the ALXS Markdown Themes more easly",
     "icon": "icon.jpg",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "engines": {
         "vscode": "^1.84.0"
     },

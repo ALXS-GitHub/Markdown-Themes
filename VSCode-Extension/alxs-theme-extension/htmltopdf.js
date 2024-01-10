@@ -30,6 +30,7 @@ async function htmlToPdf(htmlPath) {
     await page.goto(fileUrl, { waitUntil: "networkidle0" });
     await page.emulateMediaType('screen');
     await page.reload({ waitUntil: "networkidle0" }); // in order to load all ressources properly
+
     await page.pdf({ path: outputFilename, format: "A4", printBackground: true, margin: { top: '1cm', bottom: '1cm' },
     displayHeaderFooter: true,
     headerTemplate: '<span></span>',
