@@ -3,11 +3,12 @@
 <!-- css style -->
 
 <script src="import.js" defer></script>
-<!-- <script defer>
+<script defer>
 	window.addEventListener("load", function() {
-        document.color.setColor("red");
+        // document.color.setColor("red");
+        changeCodeHighlightTheme("monokai-sublime");
       });
-</script> -->
+</script>
 
 <!-- Document start -->
 
@@ -131,7 +132,7 @@
 
 ### Direct code
 
-```python	
+```python
 def function():
     print("Hello World")
 ```
@@ -145,19 +146,23 @@ function function() {
 ### Code in a box
 
 <bluebox>
-    <pre class="hljs">
-        <code>
-            <div>
-                def function():
-                print("Hello World")
-            </div>
-        </code>
+    <pre>
+        <code class="language-python">def function():
+print("Hello World")</code>
     </pre>
 </bluebox>
 
+<pre>
+    <code class="language-python">
+        def function():
+            print("Hello World")
+    </code>
+</pre>
+
+
 <bluebox>
     <pre>
-        <code class="language-javascript">
+        <code>
             function function() {
                 console.log("Hello World");
             }
@@ -165,7 +170,22 @@ function function() {
     </pre>
 </bluebox>
 
+<bluebox>
+    <pre>
+        <code class="langage-cpp">
+            include &lt;iostream&gt;
+            using namespace std;
+        </code>
+    </pre>
+</bluebox>
+
+
 ### Code in a box with no pre
+
+<code class="language-python">
+    def function():
+        print("Hello World")
+</code>
 
 <bluebox>
     <code class="language-python">
@@ -181,3 +201,13 @@ function function() {
         }
     </code>
 </bluebox>
+
+<code class="language-javascript">
+        function function() {
+            console.log("Hello World");
+        }
+</code>
+
+`this is an inline text`
+
+`def function()`

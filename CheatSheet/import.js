@@ -29,6 +29,23 @@ tocScript.src = "javascript/setupMathJax.js";
 tocScript.defer = true;
 document.head.appendChild(tocScript);
 
+// create script for the highlight.js library
+var highlightCssLink = document.createElement("link");
+highlightCssLink.rel = "stylesheet";
+highlightCssLink.id = "highlightCssLink";
+highlightCssLink.href = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css";
+document.head.appendChild(highlightCssLink);
+
+var highlightScript = document.createElement("script");
+highlightScript.src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js";
+highlightScript.defer = true;
+document.head.appendChild(highlightScript);
+
+highlightScript = document.createElement("script");
+highlightScript.src = "javascript/setupHighlight.js";
+highlightScript.defer = true;
+document.head.appendChild(highlightScript);
+
 // create script element for TOC
 var tocScript = document.createElement("script");
 tocScript.src = "javascript/toc.js";

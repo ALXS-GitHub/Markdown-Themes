@@ -273,7 +273,7 @@ pre code {
 </whitebox>
 <bluebox>
     <h6>this it the title of the box</h6>
-    there is a bit of content for this box
+    there is a bit of content or this box
 </bluebox>
 <redbox>
     <h6>this it the title of the box</h6>
@@ -311,6 +311,10 @@ pre code {
     <h6>this it the title of the box</h6>
     there is a bit of content for this box
 </redformula>
+<orangeformula>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</orangeformula>
 <greenformula>
     <h6>this it the title of the box</h6>
     there is a bit of content for this box
@@ -319,18 +323,14 @@ pre code {
     <h6>this it the title of the box</h6>
     there is a bit of content for this box
 </yellowformula>
-<pinkformula>
-    <h6>this it the title of the box</h6>
-    there is a bit of content for this box
-</pinkformula>
-<orangeformula>
-    <h6>this it the title of the box</h6>
-    there is a bit of content for this box
-</orangeformula>
 <purpleformula>
     <h6>this it the title of the box</h6>
     there is a bit of content for this box
 </purpleformula>
+<pinkformula>
+    <h6>this it the title of the box</h6>
+    there is a bit of content for this box
+</pinkformula>
 <h2 id="code-section">Code Section</h2>
 <h3 id="direct-code">Direct code</h3>
 <pre class="hljs"><code><div><span class="hljs-keyword">def</span> <span class="hljs-title function_">function</span>():
@@ -342,25 +342,35 @@ pre code {
 </div></code></pre>
 <h3 id="code-in-a-box">Code in a box</h3>
 <bluebox>
-    <pre class="hljs">
-        <code>
-            <div>
-                def function():
+    <pre>
+        <code class="language-python">
+            def function():
                 print("Hello World")
-            </div>
         </code>
     </pre>
 </bluebox>
 <bluebox>
     <pre>
-        <code class="language-javascript">
+        <code>
             function function() {
                 console.log("Hello World");
             }
         </code>
     </pre>
 </bluebox>
+<bluebox>
+    <pre>
+        <code class="langage-cpp">
+            include &lt;iostream&gt;
+            using namespace std;
+        </code>
+    </pre>
+</bluebox>
 <h3 id="code-in-a-box-with-no-pre">Code in a box with no pre</h3>
+<code class="language-python">
+    def function():
+        print("Hello World")
+</code>
 <bluebox>
     <code class="language-python">
         def function():
@@ -374,6 +384,9 @@ pre code {
         }
     </code>
 </bluebox>
+<p><code>this is an inline text</code></p>
+<p><code>def function()</code></p>
+
     </body>
     </html>
     

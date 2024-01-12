@@ -1189,7 +1189,7 @@ hr {
 
 /* & code */
 
-pre:not(:has(code.language-mermaid)) {
+/* pre:not(:has(code.language-mermaid)) {
     background-color: #f5f5f5;
     color: #333 !important;
     padding: 10px;
@@ -1197,46 +1197,49 @@ pre:not(:has(code.language-mermaid)) {
     font-size: 14px;
     line-height: 1.5;
     overflow-x: auto;
-}
+} */
 
 code {
     color: var(--color5);
+    text-shadow: 0px 0px 10px var(--color5);
     font-family: Courier, monospace;
-    background-color: #f1f1f1;
-    padding: 2px 4px;
-    border-radius: 4px;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
 }
 
 .language-mermaid * {
     font-family: var(--font-mermaid) !important;
 }
 
+pre {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    background-color: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+pre * {
+    background-color: transparent !important;
+}
+/* 
 pre code * {
     font-family: "Courier New", Courier, monospace !important;
-}
+} */
 
 pre code {
     background-color: transparent;
-    color: inherit !important;
-    padding: 0;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-.hljs-title {
-    color: #4271ae;
-}
-
-.hljs-keyword {
-    color: #8959a8;
-}
-
-.hljs-params {
-    color: #f5871f;
-}
-
-.hljs-number {
-    color: #4271ae;
+    display:block !important;
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important;
+    height:  100% !important;
+    width: 100% !important;
+    text-shadow: none;
 }
 
 /* & colors */
