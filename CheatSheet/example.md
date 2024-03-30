@@ -172,7 +172,7 @@ print("Hello World")</code>
 
 <bluebox>
     <pre>
-        <code class="langage-cpp">
+        <code class="language-cpp">
             include &lt;iostream&gt;
             using namespace std;
         </code>

@@ -42,7 +42,7 @@ highlightScript.defer = true;
 document.head.appendChild(highlightScript);
 
 highlightScript = document.createElement("script");
-highlightScript.src = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/CheatSheet/javascript/setupHighlight";
+highlightScript.src = "https://cdn.jsdelivr.net/gh/ALXS-GitHub/Markdown-Themes@latest/CheatSheet/javascript/setupHighlight.min.js";
 highlightScript.defer = true;
 document.head.appendChild(highlightScript);
 
