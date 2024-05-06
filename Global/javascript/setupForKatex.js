@@ -12,6 +12,7 @@ katexScript.defer = true;
 katexScript.src = "https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js";
 katexScript.integrity = "sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd";
 katexScript.crossOrigin = "anonymous";
+katexScript.onload = renderMath;
 document.head.appendChild(katexScript);
 
 // create script element for KaTeX auto-render extension
@@ -20,14 +21,18 @@ autoRenderScript.defer = true;
 autoRenderScript.src = "https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js";
 autoRenderScript.integrity = "sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk";
 autoRenderScript.crossOrigin = "anonymous";
-autoRenderScript.onload = function() {
-    renderMathInElement(document.body, {
-        delimiters: [
-            {left: "$$", right: "$$", display: true},
-            {left: "$", right: "$", display: false},
-            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
-            {left: "\\(", right: "\\)", display: false}
-        ]
-    });
-};
+autoRenderScript.onload = renderMath;
 document.head.appendChild(autoRenderScript);
+
+function renderMath() {
+    if (window.katex && window.renderMathInElement) {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+                {left: "\\(", right: "\\)", display: false}
+            ]
+        });
+    }
+}
