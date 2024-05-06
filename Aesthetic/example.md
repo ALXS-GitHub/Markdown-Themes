@@ -3,6 +3,8 @@
 <!-- css style -->
 
 <script src="import.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css">
 <!-- <script defer>
 	window.addEventListener("load", function() {
         document.color.setColor("red");
@@ -200,13 +202,46 @@ Here's an abbreviation: HTML
 
 Here's a math block:
 
+
+
 $$
 \frac{1}{n^{2}}
 $$
 
+
 Here's a math inline: $\frac{1}{n^{2}}$
 
 Here's a superscript: 10<sup>2</sup>
+
+Here's a bit more math :
+
+$\overrightarrow{AF} = \begin{pmatrix} 0 \\ \frac{1}{2} \end{pmatrix} - \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} -1 \\ \frac{1}{2} \end{pmatrix}$
+
+$\overrightarrow{EG} = \begin{pmatrix} 0 \\ \frac{1}{4} \end{pmatrix} - \begin{pmatrix} \frac{1}{2} \\ 0 \end{pmatrix} = \begin{pmatrix} -\frac{1}{2} \\ \frac{1}{4} \end{pmatrix}$
+
+$\left(\begin{bmatrix} 1 \\ 3 \end{bmatrix} - \begin{bmatrix} 2 \cr 2 \end{bmatrix} \right) \cdot \begin{bmatrix} 4 \cr 4 \end{bmatrix}  =0$
+
+$x = \frac{4 \pm \sqrt{64}}{2} = 2 \pm 4$
+
+$\begin{aligned} 2x + 3y &= 4 \\ 3x + 4y + 0 - 0 &= 5 \end{aligned}$
+
+\begin{equation}
+\begin{aligned}
+2x + 3y &= 4 \\
+3x + 4y &= 5
+\end{aligned}
+\end{equation}
+
+$$
+\begin{aligned}
+2x + 3y &= 4 \\
+3x + 4y &= 5
+\end{aligned}
+$$
+
+This is a first line
+This is a second line
+
 
 Here's a subscript: H<sub>2</sub>O
 

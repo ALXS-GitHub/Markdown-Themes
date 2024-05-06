@@ -193,6 +193,14 @@ Here's a math inline: $\frac{1}{n^{2}}$
 
 Here's a superscript: 10<sup>2</sup>
 
+Here's a bit more math : 
+
+$\overrightarrow{AF} = \begin{pmatrix} 0 \\ \frac{1}{2} \end{pmatrix} - \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} -1 \\ \frac{1}{2} \end{pmatrix}$
+
+$\overrightarrow{EG} = \begin{pmatrix} 0 \\ \frac{1}{4} \end{pmatrix} - \begin{pmatrix} \frac{1}{2} \\ 0 \end{pmatrix} = \begin{pmatrix} -\frac{1}{2} \\ \frac{1}{4} \end{pmatrix}$
+
+$x = \frac{4 \pm \sqrt{64}}{2} = 2 \pm 4$
+
 Here's a subscript: H<sub>2</sub>O
 
 Here's a strikethrough: ~~strikethrough~~

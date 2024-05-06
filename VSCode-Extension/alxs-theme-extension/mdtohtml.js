@@ -8,7 +8,7 @@ const md = require("markdown-it")({
     html: true,
     linkify: true,
     typographer: true,
-    breaks: true,
+    breaks: false,
     highlight: function (str, lang) {
         if (lang && lang.match(/\bmermaid\b/i)) {
             return `<div class="mermaid">${str}</div>`;
@@ -25,6 +25,58 @@ const md = require("markdown-it")({
         return '<pre class="hljs"><code><div>' + str + "</div></code></pre>";
     },
 });
+
+// Configuration
+let config = {
+    components: {
+
+        core: {
+          rules: [
+            'normalize',
+            'block',
+            'inline',
+            'text_join'
+          ]
+        },
+    
+        block: {
+          rules: [
+            'blockquote',
+            'code',
+            'fence',
+            'heading',
+            'hr',
+            'html_block',
+            'lheading',
+            'list',
+            'reference',
+            'paragraph'
+          ]
+        },
+    
+        inline: {
+          rules: [
+            'autolink',
+            'backticks',
+            'emphasis',
+            'entity',
+            // 'escape',
+            'html_inline',
+            'image',
+            'link',
+            'newline',
+            'text'
+          ],
+          rules2: [
+            'balance_pairs',
+            'emphasis',
+            'fragments_join'
+          ]
+        }
+      }
+}
+
+md.configure(config);
 
 function readFile(filename, encode) {
     if (filename.length === 0) {

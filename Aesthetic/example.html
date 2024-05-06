@@ -229,28 +229,30 @@ pre code {
         <!-- example Markdown file -->
 <!-- css style -->
 <script src="import.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css">
 <!-- <script defer>
 	window.addEventListener("load", function() {
-        document.color.setColor("blue");
+        document.color.setColor("red");
       });
 </script> -->
-<!-- <script defer>
+<script defer>
   window.addEventListener("load", function() {
-        document.font.setMermaidFont("arial");
+        document.font.setBodyFont("arial");
       });
-</script> -->
-<!--  --
-
+</script>
 <!-- Document start -->
 <h1 id="this-is-a-level-1-heading">This is a level 1 heading</h1>
+<p><author>ALXS</author></p>
+<p><date></date></p>
 <p><plan></plan></p>
 <h2 id="this-is-a-level-2-heading">This is a level 2 heading</h2>
 <h3 id="this-is-a-level-3-heading">This is a level 3 heading</h3>
 <h4 id="this-is-a-level-4-heading">This is a level 4 heading</h4>
 <h5 id="this-is-a-level-5-heading">This is a level 5 heading</h5>
 <h6 id="this-is-a-level-6-heading">This is a level 6 heading</h6>
-<p>This is a paragraph of text. Here’s a <a href="https://www.youtube.com/">link</a> to an external website.</p>
-<p>Here’s an unordered list:</p>
+<p>This is a paragraph of text. Here's a <a href="https://www.youtube.com/">link</a> to an external website.</p>
+<p>Here's an unordered list:</p>
 <ul>
 <li>Item 1</li>
 <li>Item 2</li>
@@ -261,7 +263,7 @@ pre code {
 </ul>
 </li>
 </ul>
-<p>Here’s an ordered list:</p>
+<p>Here's an ordered list:</p>
 <ol>
 <li>First item</li>
 <li>Second item</li>
@@ -274,7 +276,7 @@ pre code {
 </ol>
 <blockquote>
 <p>This is a blockquote. It can span multiple lines.</p>
-<p>Here’s a second paragraph in the blockquote.</p>
+<p>Here's a second paragraph in the blockquote.</p>
 </blockquote>
 <v>
 This is a verse block.
@@ -333,65 +335,71 @@ This is a verse block.
 <p><hpurple>This is a purple highlight</hpurple></p>
 <p><hpink>This is a pink highlight</hpink></p>
 <p><hgrey>This is a grey highlight</hgrey></p>
-<p>Here’s some inline code: <code>console.log('Hello, world!');</code></p>
-<p>Here’s a code block:</p>
+<p>Here's some inline code: <code>console.log('Hello, world!');</code></p>
+<p>Here's a code block:</p>
 <pre class="hljs"><code><div><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b</span>) {
     a = a + <span class="hljs-number">1</span>;
     b = <span class="hljs-number">2</span> + <span class="hljs-number">1</span> + <span class="hljs-number">2</span>;
-  <span class="hljs-keyword">return</span> a + b;
+    <span class="hljs-keyword">return</span> a + b;
 }
 </div></code></pre>
-<p>Here’s an image:</p>
+<p>Here's an image:</p>
 <p><img src="image.png" alt="Image alt text"></p>
-<p>Here’s some <strong>bold</strong> text and some <em>italic</em> text.</p>
-<p>Here’s a table:</p>
-<table>
-<thead>
-<tr>
-<th>Column 1</th>
-<th>Column 2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Item 1</td>
-<td>Item 2</td>
-</tr>
-<tr>
-<td>Item 3</td>
-<td>Item 4</td>
-</tr>
-</tbody>
-</table>
-<p>Here’s a horizontal rule:</p>
+<p>Here's some <strong>bold</strong> text and some <em>italic</em> text.</p>
+<p>Here's a table:</p>
+<p>| Column 1 | Column 2 |
+| -------- | -------- |
+| Item 1   | Item 2   |
+| Item 3   | Item 4   |</p>
+<p>Here's a horizontal rule:</p>
 <hr>
-<p>Here’s a footnote[^1].</p>
+<p>Here's a footnote[^1].</p>
 <p>[^1]: This is a footnote.</p>
 <p>This is my <fnote>custom footnote || And here is the explaination</fnote></p>
 <p>Here is a <fnote>second custom footnote || And here is the explaination of the second one</fnote></p>
-<p>Here’s a definition list:</p>
-<p>Term 1<br>
+<p>Here's a definition list:</p>
+<p>Term 1
 : Definition 1</p>
-<p>Term 2<br>
+<p>Term 2
 : Definition 2</p>
-<p>Here’s a task list:</p>
+<p>Here's a task list:</p>
 <ul>
 <li><input type="checkbox" id="checkbox0" checked="true"><label for="checkbox0">Task 1</label></li>
 <li><input type="checkbox" id="checkbox1"><label for="checkbox1">Task 2</label></li>
 <li><input type="checkbox" id="checkbox2"><label for="checkbox2">Task 3</label></li>
 <li><input type="checkbox" id="checkbox3" checked="true"><label for="checkbox3">Task 4</label></li>
 </ul>
-<p>Here’s an abbreviation: HTML</p>
-<p>Here’s a math block:</p>
-<p>$$<br>
-\frac{1}{n^{2}}<br>
+<p>Here's an abbreviation: HTML</p>
+<p>Here's a math block:</p>
+<p>$$
+\frac{1}{n^{2}}
 $$</p>
-<p>Here’s a math inline: $\frac{1}{n^{2}}$</p>
-<p>Here’s a superscript: 10<sup>2</sup></p>
-<p>Here’s a subscript: H<sub>2</sub>O</p>
-<p>Here’s a strikethrough: <s>strikethrough</s></p>
-<p>Here’s a comment: <!-- This is a comment --></p>
-<p>Here’s some emoji: 🐻</p>
+<p>Here's a math inline: $\frac{1}{n^{2}}$</p>
+<p>Here's a superscript: 10<sup>2</sup></p>
+<p>Here's a bit more math :</p>
+<p>$\overrightarrow{AF} = \begin{pmatrix} 0 \\ \frac{1}{2} \end{pmatrix} - \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} -1 \\ \frac{1}{2} \end{pmatrix}$</p>
+<p>$\overrightarrow{EG} = \begin{pmatrix} 0 \\ \frac{1}{4} \end{pmatrix} - \begin{pmatrix} \frac{1}{2} \\ 0 \end{pmatrix} = \begin{pmatrix} -\frac{1}{2} \\ \frac{1}{4} \end{pmatrix}$</p>
+<p>$\left(\begin{bmatrix} 1 \\ 3 \end{bmatrix} - \begin{bmatrix} 2 \cr 2 \end{bmatrix} \right) \cdot \begin{bmatrix} 4 \cr 4 \end{bmatrix}  =0$</p>
+<p>$x = \frac{4 \pm \sqrt{64}}{2} = 2 \pm 4$</p>
+<p>$\begin{aligned} 2x + 3y &amp;= 4 \\ 3x + 4y + 0 - 0 &amp;= 5 \end{aligned}$</p>
+<p>\begin{equation}
+\begin{aligned}
+2x + 3y &amp;= 4 \\
+3x + 4y &amp;= 5
+\end{aligned}
+\end{equation}</p>
+<p>$$
+\begin{aligned}
+2x + 3y &amp;= 4 \\
+3x + 4y &amp;= 5
+\end{aligned}
+$$</p>
+<p>This is a first line
+This is a second line</p>
+<p>Here's a subscript: H<sub>2</sub>O</p>
+<p>Here's a strikethrough: ~~strikethrough~~</p>
+<p>Here's a comment: <!-- This is a comment --></p>
+<p>Here's some emoji: 🐻</p>
 <p>This is a mermaid diagram:</p>
 <pre><code class="language-mermaid"><div class="mermaid">graph LR;
     A-->|text goes here|B;
@@ -411,31 +419,14 @@ $$</p>
 0 -->|"[a-zA-Z]"| 2(((q2)))
 2 -->|"[a-zA-Z0-9_]"| 2
 2 --> I[identifier]
-2 -->|if matches a keyword| K["keyword (specific token)"]
-0 -->|"[\ s \ n]"| 0
-3 -->|"-"| 5((q5))
-5 -->|"\w"| 5
-5 -->|"\ n"| 6(((q6)))
-6 --> C[/comment/]
-0 -->|"[+, -, *, /, <, >, =, .]"| 3(((q3)))
-3 -->|"-"| 4b(((q4b)))
-3 -->|"[+, *, /, <, >, =, .]"| 4(((q4)))
-4b -->|"-"| 5
-4 --> O[operator]
-4b --> O[operator]
-0 -->|"'"| 7((q7))
-7 -->|"\w"| 8((q8))
-8 -->|"'"| 9(((q9)))
-8 -->|"\w"| e1{{error}}
-9 --> Ca[character]
 </div></code></pre>
-<p>Here’s a sequence diagram:</p>
+<p>Here's a sequence diagram:</p>
 <pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram
 Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob-->Alice: I am good thanks!
 </div></code></pre>
-<p>Here’s a class diagram:</p>
+<p>Here's a class diagram:</p>
 <pre><code class="language-mermaid"><div class="mermaid">classDiagram
     class Animal {
         -name: string
@@ -454,7 +445,7 @@ Bob-->Alice: I am good thanks!
     Animal <|-- Dog
     Animal <|-- Cat
 </div></code></pre>
-<p>Here’s a plantuml diagram:</p>
+<p>Here's a plantuml diagram:</p>
 <pre class="hljs"><code><div>@startuml
 class Animal {
     -name: string
@@ -477,7 +468,261 @@ Animal &lt;|-- Cat
 <bluebox>
     Phasellus egestas feugiat aliquet. Proin ut sollicitudin diam. Sed at commodo est. Fusce non volutpat orci. Cras semper auctor hendrerit. Integer molestie efficitur augue, ac tincidunt ante pulvinar id. Nunc urna velit, pharetra vitae tincidunt et, pulvinar ac quam. Vivamus ornare at sem nec iaculis. Integer nec tortor convallis, mattis ante sit amet, bibendum magna. Nunc suscipit tellus nec pretium placerat. Nullam maximus dictum gravida. Nullam euismod lobortis velit eget sodales.
 </bluebox>
-
+<blueformula>
+This is a formula : <br> $f(n) = \frac{1}{n^{2}}$
+</blueformula>
+<p><blank></blank></p>
+<p><strong>2 columns grid (default) :</strong></p>
+<div class="grid-container c2">
+  <div class="grid-item">
+    <b>Column 1 text...</b><br>
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+  </div>
+  <div class="grid-item">
+    <b>Column 2 text...</b><br>
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+  </div>
+  <div class="grid-item">
+    </div>
+    <div class="grid-item"><b>Column 3 text...</b><br>
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+    </div>
+</div>
+<p><strong>3 columns grid :</strong></p>
+<div class="grid-container c3">
+  <div class="grid-item">
+    <b>Column 1 text...</b><br>
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+  </div>
+  <div class="grid-item">
+    <b>Column 2 text...</b><br>
+    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+  </div>
+  <div class="grid-item">
+    </div>
+    <div class="grid-item"><b>Column 3 text...</b><br>
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+    </div>
+    <div class="grid-item">
+    </div>
+    <div class="grid-item"><b>Column 4 text...</b><br>
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc. Sed euismod, nisl eget ultricies aliquam, nunc nisi aliquet nunc, vitae aliquam nisl nunc eget nunc.
+    </div>
+</div>
+<p class="center">This is a centered paragraph<br>second line here</p>
+<p class="right">This is a right-aligned paragraph<br>second line here</p>
+<p class="left">This is a left-aligned paragraph<br>second line here</p>
+<p>This is now a span to the right: <span class="right">This is a right-aligned span</span></p>
+<p>Here are the different font-sizes available :</p>
+<p><span class="f6">This is a f6 paragraph</span></p>
+<p><span class="f8">This is a f8 paragraph</span></p>
+<p><span class="f10">This is a f10 paragraph</span></p>
+<p><span class="f12">This is a f12 paragraph</span></p>
+<p><span class="f14">This is a f14 paragraph</span></p>
+<p><span class="f16">This is a f16 paragraph</span></p>
+<p><span class="f18">This is a f18 paragraph</span></p>
+<p><span class="f20">This is a f20 paragraph</span></p>
+<p><span class="f24">This is a f24 paragraph</span></p>
+<p><span class="f28">This is a f28 paragraph</span></p>
+<p><span class="f32">This is a f32 paragraph</span></p>
+<p><span class="f36">This is a f36 paragraph</span></p>
+<p><span class="f40">This is a f40 paragraph</span></p>
+<p><span class="f44">This is a f44 paragraph</span></p>
+<p><span class="f48">This is a f48 paragraph</span></p>
+<p><span class="f52">This is a f52 paragraph</span></p>
+<p><tab></tab>Tabluation. This text has a tabulation at the beginning of the line. And this is a second line right there.</p>
+<p>table :</p>
+<table>
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+<p>Custom colored table :</p>
+<table class="bluetable left">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+<table class="redtable center">
+    <thead>
+        <tr>
+            <th colspan="2">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+            <td rowspan="1">Item 5</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+            <td rowspan="1">Item 6</td>
+        </tr>
+    </tbody>
+</table>
+<table class="greentable right">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+        </tr>
+    </tbody>
+</table>
+<table class="yellowtable left">
+    <thead>
+        <tr>
+            <th colspan="3">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="2">Item 2</td>
+            <td rowspan="1">Item 5</td>
+            <td rowspan="1">Item 8</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+            <td rowspan="1">Item 7</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 6</td>
+            <td rowspan="1">Item 9</td>
+            <td rowspan="1">Item 10</td>
+            <td rowspan="1">Item 11</td>
+        </tr>
+    </tbody>
+</table>
+<table class="orangetable">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+<table class="purpletable">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+<table class="pinktable">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+<table class="whitetable">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
+<table class="colortable">
+    <thead>
+        <tr>
+            <th colspan="1">Column 1</th>
+            <th colspan="1">Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="1">Item 1</td>
+            <td rowspan="1">Item 2</td>
+        </tr>
+        <tr>
+            <td rowspan="1">Item 3</td>
+            <td rowspan="1">Item 4</td>
+        </tr>
+    </tbody>
+</table>
     </body>
     </html>
     

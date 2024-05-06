@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>example.md</title>
-<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
-<style>
-/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <title>example.md</title>
+        <style>/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
@@ -223,149 +223,10 @@ pre code {
 .vscode-dark table > tbody > tr + tr > td {
 	border-color: rgba(255, 255, 255, 0.18);
 }
-
 </style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-</head>
-<body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<!-- example Markdown file -->
+    </head>
+    <body>
+        <!-- example Markdown file -->
 <!-- css style -->
 <script src="import.js" defer></script>
 <!--  --
@@ -378,8 +239,8 @@ code {
 <h4 id="this-is-a-level-4-heading">This is a level 4 heading</h4>
 <h5 id="this-is-a-level-5-heading">This is a level 5 heading</h5>
 <h6 id="this-is-a-level-6-heading">This is a level 6 heading</h6>
-<p>This is a paragraph of text. Here's a <a href="https://www.youtube.com/">link</a> to an external website.</p>
-<p>Here's an unordered list:</p>
+<p>This is a paragraph of text. Here’s a <a href="https://www.youtube.com/">link</a> to an external website.</p>
+<p>Here’s an unordered list:</p>
 <ul>
 <li>Item 1</li>
 <li>Item 2</li>
@@ -390,7 +251,7 @@ code {
 </ul>
 </li>
 </ul>
-<p>Here's an ordered list:</p>
+<p>Here’s an ordered list:</p>
 <ol>
 <li>First item</li>
 <li>Second item</li>
@@ -403,7 +264,7 @@ code {
 </ol>
 <blockquote>
 <p>This is a blockquote. It can span multiple lines.</p>
-<p>Here's a second paragraph in the blockquote.</p>
+<p>Here’s a second paragraph in the blockquote.</p>
 </blockquote>
 <v>
 This is a verse block.
@@ -461,16 +322,16 @@ This is a verse block.
 <p><hpurple>This is a purple highlight</hpurple></p>
 <p><hpink>This is a pink highlight</hpink></p>
 <p><hgrey>This is a grey highlight</hgrey></p>
-<p>Here's some inline code: <code>console.log('Hello, world!');</code></p>
-<p>Here's a code block:</p>
-<pre class="hljs"><code><div><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b</span>) </span>{
+<p>Here’s some inline code: <code>console.log('Hello, world!');</code></p>
+<p>Here’s a code block:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">function</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">a, b</span>) {
   <span class="hljs-keyword">return</span> a + b;
 }
 </div></code></pre>
-<p>Here's an image:</p>
+<p>Here’s an image:</p>
 <p><img src="image.png" alt="Image alt text"></p>
-<p>Here's some <strong>bold</strong> text and some <em>italic</em> text.</p>
-<p>Here's a table:</p>
+<p>Here’s some <strong>bold</strong> text and some <em>italic</em> text.</p>
+<p>Here’s a table:</p>
 <table>
 <thead>
 <tr>
@@ -489,35 +350,39 @@ This is a verse block.
 </tr>
 </tbody>
 </table>
-<p>Here's a horizontal rule:</p>
+<p>Here’s a horizontal rule:</p>
 <hr>
-<p>Here's a footnote[^1].</p>
+<p>Here’s a footnote[^1].</p>
 <p>[^1]: This is a footnote.</p>
 <p>This is my <fnote>custom footnote || And here is the explaination</fnote></p>
 <p>Here is a <fnote>second custom footnote || And here is the explaination of the second one</fnote></p>
-<p>Here's a definition list:</p>
-<p>Term 1
+<p>Here’s a definition list:</p>
+<p>Term 1<br>
 : Definition 1</p>
-<p>Term 2
+<p>Term 2<br>
 : Definition 2</p>
-<p>Here's a task list:</p>
+<p>Here’s a task list:</p>
 <ul>
 <li><input type="checkbox" id="checkbox0" checked="true"><label for="checkbox0">Task 1</label></li>
 <li><input type="checkbox" id="checkbox1"><label for="checkbox1">Task 2</label></li>
 <li><input type="checkbox" id="checkbox2"><label for="checkbox2">Task 3</label></li>
 <li><input type="checkbox" id="checkbox3" checked="true"><label for="checkbox3">Task 4</label></li>
 </ul>
-<p>Here's an abbreviation: HTML</p>
-<p>Here's a math block:</p>
-<p>$$
-\frac{1}{n^{2}}
+<p>Here’s an abbreviation: HTML</p>
+<p>Here’s a math block:</p>
+<p>$$<br>
+\frac{1}{n^{2}}<br>
 $$</p>
-<p>Here's a math inline: $\frac{1}{n^{2}}$</p>
-<p>Here's a superscript: 10<sup>2</sup></p>
-<p>Here's a subscript: H<sub>2</sub>O</p>
-<p>Here's a strikethrough: <s>strikethrough</s></p>
-<p>Here's a comment: <!-- This is a comment --></p>
-<p>Here's some emoji: 🐻</p>
+<p>Here’s a math inline: $\frac{1}{n^{2}}$</p>
+<p>Here’s a superscript: 10<sup>2</sup></p>
+<p>Here’s a bit more math :</p>
+<p>$\overrightarrow{AF} = \begin{pmatrix} 0 \ \frac{1}{2} \end{pmatrix} - \begin{pmatrix} 1 \ 0 \end{pmatrix} = \begin{pmatrix} -1 \ \frac{1}{2} \end{pmatrix}$</p>
+<p>$\overrightarrow{EG} = \begin{pmatrix} 0 \ \frac{1}{4} \end{pmatrix} - \begin{pmatrix} \frac{1}{2} \ 0 \end{pmatrix} = \begin{pmatrix} -\frac{1}{2} \ \frac{1}{4} \end{pmatrix}$</p>
+<p>$x = \frac{4 \pm \sqrt{64}}{2} = 2 \pm 4$</p>
+<p>Here’s a subscript: H<sub>2</sub>O</p>
+<p>Here’s a strikethrough: <s>strikethrough</s></p>
+<p>Here’s a comment: <!-- This is a comment --></p>
+<p>Here’s some emoji: 🐻</p>
 <p>This is a mermaid diagram:</p>
 <pre><code class="language-mermaid"><div class="mermaid">graph LR;
     A-->B;
@@ -525,17 +390,18 @@ $$</p>
     B-->D[here is a very long node,<br> i want to break it into multiple lines];
     C-->D;
 </div></code></pre>
-<p>Here's a plantuml diagram:</p>
+<p>Here’s a plantuml diagram:</p>
 <pre class="hljs"><code><div>@startuml
 Bob -&gt; Alice : hello
 @enduml
 </div></code></pre>
-<p>Here's a sequence diagram:</p>
+<p>Here’s a sequence diagram:</p>
 <pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram
 Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob-->Alice: I am good thanks!
 </div></code></pre>
 
-</body>
-</html>
+    </body>
+    </html>
+    

@@ -269,6 +269,14 @@ body * {
     font-family: var(--font-body);
 }
 
+mjx-container * {
+    font-family: MJXZERO, MJXTEX;
+}
+
+.katex * {
+    text-align: center;
+}
+
 h1,
 h2,
 h3,
