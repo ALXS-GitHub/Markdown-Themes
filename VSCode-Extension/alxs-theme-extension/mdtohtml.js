@@ -151,7 +151,115 @@ function requirements(mdPath) {
 
     try {
 
-    // convert the img src of the markdown
+    // § handle emphasize in math block
+    // Save the default renderer for inline tokens, if they exist
+    const defaultEmOpenRender = md.renderer.rules.em_open || function (tokens, idx, options, env, self) {
+        return self.renderToken(tokens, idx, options);
+    };
+    const defaultEmCloseRender = md.renderer.rules.em_close || function (tokens, idx, options, env, self) {
+        return self.renderToken(tokens, idx, options);
+    };
+
+    // Helper function to check if a string starts with a substring
+    function startsWith(str, prefix) {
+        return str.slice(0, prefix.length) === prefix;
+    }
+
+    // Helper function to check if a string ends with a substring
+    function endsWith(str, suffix) {
+        return str.slice(-suffix.length) === suffix;
+    }
+
+    // Common logic for handling math blocks
+    function handleMathBlock(tokens, idx, defaultRender, options, env, self) {
+        const token = tokens[idx];
+
+        if (startsWith(tokens[0].content, "$") && endsWith(tokens[tokens.length - 1].content, "$")) {
+            return `${token.markup}`; // not .content for those special tokens
+        }
+
+        // Pass the token to the default renderer
+        return defaultRender(tokens, idx, options, env, self);
+    }
+
+    // Override the renderer for em_open tokens
+    md.renderer.rules.em_open = function (tokens, idx, options, env, self) {
+        return handleMathBlock(tokens, idx, defaultEmOpenRender, options, env, self);
+    };
+
+    // Override the renderer for em_close tokens
+    md.renderer.rules.em_close = function (tokens, idx, options, env, self) {
+        return handleMathBlock(tokens, idx, defaultEmCloseRender, options, env, self);
+    };
+
+    // § Custom renderer for <pre><code> blocks
+
+    const defaultHtmlBlockRender = md.renderer.rules.html_block || function (tokens, idx, options, env, self) {
+        return self.renderToken(tokens, idx, options);
+    };
+
+    const getBlock = function (content, index) {
+        // get the part of the content in between the index start and end
+        return content.substring(index.start, index.end);
+    }
+
+    const getInnerPreCodeContent = function (preCodeBlock) {
+        // get the content inside the <pre><code> block
+        const preCodeBlockRegex = /<pre.*?>\s*<code.*?>(\s*<div.*?>)?([\s\S]*?)(<\/div>\s*)?<\/code>\s*<\/pre>/;
+        const match = preCodeBlock.match(preCodeBlockRegex);
+        return match[2];
+    }
+
+    const getPreCodeBlockIndexes = function (content) {
+        // get the start and end indexes of every pre block inside the content and return an array of them
+        const preBlockIndexes = [];
+        const preBlockRegex = /<pre.*?>\s*<code.*?>[\s\S]*?<\/code>\s*<\/pre>/g;
+        let match;
+        while ((match = preBlockRegex.exec(content)) !== null) {
+            preBlockIndexes.push({
+                start: match.index,
+                end: preBlockRegex.lastIndex
+            });
+        }
+        return preBlockIndexes;
+    }
+
+    const handleInlineCode = function (tokens, idx, defaultRender, options, env, self) {
+        const token = tokens[idx];
+        const lang = token.info ? token.info.trim() : '';
+        let content = token.content;
+
+        let preCodeBlocksIndexes = getPreCodeBlockIndexes(content);
+
+        if (preCodeBlocksIndexes.length > 0) { // if there is at least one pre block
+            // replace every pre block by its highlited version
+            preCodeBlocksIndexes.forEach((index) => {
+                const block = getBlock(content, index);
+                // console.log("-----")
+                // console.log(block);
+                const innerContent = getInnerPreCodeContent(block);
+                // console.log("--- inner content ---");
+                // console.log(innerContent);
+                try {
+                    let hljs_content = '<pre class="hljs"><code><div>' + hljs.highlightAuto(innerContent).value + '</div></code></pre>';
+                    // todo for the following line, it is deprecated, we will take in charge the language later
+                    // let hljs_content = '<pre class="hljs"><code><div>' + hljs.highlight('python', innerContent).value + '</div></code></pre>';
+                    content = content.replace(block, hljs_content);
+                } catch (error) {
+
+                }
+            });
+            return content;
+        }
+
+        return defaultRender(tokens, idx, options, env, self);
+    };
+
+    md.renderer.rules.html_block = function (tokens, idx, options, env, self) {
+        return handleInlineCode(tokens, idx, defaultHtmlBlockRender, options, env, self);
+    };
+
+    // § convert the img src of the markdown
     // var cheerio = require("cheerio");
     var defaultRender = md.renderer.rules.image;
     md.renderer.rules.image = function (tokens, idx, options, env, self) {
@@ -165,10 +273,10 @@ function requirements(mdPath) {
         return defaultRender(tokens, idx, options, env, self);
     };
 
-    // checkbox
+    // § checkbox
     md.use(require("markdown-it-checkbox"));
 
-    // markdown-it-include
+    // § markdown-it-include
     md.use(require("markdown-it-include"), {
         root: path.dirname(mdPath),
         includeRe: /:\[.+\]\((.+\..+)\)/i,
@@ -180,7 +288,7 @@ function requirements(mdPath) {
 
     
 
-    // toc
+    // § toc
     // https://github.com/leff/markdown-it-named-headers
     var options_headers = {
         slugify: Slug,

@@ -235,3 +235,8 @@ Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob-->Alice: I am good thanks!
 ```
+
+```bash
+This is going to be a very long line of code, in order to see if the overflow persists or not (especially when we convert this file to pdf).
+Here is a second line.
+```

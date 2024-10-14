@@ -161,11 +161,13 @@ print("Hello World")</code>
 
 
 <bluebox>
-    <pre>
+    <pre class="hljs">
         <code>
+            <div>
             function function() {
                 console.log("Hello World");
             }
+            </div>
         </code>
     </pre>
 </bluebox>
@@ -211,3 +213,9 @@ print("Hello World")</code>
 `this is an inline text`
 
 `def function()`
+
+
+```bash
+This is going to be a very long line of code, in order to see if the overflow persists or not (especially when we convert this file to pdf).
+Here is a second line.
+```

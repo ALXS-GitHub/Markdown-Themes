@@ -628,3 +628,8 @@ Custom colored table :
         </tr>
     </tbody>
 </table>
+
+```bash
+This is going to be a very long line of code, in order to see if the overflow persists or not (especially when we convert this file to pdf).
+Here is a second line.
+```

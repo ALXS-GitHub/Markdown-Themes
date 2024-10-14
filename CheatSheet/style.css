@@ -1221,10 +1221,17 @@ pre {
     background-color: transparent !important;
     margin: 0 !important;
     padding: 0 !important;
+
+    /* part to make sure the text is not overflowing */
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    overflow: auto !important;
+    max-width: 100% !important;
 }
 
 pre * {
     background-color: transparent !important;
+    color: white;
 }
 /* 
 pre code * {

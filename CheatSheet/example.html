@@ -229,11 +229,12 @@ pre code {
         <!-- example Markdown file -->
 <!-- css style -->
 <script src="import.js" defer></script>
-<!-- <script defer>
+<script defer>
 	window.addEventListener("load", function() {
-        document.color.setColor("red");
+        // document.color.setColor("red");
+        changeCodeHighlightTheme("monokai-sublime");
       });
-</script> -->
+</script>
 <!-- Document start -->
 <h1 id="cheatsheet">CheatSheet</h1>
 <h2 id="boxes-section">Boxes Section</h2>
@@ -342,29 +343,25 @@ pre code {
 </div></code></pre>
 <h3 id="code-in-a-box">Code in a box</h3>
 <bluebox>
-    <pre>
-        <code class="language-python">
-            def function():
-                print("Hello World")
-        </code>
-    </pre>
+    <pre class="hljs"><code><div>def <span class="hljs-keyword">function</span><span class="hljs-params">()</span>:
+print<span class="hljs-params">(<span class="hljs-string">&quot;Hello World&quot;</span>)</span></div></code></pre>
 </bluebox>
+<pre class="hljs"><code><div>
+        def <span class="hljs-keyword">function</span><span class="hljs-params">()</span>:
+            print<span class="hljs-params">(<span class="hljs-string">&quot;Hello World&quot;</span>)</span>
+    </div></code></pre>
 <bluebox>
-    <pre>
-        <code>
-            function function() {
-                console.log("Hello World");
+    <pre class="hljs"><code><div>
+            <span class="hljs-keyword">function</span> <span class="hljs-title function_">function</span>(<span class="hljs-params"></span>) {
+                <span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-string">&quot;Hello World&quot;</span>);
             }
-        </code>
-    </pre>
+            </div></code></pre>
 </bluebox>
 <bluebox>
-    <pre>
-        <code class="langage-cpp">
-            include &lt;iostream&gt;
-            using namespace std;
-        </code>
-    </pre>
+    <pre class="hljs"><code><div>
+            include &amp;<span class="hljs-keyword">lt</span>;iostream&amp;<span class="hljs-keyword">gt</span>;
+            <span class="hljs-keyword">using</span> namespace std;
+        </div></code></pre>
 </bluebox>
 <h3 id="code-in-a-box-with-no-pre">Code in a box with no pre</h3>
 <code class="language-python">
@@ -384,8 +381,16 @@ pre code {
         }
     </code>
 </bluebox>
+<code class="language-javascript">
+        function function() {
+            console.log("Hello World");
+        }
+</code>
 <p><code>this is an inline text</code></p>
 <p><code>def function()</code></p>
+<pre class="hljs"><code><div>This is going to be a very long line of code, <span class="hljs-keyword">in</span> order to see <span class="hljs-keyword">if</span> the overflow persists or not (especially when we convert this file to pdf).
+Here is a second line.
+</div></code></pre>
 
     </body>
     </html>

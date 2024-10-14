@@ -1,3 +1,3 @@
-fix width for formulas, the ones on the last line do not justify
+Try to regroup common code (or css) in a single file if possible in order to avoid code duplication between multiple themes.
 
-Puppeteer second function to convert when the background has a different color (maybe if it is possible, generate a one page only pdf (super long page))
+With the point above, try to create a Template theme that will be the base for all the other themes.

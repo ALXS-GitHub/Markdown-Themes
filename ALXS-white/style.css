@@ -546,6 +546,12 @@ pre {
     font-size: 14px;
     line-height: 1.5;
     overflow-x: auto;
+
+    /* part to make sure the text is not overflowing */
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    overflow: auto !important;
+    max-width: 100% !important;
 }
 
 code {
