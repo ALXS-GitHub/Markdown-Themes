@@ -277,6 +277,11 @@ body * {
     font-family: var(--font-body);
 }
 
+.katex * {
+    text-align: center;
+    font-size: 1rem !important;
+}
+
 h1,
 h2,
 h3,
